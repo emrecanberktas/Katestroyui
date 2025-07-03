@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip",
+  "type": "registry:component",
+  "title": "Tooltip",
+  "description": "UI component for Tooltip.",
+  "files": [
+    {
+      "path": "registry/new-york/ui/tooltip.tsx",
+      "content": "import * as React from \"react\";\r\nimport * as TooltipPrimitive from \"@radix-ui/react-tooltip\";\r\nimport { motion, AnimatePresence } from \"motion/react\";\r\nimport { cn } from \"@/lib/utils\";\r\n\r\nfunction TooltipProvider({\r\n  delayDuration = 500,\r\n  ...props\r\n}: React.ComponentProps<typeof TooltipPrimitive.Provider>) {\r\n  return (\r\n    <TooltipPrimitive.Provider\r\n      data-slot=\"tooltip-provider\"\r\n      delayDuration={delayDuration}\r\n      {...props}\r\n    />\r\n  );\r\n}\r\n\r\nfunction Tooltip({\r\n  ...props\r\n}: React.ComponentProps<typeof TooltipPrimitive.Root>) {\r\n  return (\r\n    <TooltipProvider>\r\n      <TooltipPrimitive.Root data-slot=\"tooltip\" {...props} />\r\n    </TooltipProvider>\r\n  );\r\n}\r\n\r\nfunction TooltipTrigger({\r\n  ...props\r\n}: React.ComponentProps<typeof TooltipPrimitive.Trigger>) {\r\n  return <TooltipPrimitive.Trigger data-slot=\"tooltip-trigger\" {...props} />;\r\n}\r\n\r\nfunction TooltipContent({\r\n  className,\r\n  sideOffset = 0,\r\n  children,\r\n  ...props\r\n}: React.ComponentProps<typeof TooltipPrimitive.Content>) {\r\n  return (\r\n    <TooltipPrimitive.Portal>\r\n      <TooltipPrimitive.Content\r\n        data-slot=\"tooltip-content\"\r\n        sideOffset={sideOffset}\r\n        className={cn(\r\n          \"bg-popover text-popover-foreground z-[100] w-fit rounded-md px-3 py-1.5 text-xs text-balance shadow-md dark:bg-gray-800 dark:text-gray-100\",\r\n          className\r\n        )}\r\n        forceMount\r\n        {...props}\r\n      >\r\n        <AnimatePresence>\r\n          <motion.div\r\n            initial={{ opacity: 0, scale: 0.95, y: 5 }}\r\n            animate={{ opacity: 1, scale: 1, y: 0 }}\r\n            exit={{ opacity: 0, scale: 0.95, y: 5 }}\r\n            transition={{\r\n              type: \"spring\",\r\n              stiffness: 300,\r\n              damping: 25,\r\n            }}\r\n            style={{\r\n              transformOrigin: \"var(--radix-tooltip-content-transform-origin)\",\r\n              position: \"relative\",\r\n              isolation: \"isolate\",\r\n            }}\r\n          >\r\n            {children}\r\n          </motion.div>\r\n        </AnimatePresence>\r\n\r\n        <TooltipPrimitive.Arrow className=\"fill-popover dark:fill-gray-800 z-[100] size-2.5 translate-y-[calc(-50%_-_2px)] rotate-45 rounded-[2px] shadow-md\" />\r\n      </TooltipPrimitive.Content>\r\n    </TooltipPrimitive.Portal>\r\n  );\r\n}\r\n\r\nexport { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider };\r\n",
+      "type": "registry:component"
+    }
+  ]
+}

@@ -1,0 +1,259 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "acme",
+  "homepage": "https://acme.com",
+  "items": [
+    {
+      "name": "accordion",
+      "type": "registry:component",
+      "title": "Accordion",
+      "description": "UI component for Accordion.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/accordion.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "alert-dialog",
+      "type": "registry:component",
+      "title": "Alert Dialog",
+      "description": "UI component for Alert Dialog.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/alert-dialog.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "alert",
+      "type": "registry:component",
+      "title": "Alert",
+      "description": "UI component for Alert.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/alert.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "animeted-list",
+      "type": "registry:component",
+      "title": "Animeted List",
+      "description": "UI component for Animeted List.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/animeted-list.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "avatar-group",
+      "type": "registry:component",
+      "title": "Avatar Group",
+      "description": "UI component for Avatar Group.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/avatar-group.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "avatar",
+      "type": "registry:component",
+      "title": "Avatar",
+      "description": "UI component for Avatar.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/avatar.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "button",
+      "type": "registry:component",
+      "title": "Button",
+      "description": "UI component for Button.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/button.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "card",
+      "type": "registry:component",
+      "title": "Card",
+      "description": "UI component for Card.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/card.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "checkbox",
+      "type": "registry:component",
+      "title": "Checkbox",
+      "description": "UI component for Checkbox.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/checkbox.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "collapsible",
+      "type": "registry:component",
+      "title": "Collapsible",
+      "description": "UI component for Collapsible.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/collapsible.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "context-menu",
+      "type": "registry:component",
+      "title": "Context Menu",
+      "description": "UI component for Context Menu.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/context-menu.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "dialog",
+      "type": "registry:component",
+      "title": "Dialog",
+      "description": "UI component for Dialog.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/dialog.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu",
+      "type": "registry:component",
+      "title": "Dropdown Menu",
+      "description": "UI component for Dropdown Menu.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/dropdown-menu.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "input",
+      "type": "registry:component",
+      "title": "Input",
+      "description": "UI component for Input.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/input.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "mode-toggle",
+      "type": "registry:component",
+      "title": "Mode Toggle",
+      "description": "UI component for Mode Toggle.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/mode-toggle.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "multi-step-component",
+      "type": "registry:component",
+      "title": "Multi Step Component",
+      "description": "UI component for Multi Step Component.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/multi-step-component.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "radio-group",
+      "type": "registry:component",
+      "title": "Radio Group",
+      "description": "UI component for Radio Group.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/radio-group.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "scroll-area",
+      "type": "registry:component",
+      "title": "Scroll Area",
+      "description": "UI component for Scroll Area.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/scroll-area.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "skeleton",
+      "type": "registry:component",
+      "title": "Skeleton",
+      "description": "UI component for Skeleton.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/skeleton.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "tabs",
+      "type": "registry:component",
+      "title": "Tabs",
+      "description": "UI component for Tabs.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/tabs.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "tooltip",
+      "type": "registry:component",
+      "title": "Tooltip",
+      "description": "UI component for Tooltip.",
+      "files": [
+        {
+          "path": "registry/new-york/ui/tooltip.tsx",
+          "type": "registry:component"
+        }
+      ]
+    }
+  ]
+}

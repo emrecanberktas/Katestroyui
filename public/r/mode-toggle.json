@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "mode-toggle",
+  "type": "registry:component",
+  "title": "Mode Toggle",
+  "description": "UI component for Mode Toggle.",
+  "files": [
+    {
+      "path": "registry/new-york/ui/mode-toggle.tsx",
+      "content": "import { Moon, Sun } from \"lucide-react\";\r\n\r\nimport { Button } from \"@/components/ui/button\";\r\nimport {\r\n  DropdownMenu,\r\n  DropdownMenuContent,\r\n  DropdownMenuItem,\r\n  DropdownMenuTrigger,\r\n} from \"@/components/ui/dropdown-menu\";\r\nimport { useTheme } from \"@/components/theme-provider\";\r\n\r\nexport function ModeToggle() {\r\n  const { setTheme } = useTheme();\r\n\r\n  return (\r\n    <DropdownMenu>\r\n      <DropdownMenuTrigger asChild>\r\n        <Button variant=\"outline\" size=\"icon\">\r\n          <Sun className=\"h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90\" />\r\n          <Moon className=\"absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0\" />\r\n          <span className=\"sr-only\">Toggle theme</span>\r\n        </Button>\r\n      </DropdownMenuTrigger>\r\n      <DropdownMenuContent align=\"end\">\r\n        <DropdownMenuItem onClick={() => setTheme(\"light\")}>\r\n          Light\r\n        </DropdownMenuItem>\r\n        <DropdownMenuItem onClick={() => setTheme(\"dark\")}>\r\n          Dark\r\n        </DropdownMenuItem>\r\n        <DropdownMenuItem onClick={() => setTheme(\"system\")}>\r\n          System\r\n        </DropdownMenuItem>\r\n      </DropdownMenuContent>\r\n    </DropdownMenu>\r\n  );\r\n}\r\n",
+      "type": "registry:component"
+    }
+  ]
+}
