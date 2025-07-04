@@ -96,7 +96,7 @@ export function AnimatedList({
   itemClassName,
   delayFactor = 0.03,
   reverse = false,
-  emptyMessage = "Liste boş",
+  emptyMessage = "List is empty",
   direction = "vertical",
   ...props
 }: AnimatedListProps) {

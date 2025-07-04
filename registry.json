@@ -9,10 +9,7 @@
       "title": "Accordion",
       "description": "UI component for Accordion.",
       "files": [
-        {
-          "path": "registry/new-york/ui/accordion.tsx",
-          "type": "registry:component"
-        }
+        { "path": "components/ui/accordion.tsx", "type": "registry:component" }
       ]
     },
     {
@@ -22,7 +19,7 @@
       "description": "UI component for Alert Dialog.",
       "files": [
         {
-          "path": "registry/new-york/ui/alert-dialog.tsx",
+          "path": "components/ui/alert-dialog.tsx",
           "type": "registry:component"
         }
       ]
@@ -33,20 +30,17 @@
       "title": "Alert",
       "description": "UI component for Alert.",
       "files": [
-        {
-          "path": "registry/new-york/ui/alert.tsx",
-          "type": "registry:component"
-        }
+        { "path": "components/ui/alert.tsx", "type": "registry:component" }
       ]
     },
     {
-      "name": "animeted-list",
+      "name": "animated-list",
       "type": "registry:component",
-      "title": "Animeted List",
-      "description": "UI component for Animeted List.",
+      "title": "Animated List",
+      "description": "UI component for Animated List.",
       "files": [
         {
-          "path": "registry/new-york/ui/animeted-list.tsx",
+          "path": "components/ui/animated-list.tsx",
           "type": "registry:component"
         }
       ]
@@ -58,7 +52,7 @@
       "description": "UI component for Avatar Group.",
       "files": [
         {
-          "path": "registry/new-york/ui/avatar-group.tsx",
+          "path": "components/ui/avatar-group.tsx",
           "type": "registry:component"
         }
       ]
@@ -69,10 +63,7 @@
       "title": "Avatar",
       "description": "UI component for Avatar.",
       "files": [
-        {
-          "path": "registry/new-york/ui/avatar.tsx",
-          "type": "registry:component"
-        }
+        { "path": "components/ui/avatar.tsx", "type": "registry:component" }
       ]
     },
     {
@@ -81,10 +72,7 @@
       "title": "Button",
       "description": "UI component for Button.",
       "files": [
-        {
-          "path": "registry/new-york/ui/button.tsx",
-          "type": "registry:component"
-        }
+        { "path": "components/ui/button.tsx", "type": "registry:component" }
       ]
     },
     {
@@ -93,10 +81,7 @@
       "title": "Card",
       "description": "UI component for Card.",
       "files": [
-        {
-          "path": "registry/new-york/ui/card.tsx",
-          "type": "registry:component"
-        }
+        { "path": "components/ui/card.tsx", "type": "registry:component" }
       ]
     },
     {
@@ -105,10 +90,7 @@
       "title": "Checkbox",
       "description": "UI component for Checkbox.",
       "files": [
-        {
-          "path": "registry/new-york/ui/checkbox.tsx",
-          "type": "registry:component"
-        }
+        { "path": "components/ui/checkbox.tsx", "type": "registry:component" }
       ]
     },
     {
@@ -118,7 +100,7 @@
       "description": "UI component for Collapsible.",
       "files": [
         {
-          "path": "registry/new-york/ui/collapsible.tsx",
+          "path": "components/ui/collapsible.tsx",
           "type": "registry:component"
         }
       ]
@@ -130,7 +112,7 @@
       "description": "UI component for Context Menu.",
       "files": [
         {
-          "path": "registry/new-york/ui/context-menu.tsx",
+          "path": "components/ui/context-menu.tsx",
           "type": "registry:component"
         }
       ]
@@ -141,10 +123,7 @@
       "title": "Dialog",
       "description": "UI component for Dialog.",
       "files": [
-        {
-          "path": "registry/new-york/ui/dialog.tsx",
-          "type": "registry:component"
-        }
+        { "path": "components/ui/dialog.tsx", "type": "registry:component" }
       ]
     },
     {
@@ -154,7 +133,7 @@
       "description": "UI component for Dropdown Menu.",
       "files": [
         {
-          "path": "registry/new-york/ui/dropdown-menu.tsx",
+          "path": "components/ui/dropdown-menu.tsx",
           "type": "registry:component"
         }
       ]
@@ -165,10 +144,7 @@
       "title": "Input",
       "description": "UI component for Input.",
       "files": [
-        {
-          "path": "registry/new-york/ui/input.tsx",
-          "type": "registry:component"
-        }
+        { "path": "components/ui/input.tsx", "type": "registry:component" }
       ]
     },
     {
@@ -178,7 +154,7 @@
       "description": "UI component for Mode Toggle.",
       "files": [
         {
-          "path": "registry/new-york/ui/mode-toggle.tsx",
+          "path": "components/ui/mode-toggle.tsx",
           "type": "registry:component"
         }
       ]
@@ -190,7 +166,7 @@
       "description": "UI component for Multi Step Component.",
       "files": [
         {
-          "path": "registry/new-york/ui/multi-step-component.tsx",
+          "path": "components/ui/multi-step-component.tsx",
           "type": "registry:component"
         }
       ]
@@ -202,7 +178,7 @@
       "description": "UI component for Radio Group.",
       "files": [
         {
-          "path": "registry/new-york/ui/radio-group.tsx",
+          "path": "components/ui/radio-group.tsx",
           "type": "registry:component"
         }
       ]
@@ -214,7 +190,7 @@
       "description": "UI component for Scroll Area.",
       "files": [
         {
-          "path": "registry/new-york/ui/scroll-area.tsx",
+          "path": "components/ui/scroll-area.tsx",
           "type": "registry:component"
         }
       ]
@@ -225,10 +201,7 @@
       "title": "Skeleton",
       "description": "UI component for Skeleton.",
       "files": [
-        {
-          "path": "registry/new-york/ui/skeleton.tsx",
-          "type": "registry:component"
-        }
+        { "path": "components/ui/skeleton.tsx", "type": "registry:component" }
       ]
     },
     {
@@ -237,10 +210,7 @@
       "title": "Tabs",
       "description": "UI component for Tabs.",
       "files": [
-        {
-          "path": "registry/new-york/ui/tabs.tsx",
-          "type": "registry:component"
-        }
+        { "path": "components/ui/tabs.tsx", "type": "registry:component" }
       ]
     },
     {
@@ -249,10 +219,7 @@
       "title": "Tooltip",
       "description": "UI component for Tooltip.",
       "files": [
-        {
-          "path": "registry/new-york/ui/tooltip.tsx",
-          "type": "registry:component"
-        }
+        { "path": "components/ui/tooltip.tsx", "type": "registry:component" }
       ]
     }
   ]
