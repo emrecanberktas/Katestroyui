@@ -25,15 +25,6 @@
       ]
     },
     {
-      "name": "alert",
-      "type": "registry:component",
-      "title": "Alert",
-      "description": "UI component for Alert.",
-      "files": [
-        { "path": "components/ui/alert.tsx", "type": "registry:component" }
-      ]
-    },
-    {
       "name": "animated-list",
       "type": "registry:component",
       "title": "Animated List",
