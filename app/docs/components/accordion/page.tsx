@@ -6,12 +6,16 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from "@/components/ui/accordion";
-import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CodeBlock } from "@/components/code-block";
 import { TerminalBlock } from "@/components/terminal-block";
 
-const codeExample = `import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
+const codeExample = `import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@/components/ui/accordion";
 
 export default function Example() {
   return (
@@ -47,11 +51,8 @@ const manualCommands = {
 };
 
 export default function AccordionDocs() {
-  const [copied, setCopied] = useState(false);
-
   return (
     <div className="max-w-2xl mx-auto py-10 px-4 flex flex-col gap-10">
-      {/* Başlık ve açıklama */}
       <div className="mb-4">
         <h1 className="text-3xl font-bold mb-3">Accordion</h1>
         <p className="text-muted-foreground text-lg">
@@ -85,16 +86,6 @@ export default function AccordionDocs() {
         </TabsContent>
         <TabsContent value="code">
           <div className="bg-zinc-900 rounded-lg p-4 text-sm text-white font-mono relative mt-2 overflow-x-auto border shadow mb-6">
-            <button
-              onClick={() => {
-                navigator.clipboard.writeText(codeExample);
-                setCopied(true);
-                setTimeout(() => setCopied(false), 1200);
-              }}
-              className="absolute top-3 right-3 px-3 py-1.5 bg-zinc-800 rounded text-xs hover:bg-zinc-700 transition border border-zinc-700"
-            >
-              {copied ? "Kopyalandı!" : "Kopyala"}
-            </button>
             <CodeBlock code={codeExample} />
           </div>
         </TabsContent>
@@ -326,7 +317,6 @@ import {
         </div>
       </div>
 
-      {/* Props Tablosu */}
       <div className="mt-2 mb-8">
         <h2 className="text-xl font-semibold mb-4">Props</h2>
         <div className="overflow-x-auto bg-background border rounded-lg p-4 shadow">
