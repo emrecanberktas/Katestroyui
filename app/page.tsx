@@ -35,7 +35,7 @@ export default function Home() {
           transition={{ delay: 0.4 }}
         >
           <Link
-            href={"/accordion"}
+            href={"/docs/components/accordion"}
             className="inline-block px-6 py-3 rounded-lg bg-blue-600 text-white font-semibold shadow-md hover:bg-blue-700 transition-colors text-lg animate-bounce"
           >
             Dökümantasyonu Keşfet
