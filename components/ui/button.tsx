@@ -2,9 +2,10 @@ import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
 import { AnimatePresence, motion } from "motion/react";
-import { Loader2Icon } from "lucide-react";
+import { CopyIcon, CheckIcon, Loader2Icon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
+import { useState } from "react";
 
 const buttonVariants = cva(
   "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
@@ -52,7 +53,7 @@ function Button({
   return (
     <motion.button
       whileHover={{ scale: 1.05 }}
-      transition={{ duration: 0.125, type: "easeInOut" }}
+      transition={{ duration: 0.125, ease: "easeInOut" }}
     >
       <Comp
         data-slot="button"
@@ -120,4 +121,55 @@ function LoadingButton({
   );
 }
 
-export { Button, buttonVariants, LoadingButton };
+function CopyButton({ code, className }: { code: string; className?: string }) {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(code);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  const variants = {
+    hidden: { opacity: 0, scale: 0.5 },
+    visible: { opacity: 1, scale: 1 },
+  };
+
+  return (
+    <Button
+      className={cn(
+        "bg-muted text-muted-foreground hover:bg-muted/80 hover:text-muted-foreground/80",
+        className
+      )}
+      onClick={handleCopy}
+      variant="ghost"
+      size="icon"
+    >
+      <AnimatePresence mode="wait" initial={false}>
+        {copied ? (
+          <motion.span
+            key="copied"
+            variants={variants}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+          >
+            <CheckIcon className="size-4" />
+          </motion.span>
+        ) : (
+          <motion.span
+            key="copy"
+            variants={variants}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+          >
+            <CopyIcon className="size-4" />
+          </motion.span>
+        )}
+      </AnimatePresence>
+    </Button>
+  );
+}
+
+export { Button, buttonVariants, LoadingButton, CopyButton };
