@@ -55,13 +55,23 @@ function AnimatedListItem({
       initial={getInitialState()}
       animate={getAnimateState()}
       exit={getExitState()}
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
+      whileHover={{
+        scale: 1.05,
+        transition: { duration: 0.15 },
+      }}
+      whileTap={{
+        scale: 0.95,
+        transition: { duration: 0.1 },
+      }}
       transition={{
+        opacity: { delay },
+        y: { delay },
+        x: { delay },
+        filter: { delay },
+        scale: { delay: 0 },
         type: "spring",
         stiffness: 120,
         damping: 20,
-        delay,
         ...transition,
       }}
       layout
@@ -145,14 +155,6 @@ export function AnimatedList({
             exit={{ opacity: 0, y: -20 }}
             className="text-muted-foreground text-sm flex items-center gap-2"
           >
-            <motion.span
-              animate={{
-                rotate: [0, 10, -10, 0],
-                transition: { repeat: Infinity, duration: 1.5 },
-              }}
-            >
-              😕
-            </motion.span>
             {emptyMessage}
           </motion.div>
         ) : (
