@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { CopyIcon, CheckIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence, MotionConfig } from "motion/react";
+import { CopyButton } from "./ui/button";
 
 export function TerminalBlock({
   commands,
@@ -15,7 +15,6 @@ export function TerminalBlock({
   const [activeTab, setActiveTab] = useState<keyof typeof commands>(
     Object.keys(commands)[0]
   );
-  const [copied, setCopied] = useState(false);
   const [prevTabIndex, setPrevTabIndex] = useState(0);
   const activeTabIndex = tabs.indexOf(activeTab);
   const direction =
@@ -24,12 +23,6 @@ export function TerminalBlock({
       : activeTabIndex < prevTabIndex
       ? "back"
       : "next";
-
-  const handleCopy = async () => {
-    await navigator.clipboard.writeText(commands[activeTab]);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 1500);
-  };
 
   const handleTabChange = (tab: keyof typeof commands) => {
     setPrevTabIndex(tabs.indexOf(activeTab));
@@ -64,46 +57,37 @@ export function TerminalBlock({
                 : "border-transparent text-muted-foreground hover:text-foreground"
             )}
             layout
-            transition={{ type: "spring", stiffness: 350, damping: 30 }}
           >
             {tab}
             {activeTab === tab && (
               <motion.div
                 layoutId="underline"
                 className="absolute inset-x-0 bottom-0 h-[2px] bg-primary"
-                transition={{ type: "spring", stiffness: 350, damping: 30 }}
               />
             )}
           </motion.button>
         ))}
 
         <div className="ml-auto">
-          <button
-            onClick={handleCopy}
-            className="p-2 text-muted-foreground hover:text-foreground"
-          >
-            {copied ? <CheckIcon size={16} /> : <CopyIcon size={16} />}
-          </button>
+          <CopyButton code={commands[activeTab]} className="p-2" />
         </div>
       </div>
 
-      <MotionConfig transition={{ duration: 0.4, type: "spring", bounce: 0.1 }}>
-        <div className="flex items-center gap-2 px-4 py-3 min-h-[32px] overflow-hidden">
-          <AnimatePresence mode="popLayout" initial={false} custom={direction}>
-            <motion.code
-              key={activeTab}
-              className="whitespace-pre-wrap break-words text-sm w-full block"
-              variants={variants}
-              initial="initial"
-              animate="animate"
-              exit="exit"
-              custom={direction}
-            >
-              {commands[activeTab]}
-            </motion.code>
-          </AnimatePresence>
-        </div>
-      </MotionConfig>
+      <div className="flex items-center gap-2 px-4 py-3 min-h-[32px] overflow-hidden">
+        <AnimatePresence mode="popLayout" initial={false} custom={direction}>
+          <motion.code
+            key={activeTab}
+            className="whitespace-pre-wrap break-words text-sm w-full block"
+            variants={variants}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            custom={direction}
+          >
+            {commands[activeTab]}
+          </motion.code>
+        </AnimatePresence>
+      </div>
     </div>
   );
 }
