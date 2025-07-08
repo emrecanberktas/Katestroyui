@@ -1,6 +1,7 @@
 import * as React from "react";
 import { useState, useMemo } from "react";
 import { motion, AnimatePresence, MotionConfig } from "motion/react";
+import type { Transition } from "motion";
 import { cn } from "@/lib/utils";
 import {
   Card,
@@ -25,7 +26,7 @@ interface MultiStepProps {
   backButtonLabel?: string;
   nextButtonLabel?: string;
   completeButtonLabel?: string;
-  transition?: { duration: number; type: string; bounce?: number };
+  transition?: Transition;
   onNext?: (currentStep: number) => void;
   onBack?: (currentStep: number) => void;
   onComplete?: () => void;
