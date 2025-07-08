@@ -39,8 +39,6 @@ function ContextMenuTrigger({
       const parent = containerRef.current.parentElement;
 
       if (parent) {
-        parent.style.cursor = "none";
-
         const handleMouseMove = (e: MouseEvent) => {
           x.set(e.clientX);
           y.set(e.clientY);
@@ -54,7 +52,6 @@ function ContextMenuTrigger({
         parent.addEventListener("mouseleave", handleMouseLeave);
 
         return () => {
-          parent.style.cursor = "";
           parent.removeEventListener("mousemove", handleMouseMove);
           parent.removeEventListener("mouseenter", handleMouseEnter);
           parent.removeEventListener("mouseleave", handleMouseLeave);
@@ -66,10 +63,13 @@ function ContextMenuTrigger({
   return (
     <ContextMenuPrimitive.Trigger
       data-slot="context-menu-trigger"
-      className={className}
+      className={cn("cursor-none", className)}
       {...props}
     >
-      <div ref={containerRef} className="relative">
+      <div
+        ref={containerRef}
+        className="relative group cursor-none hover:cursor-none"
+      >
         <AnimatePresence>
           {isActive && (
             <motion.div
@@ -79,7 +79,11 @@ function ContextMenuTrigger({
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0, opacity: 0 }}
             >
-              {customCursor ?? (
+              {customCursor ? (
+                // Render custom cursor if provided
+                customCursor
+              ) : (
+                // Default SVG cursor
                 <svg
                   stroke="currentColor"
                   fill="currentColor"

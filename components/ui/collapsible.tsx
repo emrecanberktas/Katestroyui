@@ -74,35 +74,41 @@ function CollapsibleContent({
   ...props
 }: React.ComponentProps<typeof CollapsiblePrimitive.CollapsibleContent>) {
   const { isOpen } = useCollapsible();
+  const childrenArray = React.Children.toArray(children);
 
   return (
     <AnimatePresence>
-      {React.Children.map(
-        children,
-        (child, index) =>
-          isOpen && (
-            <motion.div
-              layoutId="collapsible-content"
-              key={index}
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{
+      {isOpen &&
+        childrenArray.map((child, index) => (
+          <motion.div
+            layout
+            key={index}
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{
+              opacity: 0,
+              y: -10,
+              transition: {
                 duration: 0.3,
-                delay: index * 0.05,
-                type: "easeOut",
-              }}
+                delay: (childrenArray.length - 1 - index) * 0.05,
+                ease: "easeOut",
+              },
+            }}
+            transition={{
+              duration: 0.3,
+              delay: index * 0.05,
+              ease: "easeOut",
+            }}
+          >
+            <CollapsiblePrimitive.CollapsibleContent
+              forceMount
+              data-slot="collapsible-content"
+              {...props}
             >
-              <CollapsiblePrimitive.CollapsibleContent
-                forceMount
-                data-slot="collapsible-content"
-                {...props}
-              >
-                {child}
-              </CollapsiblePrimitive.CollapsibleContent>
-            </motion.div>
-          )
-      )}
+              {child}
+            </CollapsiblePrimitive.CollapsibleContent>
+          </motion.div>
+        ))}
     </AnimatePresence>
   );
 }
