@@ -336,7 +336,7 @@ export default function AnimatedListDocs() {
           </div>
         </TabsContent>
         <TabsContent value="code">
-          <div className="bg-zinc-900 rounded-lg p-4 text-sm text-white font-mono relative mt-2 overflow-x-auto border shadow mb-6">
+          <div className="rounded-lg p-4 text-sm font-mono relative mt-2 overflow-x-auto border shadow mb-6">
             <CodeBlock code={codeExample} />
           </div>
         </TabsContent>
