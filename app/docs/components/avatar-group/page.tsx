@@ -233,9 +233,11 @@ export function AvatarGroup({
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">size</td>
-                <td className="px-4 py-2 font-mono">"sm" | "md" | "lg"</td>
+                <td className="px-4 py-2 font-mono">
+                  &quot;sm&quot; | &quot;md&quot; | &quot;lg&quot;
+                </td>
                 <td className="px-4 py-2">Avatar boyutu</td>
-                <td className="px-4 py-2">"md"</td>
+                <td className="px-4 py-2">&quot;md&quot;</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">className</td>

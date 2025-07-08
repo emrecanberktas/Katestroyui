@@ -1,15 +1,20 @@
 import { cn } from "@/lib/utils";
-import { motion, AnimatePresence } from "motion/react";
+import {
+  motion,
+  AnimatePresence,
+  TargetAndTransition,
+  VariantLabels,
+} from "motion/react";
 import React, { useMemo } from "react";
 
 interface AnimatedListItemProps {
   children: React.ReactNode;
   index: number;
   className?: string;
-  transition?: any;
-  initial?: any;
-  animate?: any;
-  exit?: any;
+  transition?: Record<string, unknown>;
+  initial?: TargetAndTransition | VariantLabels | undefined;
+  animate?: TargetAndTransition | VariantLabels | undefined;
+  exit?: TargetAndTransition | VariantLabels | undefined;
   delayFactor?: number;
   reverse?: boolean;
   direction?: "vertical" | "horizontal";
@@ -85,10 +90,10 @@ function AnimatedListItem({
 export interface AnimatedListProps
   extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode[];
-  transition?: any;
-  initial?: any;
-  animate?: any;
-  exit?: any;
+  transition?: Record<string, unknown>;
+  initial?: TargetAndTransition | VariantLabels | undefined;
+  animate?: TargetAndTransition | VariantLabels | undefined;
+  exit?: TargetAndTransition | VariantLabels | undefined;
   itemClassName?: string;
   delayFactor?: number;
   reverse?: boolean;
@@ -108,27 +113,12 @@ export function AnimatedList({
   reverse = false,
   emptyMessage = "List is empty",
   direction = "vertical",
-  ...props
 }: AnimatedListProps) {
   const childrenArray = useMemo(
     () => React.Children.toArray(children),
     [children]
   );
   const isEmpty = childrenArray.length === 0;
-
-  const {
-    onAnimationStart,
-    onAnimationEnd,
-    onAnimationIteration,
-    onDragStart,
-    onDrag,
-    onDragEnd,
-    onDragEnter,
-    onDragLeave,
-    onDragOver,
-    onDrop,
-    ...motionProps
-  } = props;
 
   return (
     <motion.div
@@ -139,7 +129,6 @@ export function AnimatedList({
           : "flex flex-col items-center",
         className
       )}
-      {...motionProps}
     >
       <AnimatePresence mode="popLayout">
         {isEmpty ? (
@@ -160,7 +149,7 @@ export function AnimatedList({
         ) : (
           childrenArray.map((child, index) => (
             <AnimatedListItem
-              key={(child as any).key ?? index}
+              key={(child as React.ReactElement).key ?? index}
               index={index}
               transition={transition}
               initial={initial}

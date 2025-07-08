@@ -28,7 +28,6 @@ export function ThemeProvider({
 }: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>(defaultTheme);
 
-  // On mount, read the theme from localStorage (client-side only)
   useEffect(() => {
     const storedTheme =
       typeof window !== "undefined"
@@ -37,7 +36,7 @@ export function ThemeProvider({
     if (storedTheme && storedTheme !== theme) {
       setTheme(storedTheme);
     }
-  }, []);
+  }, [theme, storageKey]);
 
   useEffect(() => {
     const root = window.document.documentElement;

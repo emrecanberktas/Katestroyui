@@ -183,10 +183,10 @@ export { LoadingButton };
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">state</td>
                 <td className="px-4 py-2 font-mono">
-                  "idle" | "loading" | "success"
+                  &quot;idle&quot; | &quot;loading&quot; | &quot;success&quot;
                 </td>
                 <td className="px-4 py-2">Butonun durumu</td>
-                <td className="px-4 py-2">"idle"</td>
+                <td className="px-4 py-2">&quot;idle&quot;</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">onClick</td>
@@ -198,7 +198,7 @@ export { LoadingButton };
                 <td className="px-4 py-2 font-mono">idleText</td>
                 <td className="px-4 py-2 font-mono">React.ReactNode</td>
                 <td className="px-4 py-2">Bekleme metni</td>
-                <td className="px-4 py-2">"Form Submit"</td>
+                <td className="px-4 py-2">&quot;Form Submit&quot;</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">loadingIndicator</td>
@@ -210,7 +210,7 @@ export { LoadingButton };
                 <td className="px-4 py-2 font-mono">successText</td>
                 <td className="px-4 py-2 font-mono">React.ReactNode</td>
                 <td className="px-4 py-2">Başarı metni</td>
-                <td className="px-4 py-2">"Form Submitted!"</td>
+                <td className="px-4 py-2">&quot;Form Submitted!&quot;</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">className</td>

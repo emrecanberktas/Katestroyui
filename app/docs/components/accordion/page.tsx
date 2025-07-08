@@ -332,11 +332,13 @@ import {
             <tbody>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">type</td>
-                <td className="px-4 py-2 font-mono">"single" | "multiple"</td>
+                <td className="px-4 py-2 font-mono">
+                  &quot;single&quot; | &quot;multiple&quot;
+                </td>
                 <td className="px-4 py-2">
                   Accordion tipi (tekli veya çoklu seçim)
                 </td>
-                <td className="px-4 py-2">"single"</td>
+                <td className="px-4 py-2">&quot;single&quot;</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">defaultValue</td>

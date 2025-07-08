@@ -83,6 +83,7 @@ interface ScrollAreaItemProps
 }
 
 function isProbablyMotionValue(val: any): boolean {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   return val && typeof val === "object" && typeof val.get === "function";
 }
 

@@ -203,7 +203,7 @@ export { Checkbox };
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">onCheckedChange</td>
                 <td className="px-4 py-2 font-mono">
-                  (checked: boolean | "indeterminate") =&gt; void
+                  (checked: boolean | &quot;indeterminate&quot;) =&gt; void
                 </td>
                 <td className="px-4 py-2">Durum değiştiğinde çağrılır</td>
                 <td className="px-4 py-2">-</td>

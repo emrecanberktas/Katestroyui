@@ -17,15 +17,12 @@ function useCollapsible() {
   return context;
 }
 
-interface CollapsibleProps
-  extends React.ComponentProps<typeof CollapsiblePrimitive.Root> {}
-
 function Collapsible({
   open: openProp,
   defaultOpen,
   onOpenChange,
   ...props
-}: CollapsibleProps) {
+}: React.ComponentProps<typeof CollapsiblePrimitive.Root>) {
   const isControlled = openProp !== undefined;
 
   const [uncontrolledOpen, setUncontrolledOpen] = useState(
@@ -34,12 +31,15 @@ function Collapsible({
 
   const open = isControlled ? openProp : uncontrolledOpen;
 
-  const handleOpenChange = (value: boolean) => {
-    if (!isControlled) {
-      setUncontrolledOpen(value);
-    }
-    onOpenChange?.(value);
-  };
+  const handleOpenChange = React.useCallback(
+    (value: boolean) => {
+      if (!isControlled) {
+        setUncontrolledOpen(value);
+      }
+      onOpenChange?.(value);
+    },
+    [isControlled, onOpenChange]
+  );
 
   const contextValue = useMemo(
     () => ({ isOpen: open, setIsOpen: handleOpenChange }),
