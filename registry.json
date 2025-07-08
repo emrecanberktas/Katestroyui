@@ -49,30 +49,39 @@
       ]
     },
     {
-      "name": "avatar",
+      "name": "copy-button",
       "type": "registry:component",
-      "title": "Avatar",
-      "description": "UI component for Avatar.",
+      "title": "Copy Button",
+      "description": "UI component for Copy Button.",
       "files": [
-        { "path": "components/ui/avatar.tsx", "type": "registry:component" }
+        {
+          "path": "components/ui/copy-button.tsx",
+          "type": "registry:component"
+        }
       ]
     },
     {
-      "name": "button",
+      "name": "loading-button",
       "type": "registry:component",
-      "title": "Button",
-      "description": "UI component for Button.",
+      "title": "Loading Button",
+      "description": "UI component for Loading Button.",
       "files": [
-        { "path": "components/ui/button.tsx", "type": "registry:component" }
+        {
+          "path": "components/ui/loading-button.tsx",
+          "type": "registry:component"
+        }
       ]
     },
     {
-      "name": "card",
+      "name": "popover-button",
       "type": "registry:component",
-      "title": "Card",
-      "description": "UI component for Card.",
+      "title": "Popover Button",
+      "description": "UI component for Popover Button.",
       "files": [
-        { "path": "components/ui/card.tsx", "type": "registry:component" }
+        {
+          "path": "components/ui/popover-button.tsx",
+          "type": "registry:component"
+        }
       ]
     },
     {
@@ -136,18 +145,6 @@
       "description": "UI component for Input.",
       "files": [
         { "path": "components/ui/input.tsx", "type": "registry:component" }
-      ]
-    },
-    {
-      "name": "mode-toggle",
-      "type": "registry:component",
-      "title": "Mode Toggle",
-      "description": "UI component for Mode Toggle.",
-      "files": [
-        {
-          "path": "components/ui/mode-toggle.tsx",
-          "type": "registry:component"
-        }
       ]
     },
     {
