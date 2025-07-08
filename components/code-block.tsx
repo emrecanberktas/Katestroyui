@@ -3,7 +3,7 @@
 import React from "react";
 import { Highlight, themes, Language } from "prism-react-renderer";
 import { useTheme } from "./theme-provider";
-import { CopyButton } from "./ui/button";
+import { CopyButton } from "./ui/copy-button";
 interface CodeBlockProps {
   code: string;
   language?: Language;
@@ -20,7 +20,7 @@ export const CodeBlock: React.FC<CodeBlockProps> = ({
   return (
     <div className={`relative rounded-md overflow-hidden ${className}`}>
       <div className="absolute top-2 right-2 z-10">
-        <CopyButton code={code} />
+        <CopyButton content={code} />
       </div>
       <Highlight
         code={code.trim()}

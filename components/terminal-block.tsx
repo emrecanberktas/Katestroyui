@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence, MotionConfig } from "motion/react";
-import { CopyButton } from "./ui/button";
+import { CopyButton } from "./ui/copy-button";
 
 export function TerminalBlock({
   commands,
@@ -69,7 +69,7 @@ export function TerminalBlock({
         ))}
 
         <div className="ml-auto">
-          <CopyButton code={commands[activeTab]} className="p-2" />
+          <CopyButton content={commands[activeTab]} className="p-2" />
         </div>
       </div>
 
