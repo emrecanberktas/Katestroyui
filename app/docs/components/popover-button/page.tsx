@@ -1,7 +1,6 @@
 "use client";
 
 import { PopoverButton } from "@/components/ui/popover-button";
-import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CodeBlock } from "@/components/code-block";
 import { TerminalBlock } from "@/components/terminal-block";

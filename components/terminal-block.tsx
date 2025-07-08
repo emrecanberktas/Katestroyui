@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { cn } from "@/lib/utils";
-import { motion, AnimatePresence, MotionConfig } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
 import { CopyButton } from "./ui/copy-button";
 
 export function TerminalBlock({

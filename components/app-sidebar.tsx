@@ -13,7 +13,6 @@ import registry from "../registry.json";
 
 function getUIComponents() {
   // registry.ui varsa onu döndür, yoksa boş dizi
-  // @ts-ignore
   return registry.items || [];
 }
 
@@ -35,7 +34,7 @@ export function AppSidebar() {
         <SidebarGroup>
           <SidebarGroupLabel>Componentler</SidebarGroupLabel>
           <SidebarMenu>
-            {uiComponents.map((comp: any) => (
+            {uiComponents.map((comp: { name: string; title: string }) => (
               <SidebarMenuItem key={comp.name}>
                 <SidebarMenuButton asChild>
                   <Link href={`/docs/components/${comp.name}`}>

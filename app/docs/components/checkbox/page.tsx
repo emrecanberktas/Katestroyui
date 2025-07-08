@@ -4,7 +4,6 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CodeBlock } from "@/components/code-block";
 import { TerminalBlock } from "@/components/terminal-block";
-import { useState } from "react";
 
 const codeExample = `import { Checkbox } from "@/components/ui/checkbox";
 
@@ -27,12 +26,6 @@ const manualCommands = {
 };
 
 export default function CheckboxDocs() {
-  const [checked, setChecked] = useState(false);
-
-  function handleCheckedChange(checked: boolean | "indeterminate") {
-    setChecked(checked === true);
-  }
-
   return (
     <div className="max-w-2xl mx-auto py-10 px-4 flex flex-col gap-10">
       <div className="mb-4">

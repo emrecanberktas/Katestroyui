@@ -190,7 +190,8 @@ export default function DialogDocs() {
                 <td className="px-4 py-2 font-mono">open</td>
                 <td className="px-4 py-2 font-mono">boolean</td>
                 <td className="px-4 py-2">
-                  Dialog'un açık olup olmadığını kontrol eder (controlled usage)
+                  Dialog&apos;un açık olup olmadığını kontrol eder (controlled
+                  usage)
                 </td>
                 <td className="px-4 py-2">-</td>
               </tr>
@@ -198,7 +199,7 @@ export default function DialogDocs() {
                 <td className="px-4 py-2 font-mono">defaultOpen</td>
                 <td className="px-4 py-2 font-mono">boolean</td>
                 <td className="px-4 py-2">
-                  Dialog'un başlangıçta açık olup olmadığını belirler
+                  Dialog&apos;un başlangıçta açık olup olmadığını belirler
                 </td>
                 <td className="px-4 py-2">false</td>
               </tr>
