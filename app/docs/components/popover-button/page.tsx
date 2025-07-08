@@ -46,11 +46,11 @@ export default function PopoverButtonDocs() {
         </TabsList>
         <TabsContent value="demo">
           <div className="bg-background border rounded-lg p-6 shadow flex flex-col gap-6 mb-6 items-center justify-center">
-            <PopoverButton
+            {/* <PopoverButton
               content={<div className="p-4">Popover içeriği buraya!</div>}
             >
               Popover Aç
-            </PopoverButton>
+            </PopoverButton> */}
           </div>
         </TabsContent>
         <TabsContent value="code">
