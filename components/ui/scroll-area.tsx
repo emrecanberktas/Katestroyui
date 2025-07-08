@@ -82,9 +82,13 @@ interface ScrollAreaItemProps
   children?: React.ReactNode;
 }
 
-function isProbablyMotionValue(val: any): boolean {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  return val && typeof val === "object" && typeof val.get === "function";
+function isProbablyMotionValue(val: unknown): boolean {
+  return (
+    typeof val === "object" &&
+    val !== null &&
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    typeof (val as { get: () => unknown }).get === "function"
+  );
 }
 
 function filterMotionValues(node: React.ReactNode): React.ReactNode {
