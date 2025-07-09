@@ -86,7 +86,6 @@ function isProbablyMotionValue(val: unknown): boolean {
   return (
     typeof val === "object" &&
     val !== null &&
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     typeof (val as { get: () => unknown }).get === "function"
   );
 }
