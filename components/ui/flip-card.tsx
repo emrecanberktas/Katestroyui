@@ -150,4 +150,5 @@ const FlipCard = forwardRef<FlipCardHandle, FlipCardProps>(
   }
 );
 
+FlipCard.displayName = "FlipCard";
 export { FlipCard };

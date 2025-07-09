@@ -1,6 +1,6 @@
 "use client";
 
-import { FlipCard } from "@/components/ui/flip-card";
+import { FlipCard, FlipCardHandle } from "@/components/ui/flip-card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CodeBlock } from "@/components/code-block";
 import React, { useRef } from "react";
@@ -53,7 +53,7 @@ const manualCommands = {
 };
 
 export default function FlipCardDocs() {
-  const flipCardRef = useRef<any>(null);
+  const flipCardRef = useRef<FlipCardHandle | null>(null);
   return (
     <div className="max-w-2xl mx-auto py-10 px-4 flex flex-col gap-10">
       <div className="mb-4">
