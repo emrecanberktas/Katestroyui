@@ -11,7 +11,7 @@ import { ThemeProvider } from "../components/theme-provider";
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className=" text-foreground min-h-screen flex">
+      <body className="bg-background text-foreground min-h-screen flex">
         <ThemeProvider>
           <SidebarProvider>
             <AppSidebar />

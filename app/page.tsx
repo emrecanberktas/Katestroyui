@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import Link from "next/link";
 import TypewriterEffect from "@/components/ui/type-writer-effect";
 import { CodeBlock } from "@/components/code-block";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
@@ -38,20 +39,25 @@ export default function Home() {
           className="text-xl text-blue-700 dark:text-blue-400 font-mono min-h-[2.5rem]"
         />
         <div className="flex flex-col sm:flex-row gap-4 mt-4">
-          <Link
-            href="/docs/components/accordion"
-            className="px-6 py-3 rounded-lg bg-blue-600 text-white font-semibold shadow-md hover:bg-blue-700 transition-colors text-lg"
+          <Button
+            asChild
+            className="px-6 py-3 rounded-lg bg-blue-600 text-white font-semibold shadow-md hover:bg-blue-700 transition-colors text-lg h-14"
           >
-            Dökümantasyonu Keşfet
-          </Link>
-          <a
-            href="https://github.com/katdestroy/katestroy-ui"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-6 py-3 rounded-lg  text-white font-semibold shadow-md  transition-colors text-lg"
+            <Link href="/docs/components/accordion">Dökümantasyonu Keşfet</Link>
+          </Button>
+          <Button
+            asChild
+            variant="outline"
+            className="px-6 py-3 rounded-lg font-semibold shadow-md transition-colors text-lg h-14"
           >
-            GitHub
-          </a>
+            <a
+              href="https://github.com/emrecanberktas/Katestroyui"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+          </Button>
         </div>
       </motion.div>
 
