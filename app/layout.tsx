@@ -11,27 +11,26 @@ import { ThemeProvider } from "../components/theme-provider";
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className="bg-background text-foreground min-h-screen flex">
+      <body className=" text-foreground min-h-screen flex">
         <ThemeProvider>
           <SidebarProvider>
             <AppSidebar />
-            <div className="flex-1 flex flex-col min-h-screen">
-              {/* Top Bar */}
-              <header className="flex items-center justify-between px-8 py-4 border-b border-zinc-200 dark:border-zinc-800 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md sticky top-0 z-10">
+            <div className="flex-1 flex flex-col min-h-screen min-w-0">
+              <header className="flex items-center justify-between px-8 py-4 border-b backdrop-blur-md sticky top-0 z-10">
                 <div />
                 <div className="flex items-center gap-4">
                   <a
                     href="https://github.com/emrecanberktas/Katestroyui"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-zinc-700 dark:text-zinc-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                    className=" hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                   >
                     <GithubIcon size={24} />
                   </a>
                   <ModeToggle />
                 </div>
               </header>
-              <main className="flex-1 p-8 overflow-y-auto">{children}</main>
+              <main className="flex-1 overflow-y-auto min-w-0">{children}</main>
             </div>
           </SidebarProvider>
         </ThemeProvider>

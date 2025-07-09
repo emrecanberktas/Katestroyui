@@ -12,7 +12,6 @@ import Link from "next/link";
 import registry from "../registry.json";
 
 function getUIComponents() {
-  // registry.ui varsa onu döndür, yoksa boş dizi
   return registry.items || [];
 }
 
@@ -21,7 +20,7 @@ export function AppSidebar() {
   return (
     <Sidebar>
       <SidebarContent>
-        <div className="flex items-center gap-3 px-6 py-4 border-b border-zinc-200 dark:border-zinc-800">
+        <div className="flex items-center gap-3 px-8 py-4 border-b border-zinc-200 dark:border-zinc-800">
           <img
             src="/Logo.jpg"
             alt="Logo"
