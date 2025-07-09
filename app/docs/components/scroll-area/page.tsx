@@ -293,7 +293,7 @@ export { ScrollArea, ScrollBar, ScrollAreaItem };
                   &quot;vertical&quot; | &quot;horizontal&quot;
                 </td>
                 <td className="px-4 py-2">Kaydırma yönü</td>
-                <td className="px-4 py-2">"vertical"</td>
+                <td className="px-4 py-2">&quot;vertical&quot;</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">children</td>

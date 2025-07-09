@@ -319,7 +319,7 @@ export { FlipCard };
                 <td className="px-4 py-2">
                   Kartın genişliği (Tailwind sınıfı).
                 </td>
-                <td className="px-4 py-2">"w-80"</td>
+                <td className="px-4 py-2">&quot;w-80&quot;</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">height</td>
@@ -327,7 +327,7 @@ export { FlipCard };
                 <td className="px-4 py-2">
                   Kartın yüksekliği (Tailwind sınıfı).
                 </td>
-                <td className="px-4 py-2">"h-96"</td>
+                <td className="px-4 py-2">&quot;h-96&quot;</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">flipDirection</td>
@@ -335,7 +335,7 @@ export { FlipCard };
                   &quot;horizontal&quot; | &quot;vertical&quot;
                 </td>
                 <td className="px-4 py-2">Dönüş yönü (yatay/dikey).</td>
-                <td className="px-4 py-2">"horizontal"</td>
+                <td className="px-4 py-2">&quot;horizontal&quot;</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">className</td>
@@ -375,7 +375,7 @@ export { FlipCard };
                 <td className="px-4 py-2">
                   Çevirme tetikleyicisi (tıkla, hover, manuel).
                 </td>
-                <td className="px-4 py-2">"click"</td>
+                <td className="px-4 py-2">&quot;click&quot;</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">duration</td>
