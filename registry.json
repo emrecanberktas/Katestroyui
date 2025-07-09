@@ -139,12 +139,12 @@
       ]
     },
     {
-      "name": "input",
+      "name": "flip-card",
       "type": "registry:component",
-      "title": "Input",
-      "description": "UI component for Input.",
+      "title": "Flip Card",
+      "description": "UI component for Flip Card.",
       "files": [
-        { "path": "components/ui/input.tsx", "type": "registry:component" }
+        { "path": "components/ui/flip-card.tsx", "type": "registry:component" }
       ]
     },
     {
@@ -202,12 +202,15 @@
       ]
     },
     {
-      "name": "tooltip",
+      "name": "type-writer-effect",
       "type": "registry:component",
-      "title": "Tooltip",
-      "description": "UI component for Tooltip.",
+      "title": "Type Writer Effect",
+      "description": "UI component for Type Writer Effect.",
       "files": [
-        { "path": "components/ui/tooltip.tsx", "type": "registry:component" }
+        {
+          "path": "components/ui/type-writer-effect.tsx",
+          "type": "registry:component"
+        }
       ]
     }
   ]
