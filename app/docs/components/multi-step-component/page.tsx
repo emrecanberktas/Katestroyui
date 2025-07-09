@@ -459,19 +459,19 @@ export type { Step };
                 <td className="px-4 py-2 font-mono">backButtonLabel</td>
                 <td className="px-4 py-2 font-mono">string</td>
                 <td className="px-4 py-2">Geri butonu metni</td>
-                <td className="px-4 py-2">"Back"</td>
+                <td className="px-4 py-2">&quot;Back&quot;</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">nextButtonLabel</td>
                 <td className="px-4 py-2 font-mono">string</td>
                 <td className="px-4 py-2">İleri butonu metni</td>
-                <td className="px-4 py-2">"Continue"</td>
+                <td className="px-4 py-2">&quot;Continue&quot;</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">completeButtonLabel</td>
                 <td className="px-4 py-2 font-mono">string</td>
                 <td className="px-4 py-2">Son adım butonu metni</td>
-                <td className="px-4 py-2">"Finish"</td>
+                <td className="px-4 py-2">&quot;Finish&quot;</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">transition</td>

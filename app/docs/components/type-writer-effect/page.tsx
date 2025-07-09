@@ -318,7 +318,7 @@ export default TypewriterEffect;
                 <td className="px-4 py-2 font-mono">cursorChar</td>
                 <td className="px-4 py-2 font-mono">string</td>
                 <td className="px-4 py-2">İmleç karakteri.</td>
-                <td className="px-4 py-2">"|"</td>
+                <td className="px-4 py-2">&quot;|&quot;</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">className</td>

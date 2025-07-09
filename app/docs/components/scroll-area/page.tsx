@@ -290,7 +290,7 @@ export { ScrollArea, ScrollBar, ScrollAreaItem };
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">orientation</td>
                 <td className="px-4 py-2 font-mono">
-                  "vertical" | "horizontal"
+                  &quot;vertical&quot; | &quot;horizontal&quot;
                 </td>
                 <td className="px-4 py-2">Kaydırma yönü</td>
                 <td className="px-4 py-2">"vertical"</td>

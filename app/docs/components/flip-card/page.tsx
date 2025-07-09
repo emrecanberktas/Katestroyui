@@ -332,7 +332,7 @@ export { FlipCard };
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">flipDirection</td>
                 <td className="px-4 py-2 font-mono">
-                  "horizontal" | "vertical"
+                  &quot;horizontal&quot; | &quot;vertical&quot;
                 </td>
                 <td className="px-4 py-2">Dönüş yönü (yatay/dikey).</td>
                 <td className="px-4 py-2">"horizontal"</td>
@@ -370,7 +370,7 @@ export { FlipCard };
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">flipTrigger</td>
                 <td className="px-4 py-2 font-mono">
-                  "click" | "hover" | "manual"
+                  &quot;click&quot; | &quot;hover&quot; | &quot;manual&quot;
                 </td>
                 <td className="px-4 py-2">
                   Çevirme tetikleyicisi (tıkla, hover, manuel).
@@ -389,7 +389,7 @@ export { FlipCard };
                 <td className="px-4 py-2 font-mono">easing</td>
                 <td className="px-4 py-2 font-mono">Easing | Easing[]</td>
                 <td className="px-4 py-2">Animasyon eğrisi.</td>
-                <td className="px-4 py-2">"easeInOut"</td>
+                <td className="px-4 py-2">&quot;easeInOut&quot;</td>
               </tr>
             </tbody>
           </table>
