@@ -73,18 +73,6 @@
       ]
     },
     {
-      "name": "popover-button",
-      "type": "registry:component",
-      "title": "Popover Button",
-      "description": "UI component for Popover Button.",
-      "files": [
-        {
-          "path": "components/ui/popover-button.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
       "name": "checkbox",
       "type": "registry:component",
       "title": "Checkbox",
