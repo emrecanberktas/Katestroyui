@@ -4,7 +4,7 @@ import path from "path";
 
 export async function GET(
   req: NextRequest,
-  context: { params: { component: string } }
+  context: { params: Record<string, string> }
 ) {
   const { component } = context.params;
   const filePath = path.join(process.cwd(), "public", "r", `${component}.json`);
