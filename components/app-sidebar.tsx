@@ -25,7 +25,7 @@ export function AppSidebar() {
         <div className="flex items-center gap-3 px-4 py-4 border-b border-zinc-200 dark:border-zinc-800">
           <Link href="/" className="flex items-center gap-2">
             <img
-              src="/Logo.jpg"
+              src="/Logo.png"
               alt="Logo"
               width={32}
               height={32}

@@ -16,7 +16,7 @@ export default function Home() {
         className="flex flex-col items-center gap-6 text-center mt-8"
       >
         <motion.img
-          src="/Logo.jpg"
+          src="/Logo.png"
           alt="Logo"
           width={96}
           height={96}
