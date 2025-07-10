@@ -29,10 +29,10 @@ function Example() {
 `;
 
 const cliCommands = {
-  pnpm: "pnpm dlx shadcn@latest add collapsible",
-  npm: "npx shadcn@latest add collapsible",
-  yarn: "yarn dlx shadcn@latest add collapsible",
-  bun: "bunx shadcn@latest add collapsible",
+  pnpm: "pnpm dlx shadcn@latest add https://www.katestroyui.com/r/collapsible",
+  npm: "npx shadcn@latest add https://www.katestroyui.com/r/collapsible",
+  yarn: "yarn dlx shadcn@latest add https://www.katestroyui.com/r/collapsible",
+  bun: "bunx shadcn@latest add https://www.katestroyui.com/r/collapsible",
 };
 
 const manualCommands = {

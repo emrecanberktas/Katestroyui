@@ -53,10 +53,10 @@ export default function Example() {
 }`;
 
 const cliCommands = {
-  pnpm: "pnpm dlx shadcn@latest add dialog",
-  npm: "npx shadcn@latest add dialog",
-  yarn: "yarn dlx shadcn@latest add dialog",
-  bun: "bunx shadcn@latest add dialog",
+  pnpm: "pnpm dlx shadcn@latest add https://www.katestroyui.com/r/dialog",
+  npm: "npx shadcn@latest add https://www.katestroyui.com/r/dialog",
+  yarn: "yarn dlx shadcn@latest add https://www.katestroyui.com/r/dialog",
+  bun: "bunx shadcn@latest add https://www.katestroyui.com/r/dialog",
 };
 
 const manualCommands = {

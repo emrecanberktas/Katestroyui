@@ -11,10 +11,10 @@ const codeExample = `import { CopyButton } from "@/components/ui/copy-button";
 `;
 
 const cliCommands = {
-  pnpm: "pnpm dlx shadcn@latest add copy-button",
-  npm: "npx shadcn@latest add copy-button",
-  yarn: "yarn dlx shadcn@latest add copy-button",
-  bun: "bunx shadcn@latest add copy-button",
+  pnpm: "pnpm dlx shadcn@latest add https://www.katestroyui.com/r/copy-button",
+  npm: "npx shadcn@latest add https://www.katestroyui.com/r/copy-button",
+  yarn: "yarn dlx shadcn@latest add https://www.katestroyui.com/r/copy-button",
+  bun: "bunx shadcn@latest add https://www.katestroyui.com/r/copy-button",
 };
 
 const manualCommands = {

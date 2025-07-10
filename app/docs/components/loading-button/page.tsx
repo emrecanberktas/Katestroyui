@@ -20,10 +20,10 @@ import { Loader2Icon } from "lucide-react";
 `;
 
 const cliCommands = {
-  pnpm: "pnpm dlx shadcn@latest add button",
-  npm: "npx shadcn@latest add button",
-  yarn: "yarn dlx shadcn@latest add button",
-  bun: "bunx shadcn@latest add button",
+  pnpm: "pnpm dlx shadcn@latest add https://www.katestroyui.com/r/loading-button",
+  npm: "npx shadcn@latest add https://www.katestroyui.com/r/loading-button",
+  yarn: "yarn dlx shadcn@latest add https://www.katestroyui.com/r/loading-button",
+  bun: "bunx shadcn@latest add https://www.katestroyui.com/r/loading-button",
 };
 
 const manualCommands = {

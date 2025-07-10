@@ -50,10 +50,10 @@ function Example() {
 `;
 
 const cliCommands = {
-  pnpm: "pnpm dlx shadcn@latest add tabs",
-  npm: "npx shadcn@latest add tabs",
-  yarn: "yarn dlx shadcn@latest add tabs",
-  bun: "bunx shadcn@latest add tabs",
+  pnpm: "pnpm dlx shadcn@latest add https://www.katestroyui.com/r/tabs",
+  npm: "npx shadcn@latest add https://www.katestroyui.com/r/tabs",
+  yarn: "yarn dlx shadcn@latest add https://www.katestroyui.com/r/tabs",
+  bun: "bunx shadcn@latest add https://www.katestroyui.com/r/tabs",
 };
 
 const manualCommands = {

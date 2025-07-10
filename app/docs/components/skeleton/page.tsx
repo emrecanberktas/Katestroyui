@@ -27,10 +27,10 @@ function Example() {
 `;
 
 const cliCommands = {
-  pnpm: "pnpm dlx shadcn@latest add skeleton",
-  npm: "npx shadcn@latest add skeleton",
-  yarn: "yarn dlx shadcn@latest add skeleton",
-  bun: "bunx shadcn@latest add skeleton",
+  pnpm: "pnpm dlx shadcn@latest add https://www.katestroyui.com/r/skeleton",
+  npm: "npx shadcn@latest add https://www.katestroyui.com/r/skeleton",
+  yarn: "yarn dlx shadcn@latest add https://www.katestroyui.com/r/skeleton",
+  bun: "bunx shadcn@latest add https://www.katestroyui.com/r/skeleton",
 };
 
 const manualCommands = {

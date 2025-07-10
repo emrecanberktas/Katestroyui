@@ -22,10 +22,10 @@ function Example() {
 `;
 
 const cliCommands = {
-  pnpm: "pnpm dlx shadcn@latest add radio-group",
-  npm: "npx shadcn@latest add radio-group",
-  yarn: "yarn dlx shadcn@latest add radio-group",
-  bun: "bunx shadcn@latest add radio-group",
+  pnpm: "pnpm dlx shadcn@latest add https://www.katestroyui.com/r/radio-group",
+  npm: "npx shadcn@latest add https://www.katestroyui.com/r/radio-group",
+  yarn: "yarn dlx shadcn@latest add https://www.katestroyui.com/r/radio-group",
+  bun: "bunx shadcn@latest add https://www.katestroyui.com/r/radio-group",
 };
 
 const manualCommands = {

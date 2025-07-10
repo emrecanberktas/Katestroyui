@@ -19,6 +19,7 @@ export async function GET(
       headers: { "Content-Type": "application/json" },
     });
   } catch (error) {
+    console.log(error);
     return new NextResponse("Not Found", { status: 404 });
   }
 }

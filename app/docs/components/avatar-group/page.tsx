@@ -20,10 +20,10 @@ const avatars = [
 `;
 
 const cliCommands = {
-  pnpm: "pnpm dlx shadcn@latest add avatar-group",
-  npm: "npx shadcn@latest add avatar-group",
-  yarn: "yarn dlx shadcn@latest add avatar-group",
-  bun: "bunx shadcn@latest add avatar-group",
+  pnpm: "pnpm dlx shadcn@latest add https://www.katestroyui.com/r/avatar-group",
+  npm: "npx shadcn@latest add https://www.katestroyui.com/r/avatar-group",
+  yarn: "yarn dlx shadcn@latest add https://www.katestroyui.com/r/avatar-group",
+  bun: "bunx shadcn@latest add https://www.katestroyui.com/r/avatar-group",
 };
 
 const manualCommands = {

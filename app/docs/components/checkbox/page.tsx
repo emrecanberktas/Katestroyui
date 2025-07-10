@@ -12,10 +12,10 @@ const codeExample = `import { Checkbox } from "@/components/ui/checkbox";
 `;
 
 const cliCommands = {
-  pnpm: "pnpm dlx shadcn@latest add checkbox",
-  npm: "npx shadcn@latest add checkbox",
-  yarn: "yarn dlx shadcn@latest add checkbox",
-  bun: "bunx shadcn@latest add checkbox",
+  pnpm: "pnpm dlx shadcn@latest add https://www.katestroyui.com/r/checkbox",
+  npm: "npx shadcn@latest add https://www.katestroyui.com/r/checkbox",
+  yarn: "yarn dlx shadcn@latest add https://www.katestroyui.com/r/checkbox",
+  bun: "bunx shadcn@latest add https://www.katestroyui.com/r/checkbox",
 };
 
 const manualCommands = {

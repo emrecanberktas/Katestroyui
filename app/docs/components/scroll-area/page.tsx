@@ -26,10 +26,10 @@ function Example() {
 `;
 
 const cliCommands = {
-  pnpm: "pnpm dlx shadcn@latest add scroll-area",
-  npm: "npx shadcn@latest add scroll-area",
-  yarn: "yarn dlx shadcn@latest add scroll-area",
-  bun: "bunx shadcn@latest add scroll-area",
+  pnpm: "pnpm dlx shadcn@latest add https://www.katestroyui.com/r/scroll-area",
+  npm: "npx shadcn@latest add https://www.katestroyui.com/r/scroll-area",
+  yarn: "yarn dlx shadcn@latest add https://www.katestroyui.com/r/scroll-area",
+  bun: "bunx shadcn@latest add https://www.katestroyui.com/r/scroll-area",
 };
 
 const manualCommands = {

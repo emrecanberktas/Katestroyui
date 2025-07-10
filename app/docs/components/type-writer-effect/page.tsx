@@ -25,10 +25,10 @@ export default function Demo() {
 `;
 
 const cliCommands = {
-  pnpm: "pnpm dlx shadcn@latest add type-writer-effect",
-  npm: "npx shadcn@latest add type-writer-effect",
-  yarn: "yarn dlx shadcn@latest add type-writer-effect",
-  bun: "bunx shadcn@latest add type-writer-effect",
+  pnpm: "pnpm dlx shadcn@latest add https://www.katestroyui.com/r/type-writer-effect",
+  npm: "npx shadcn@latest add https://www.katestroyui.com/r/type-writer-effect",
+  yarn: "yarn dlx shadcn@latest add https://www.katestroyui.com/r/type-writer-effect",
+  bun: "bunx shadcn@latest add https://www.katestroyui.com/r/type-writer-effect",
 };
 
 const manualCommands = {

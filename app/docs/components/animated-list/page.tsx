@@ -145,10 +145,10 @@ export default function Example() {
 `;
 
 const cliCommands = {
-  pnpm: "pnpm dlx shadcn@latest add animated-list",
-  npm: "npx shadcn@latest add animated-list",
-  yarn: "yarn dlx shadcn@latest add animated-list",
-  bun: "bunx shadcn@latest add animated-list",
+  pnpm: "pnpm dlx shadcn@latest add https://www.katestroyui.com/r/animated-list",
+  npm: "npx shadcn@latest add https://www.katestroyui.com/r/animated-list",
+  yarn: "yarn dlx shadcn@latest add https://www.katestroyui.com/r/animated-list",
+  bun: "bunx shadcn@latest add https://www.katestroyui.com/r/animated-list",
 };
 
 const manualCommands = {

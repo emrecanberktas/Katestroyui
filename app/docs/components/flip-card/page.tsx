@@ -39,10 +39,10 @@ function Example() {
 `;
 
 const cliCommands = {
-  pnpm: "pnpm dlx shadcn@latest add flip-card",
-  npm: "npx shadcn@latest add flip-card",
-  yarn: "yarn dlx shadcn@latest add flip-card",
-  bun: "bunx shadcn@latest add flip-card",
+  pnpm: "pnpm dlx shadcn@latest add https://www.katestroyui.com/r/flip-card",
+  npm: "npx shadcn@latest add https://www.katestroyui.com/r/flip-card",
+  yarn: "yarn dlx shadcn@latest add https://www.katestroyui.com/r/flip-card",
+  bun: "bunx shadcn@latest add https://www.katestroyui.com/r/flip-card",
 };
 
 const manualCommands = {

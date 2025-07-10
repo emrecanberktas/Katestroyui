@@ -16,10 +16,10 @@ import { Button } from "@/components/ui/button";
 `;
 
 const cliCommands = {
-  pnpm: "pnpm dlx shadcn@latest add popover-button",
-  npm: "npx shadcn@latest add popover-button",
-  yarn: "yarn dlx shadcn@latest add popover-button",
-  bun: "bunx shadcn@latest add popover-button",
+  pnpm: "pnpm dlx shadcn@latest add https://www.katestroyui.com/r/popover-button",
+  npm: "npx shadcn@latest add https://www.katestroyui.com/r/popover-button",
+  yarn: "yarn dlx shadcn@latest add https://www.katestroyui.com/r/popover-button",
+  bun: "bunx shadcn@latest add https://www.katestroyui.com/r/popover-button",
 };
 
 const manualCommands = {

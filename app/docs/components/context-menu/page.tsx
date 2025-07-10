@@ -105,10 +105,10 @@ function Example() {
 `;
 
 const cliCommands = {
-  pnpm: "pnpm dlx shadcn@latest add context-menu",
-  npm: "npx shadcn@latest add context-menu",
-  yarn: "yarn dlx shadcn@latest add context-menu",
-  bun: "bunx shadcn@latest add context-menu",
+  pnpm: "pnpm dlx shadcn@latest add https://www.katestroyui.com/r/context-menu",
+  npm: "npx shadcn@latest add https://www.katestroyui.com/r/context-menu",
+  yarn: "yarn dlx shadcn@latest add https://www.katestroyui.com/r/context-menu",
+  bun: "bunx shadcn@latest add https://www.katestroyui.com/r/context-menu",
 };
 
 const manualCommands = {

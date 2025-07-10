@@ -82,10 +82,10 @@ function Example() {
 `;
 
 const cliCommands = {
-  pnpm: "pnpm dlx shadcn@latest add multi-step-component",
-  npm: "npx shadcn@latest add multi-step-component",
-  yarn: "yarn dlx shadcn@latest add multi-step-component",
-  bun: "bunx shadcn@latest add multi-step-component",
+  pnpm: "pnpm dlx shadcn@latest add https://www.katestroyui.com/r/multi-step-component",
+  npm: "npx shadcn@latest add https://www.katestroyui.com/r/multi-step-component",
+  yarn: "yarn dlx shadcn@latest add https://www.katestroyui.com/r/multi-step-component",
+  bun: "bunx shadcn@latest add https://www.katestroyui.com/r/multi-step-component",
 };
 
 const manualCommands = {

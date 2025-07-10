@@ -94,10 +94,10 @@ function Example() {
 `;
 
 const cliCommands = {
-  pnpm: "pnpm dlx shadcn@latest add dropdown-menu",
-  npm: "npx shadcn@latest add dropdown-menu",
-  yarn: "yarn dlx shadcn@latest add dropdown-menu",
-  bun: "bunx shadcn@latest add dropdown-menu",
+  pnpm: "pnpm dlx shadcn@latest add https://www.katestroyui.com/r/dropdown-menu",
+  npm: "npx shadcn@latest add https://www.katestroyui.com/r/dropdown-menu",
+  yarn: "yarn dlx shadcn@latest add https://www.katestroyui.com/r/dropdown-menu",
+  bun: "bunx shadcn@latest add https://www.katestroyui.com/r/dropdown-menu",
 };
 
 const manualCommands = {
