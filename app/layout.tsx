@@ -2,15 +2,19 @@
 
 import "../app/globals.css";
 import { ReactNode } from "react";
-import { GithubIcon } from "lucide-react";
+import { GithubIcon, Link } from "lucide-react";
 import { AppSidebar } from "../components/app-sidebar";
 import { SidebarProvider } from "../components/ui/sidebar";
 import { ModeToggle } from "../components/mode-toggle";
 import { ThemeProvider } from "../components/theme-provider";
+import Image from "next/image";
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/Logo.jpg" type="image/jpg" />
+      </head>
       <body className="bg-background text-foreground min-h-screen flex">
         <ThemeProvider>
           <SidebarProvider>

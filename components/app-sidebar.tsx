@@ -23,14 +23,18 @@ export function AppSidebar() {
     <Sidebar>
       <SidebarContent>
         <div className="flex items-center gap-3 px-4 py-4 border-b border-zinc-200 dark:border-zinc-800">
-          <img
-            src="/Logo.jpg"
-            alt="Logo"
-            width={32}
-            height={32}
-            className="rounded-lg shadow"
-          />
-          <span className="font-bold text-lg tracking-tight">KatestroyUI</span>
+          <Link href="/" className="flex items-center gap-2">
+            <img
+              src="/Logo.jpg"
+              alt="Logo"
+              width={32}
+              height={32}
+              className="rounded-lg shadow"
+            />
+            <span className="font-bold text-lg tracking-tight">
+              KatestroyUI
+            </span>
+          </Link>
         </div>
         <SidebarGroup>
           <SidebarGroupLabel>Componentler</SidebarGroupLabel>
