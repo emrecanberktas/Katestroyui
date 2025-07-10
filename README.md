@@ -1,6 +1,6 @@
 # KatestroyUI
 
-KatestroyUI,React, TypeScript, Tailwind CSS, ve Motion kullanarak, animasyonlu ve kullanımı kolay React bileşenleri sunan açık kaynaklı bir UI kütüphanesidir.
+KatestroyUI React, TypeScript, Tailwind CSS, ve Motion kullanarak, animasyonlu ve kullanımı kolay React bileşenleri sunan açık kaynaklı bir UI kütüphanesidir.
 ![Logo](public/Logo.png)
 
 ## Özellikler
