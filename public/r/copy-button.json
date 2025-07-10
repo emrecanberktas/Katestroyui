@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "copy-button",
+  "type": "registry:component",
+  "title": "Copy Button",
+  "description": "UI component for Copy Button.",
+  "files": [
+    {
+      "path": "components/ui/copy-button.tsx",
+      "content": "import { Button } from \"@/components/ui/button\";\r\nimport { cn } from \"@/lib/utils\";\r\nimport { AnimatePresence, motion } from \"motion/react\";\r\nimport { useState } from \"react\";\r\nimport { CheckIcon, CopyIcon } from \"lucide-react\";\r\n\r\nfunction CopyButton({\r\n  content,\r\n  className,\r\n}: {\r\n  content: string;\r\n  className?: string;\r\n}) {\r\n  const [copied, setCopied] = useState(false);\r\n\r\n  const handleCopy = () => {\r\n    navigator.clipboard.writeText(content);\r\n    setCopied(true);\r\n    setTimeout(() => setCopied(false), 2000);\r\n  };\r\n\r\n  const variants = {\r\n    hidden: { opacity: 0, scale: 0.5 },\r\n    visible: { opacity: 1, scale: 1 },\r\n  };\r\n\r\n  return (\r\n    <Button\r\n      className={cn(\r\n        \"bg-muted text-muted-foreground hover:bg-muted/80 hover:text-muted-foreground/80\",\r\n        className\r\n      )}\r\n      onClick={handleCopy}\r\n      variant=\"ghost\"\r\n      size=\"icon\"\r\n    >\r\n      <AnimatePresence mode=\"wait\" initial={false}>\r\n        {copied ? (\r\n          <motion.span\r\n            key=\"copied\"\r\n            variants={variants}\r\n            initial=\"hidden\"\r\n            animate=\"visible\"\r\n            exit=\"hidden\"\r\n          >\r\n            <CheckIcon className=\"size-4\" />\r\n          </motion.span>\r\n        ) : (\r\n          <motion.span\r\n            key=\"copy\"\r\n            variants={variants}\r\n            initial=\"hidden\"\r\n            animate=\"visible\"\r\n            exit=\"hidden\"\r\n          >\r\n            <CopyIcon className=\"size-4\" />\r\n          </motion.span>\r\n        )}\r\n      </AnimatePresence>\r\n    </Button>\r\n  );\r\n}\r\n\r\nexport { CopyButton };\r\n",
+      "type": "registry:component"
+    }
+  ]
+}

@@ -6,7 +6,7 @@
   "description": "UI component for Skeleton.",
   "files": [
     {
-      "path": "registry/new-york/ui/skeleton.tsx",
+      "path": "components/ui/skeleton.tsx",
       "content": "import { motion } from \"motion/react\";\nimport { cn } from \"@/lib/utils\";\n\nfunction Skeleton({\n  className,\n  ...props\n}: React.ComponentProps<typeof motion.div>) {\n  return (\n    <motion.div\n      data-slot=\"skeleton\"\n      className={cn(\n        \"bg-neutral-200 dark:bg-accent rounded-md relative overflow-hidden\",\n        className\n      )}\n      animate={{\n        opacity: [0.6, 1, 0.6],\n      }}\n      transition={{\n        repeat: Infinity,\n        duration: 1.5,\n        ease: \"easeInOut\",\n      }}\n      {...props}\n    >\n      <motion.div\n        className=\"absolute inset-0 bg-gradient-to-r from-transparent via-white/70 to-transparent dark:via-white/30\"\n        animate={{\n          x: [\"-100%\", \"100%\"],\n        }}\n        transition={{\n          repeat: Infinity,\n          duration: 1.2,\n          ease: \"linear\",\n        }}\n      />\n    </motion.div>\n  );\n}\n\nexport { Skeleton };\n",
       "type": "registry:component"
     }

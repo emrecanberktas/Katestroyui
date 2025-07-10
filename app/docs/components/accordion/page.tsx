@@ -37,10 +37,10 @@ export default function Example() {
 }`;
 
 const cliCommands = {
-  pnpm: "pnpm dlx shadcn@latest add accordion",
-  npm: "npx shadcn@latest add accordion",
-  yarn: "yarn dlx shadcn@latest add accordion",
-  bun: "bunx shadcn@latest add accordion",
+  pnpm: "pnpm dlx shadcn@latest add https://www.katestroyui.com/r/accordion",
+  npm: "npx shadcn@latest add https://www.katestroyui.com/r/accordion",
+  yarn: "yarn dlx shadcn@latest add https://www.katestroyui.com/r/accordion",
+  bun: "bunx shadcn@latest add https://www.katestroyui.com/r/accordion",
 };
 
 const manualCommands = {

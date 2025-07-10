@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "loading-button",
+  "type": "registry:component",
+  "title": "Loading Button",
+  "description": "UI component for Loading Button.",
+  "files": [
+    {
+      "path": "components/ui/loading-button.tsx",
+      "content": "import { Button } from \"@/components/ui/button\";\r\nimport { cn } from \"@/lib/utils\";\r\nimport { AnimatePresence, motion } from \"motion/react\";\r\nimport { Loader2Icon } from \"lucide-react\";\r\n\r\ninterface LoadingButtonProps {\r\n  state?: \"idle\" | \"loading\" | \"success\";\r\n  onClick?: () => void;\r\n  idleText?: React.ReactNode;\r\n  loadingIndicator?: React.ReactNode;\r\n  successText?: React.ReactNode;\r\n  className?: string;\r\n  disabled?: boolean;\r\n}\r\n\r\nfunction LoadingButton({\r\n  state = \"idle\",\r\n  onClick,\r\n  idleText = \"Form Submit\",\r\n  loadingIndicator = <Loader2Icon className=\"animate-spin\" />,\r\n  successText = \"Form Submitted!\",\r\n  className,\r\n  disabled,\r\n}: LoadingButtonProps) {\r\n  const contentMap: Record<string, React.ReactNode> = {\r\n    idle: idleText,\r\n    loading: loadingIndicator,\r\n    success: successText,\r\n  };\r\n\r\n  const variants = {\r\n    initial: { opacity: 0, y: -25 },\r\n    visible: { opacity: 1, y: 0 },\r\n    exit: { opacity: 0, y: 25 },\r\n  };\r\n\r\n  return (\r\n    <Button\r\n      onClick={onClick}\r\n      disabled={disabled ?? state !== \"idle\"}\r\n      className={cn(\r\n        \"bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md font-medium relative overflow-hidden\",\r\n        \"disabled:opacity-50 disabled:cursor-not-allowed transition-all min-w-[180px] flex items-center justify-center\",\r\n        className\r\n      )}\r\n    >\r\n      <AnimatePresence mode=\"popLayout\" initial={false}>\r\n        <motion.span\r\n          key={state}\r\n          initial=\"initial\"\r\n          animate=\"visible\"\r\n          exit=\"exit\"\r\n          variants={variants}\r\n          transition={{ type: \"spring\", duration: 0.3, bounce: 0 }}\r\n        >\r\n          {contentMap[state]}\r\n        </motion.span>\r\n      </AnimatePresence>\r\n    </Button>\r\n  );\r\n}\r\n\r\nexport { LoadingButton };\r\n",
+      "type": "registry:component"
+    }
+  ]
+}

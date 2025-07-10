@@ -9,6 +9,7 @@ import {
   SidebarMenuButton,
 } from "@/components/ui/sidebar";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import registry from "../registry.json";
 
 function getUIComponents() {
@@ -17,6 +18,7 @@ function getUIComponents() {
 
 export function AppSidebar() {
   const uiComponents = getUIComponents();
+  const pathname = usePathname();
   return (
     <Sidebar>
       <SidebarContent>
@@ -33,16 +35,19 @@ export function AppSidebar() {
         <SidebarGroup>
           <SidebarGroupLabel>Componentler</SidebarGroupLabel>
           <SidebarMenu>
-            {uiComponents.map((comp: { name: string; title: string }) => (
-              <SidebarMenuItem key={comp.name}>
-                <SidebarMenuButton asChild>
-                  <Link href={`/docs/components/${comp.name}`}>
-                    {/* İleride ikon eklenebilir */}
-                    <span>{comp.title}</span>
-                  </Link>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-            ))}
+            {uiComponents.map((comp: { name: string; title: string }) => {
+              const isActive = pathname === `/docs/components/${comp.name}`;
+              return (
+                <SidebarMenuItem key={comp.name}>
+                  <SidebarMenuButton asChild isActive={isActive}>
+                    <Link href={`/docs/components/${comp.name}`}>
+                      {/* İleride ikon eklenebilir */}
+                      <span>{comp.title}</span>
+                    </Link>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              );
+            })}
           </SidebarMenu>
         </SidebarGroup>
       </SidebarContent>

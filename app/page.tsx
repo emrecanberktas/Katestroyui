@@ -108,8 +108,7 @@ export default function Home() {
       <section className="w-full max-w-2xl mt-16 flex flex-col items-center gap-6">
         <h2 className="text-2xl font-bold">Hızlı Başlangıç</h2>
         <CodeBlock
-          code={`pnpm dlx shadcn@latest add accordion
-pnpm install motion`}
+          code={`pnpm dlx shadcn@latest add https://www.katestroyui.com/r/accordion`}
         />
         <span className="text-muted-foreground text-sm">
           <b>Not:</b> Her bileşenin dökümanında kurulum ve kullanım detaylarını
