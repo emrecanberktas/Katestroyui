@@ -4,14 +4,10 @@ import path from "path";
 
 export async function GET(
   req: NextRequest,
-  { params }: { params: { component: string } }
+  context: { params: { component: string } }
 ) {
-  const filePath = path.join(
-    process.cwd(),
-    "public",
-    "r",
-    `${params.component}.json`
-  );
+  const { component } = context.params;
+  const filePath = path.join(process.cwd(), "public", "r", `${component}.json`);
 
   try {
     const file = await fs.readFile(filePath, "utf-8");
