@@ -4,6 +4,7 @@
   "type": "registry:component",
   "title": "Radio Group",
   "description": "UI component for Radio Group.",
+  "dependencies": ["@radix-ui/react-radio-group", "motion"],
   "files": [
     {
       "path": "components/ui/radio-group.tsx",

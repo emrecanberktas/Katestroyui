@@ -4,6 +4,7 @@
   "type": "registry:component",
   "title": "Context Menu",
   "description": "UI component for Context Menu.",
+  "dependencies": ["@radix-ui/react-context-menu", "motion"],
   "files": [
     {
       "path": "components/ui/context-menu.tsx",

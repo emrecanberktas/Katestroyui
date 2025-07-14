@@ -4,6 +4,7 @@
   "type": "registry:component",
   "title": "Skeleton",
   "description": "UI component for Skeleton.",
+  "dependencies": ["motion"],
   "files": [
     {
       "path": "components/ui/skeleton.tsx",

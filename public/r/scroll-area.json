@@ -4,6 +4,7 @@
   "type": "registry:component",
   "title": "Scroll Area",
   "description": "UI component for Scroll Area.",
+  "dependencies": ["@radix-ui/react-scroll-area", "motion"],
   "files": [
     {
       "path": "components/ui/scroll-area.tsx",

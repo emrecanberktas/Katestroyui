@@ -4,6 +4,7 @@
   "type": "registry:component",
   "title": "Collapsible",
   "description": "UI component for Collapsible.",
+  "dependencies": ["@radix-ui/react-collapsible", "motion"],
   "files": [
     {
       "path": "components/ui/collapsible.tsx",

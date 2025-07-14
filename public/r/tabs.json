@@ -4,6 +4,7 @@
   "type": "registry:component",
   "title": "Tabs",
   "description": "UI component for Tabs.",
+  "dependencies": ["@radix-ui/react-tabs", "motion"],
   "files": [
     {
       "path": "components/ui/tabs.tsx",

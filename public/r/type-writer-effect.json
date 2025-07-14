@@ -4,6 +4,7 @@
   "type": "registry:component",
   "title": "Type Writer Effect",
   "description": "UI component for Type Writer Effect.",
+  "dependencies": ["motion"],
   "files": [
     {
       "path": "components/ui/type-writer-effect.tsx",

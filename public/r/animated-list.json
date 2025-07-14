@@ -4,6 +4,7 @@
   "type": "registry:component",
   "title": "Animated List",
   "description": "UI component for Animated List.",
+  "dependencies": ["motion"],
   "files": [
     {
       "path": "components/ui/animated-list.tsx",

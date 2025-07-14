@@ -4,6 +4,7 @@
   "type": "registry:component",
   "title": "Dialog",
   "description": "UI component for Dialog.",
+  "dependencies": ["@radix-ui/react-dialog", "motion"],
   "files": [
     {
       "path": "components/ui/dialog.tsx",

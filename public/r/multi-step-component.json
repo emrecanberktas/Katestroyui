@@ -4,6 +4,7 @@
   "type": "registry:component",
   "title": "Multi Step Component",
   "description": "UI component for Multi Step Component.",
+  "dependencies": ["motion"],
   "files": [
     {
       "path": "components/ui/multi-step-component.tsx",

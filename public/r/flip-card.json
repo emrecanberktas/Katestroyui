@@ -4,6 +4,7 @@
   "type": "registry:component",
   "title": "Flip Card",
   "description": "UI component for Flip Card.",
+  "dependencies": ["motion"],
   "files": [
     {
       "path": "components/ui/flip-card.tsx",

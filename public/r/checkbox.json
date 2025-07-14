@@ -4,6 +4,7 @@
   "type": "registry:component",
   "title": "Checkbox",
   "description": "UI component for Checkbox.",
+  "dependencies": ["@radix-ui/react-checkbox", "motion"],
   "files": [
     {
       "path": "components/ui/checkbox.tsx",

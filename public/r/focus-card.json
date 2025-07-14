@@ -4,6 +4,7 @@
   "type": "registry:component",
   "title": "Focus Card",
   "description": "UI component for Focus Card.",
+  "dependencies": ["motion"],
   "files": [
     {
       "path": "components/ui/focus-card.tsx",

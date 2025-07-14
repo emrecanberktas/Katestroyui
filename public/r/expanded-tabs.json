@@ -4,6 +4,7 @@
   "type": "registry:component",
   "title": "Expanded Tabs",
   "description": "UI component for Expanded Tabs.",
+  "dependencies": ["@radix-ui/react-tabs", "motion"],
   "files": [
     {
       "path": "components/ui/expanded-tabs.tsx",
