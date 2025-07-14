@@ -127,12 +127,33 @@
       ]
     },
     {
+      "name": "expanded-tabs",
+      "type": "registry:component",
+      "title": "Expanded Tabs",
+      "description": "UI component for Expanded Tabs.",
+      "files": [
+        {
+          "path": "components/ui/expanded-tabs.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "flip-card",
       "type": "registry:component",
       "title": "Flip Card",
       "description": "UI component for Flip Card.",
       "files": [
         { "path": "components/ui/flip-card.tsx", "type": "registry:component" }
+      ]
+    },
+    {
+      "name": "focus-card",
+      "type": "registry:component",
+      "title": "Focus Card",
+      "description": "UI component for Focus Card.",
+      "files": [
+        { "path": "components/ui/focus-card.tsx", "type": "registry:component" }
       ]
     },
     {
