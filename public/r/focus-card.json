@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "focus-card",
+  "type": "registry:component",
+  "title": "Focus Card",
+  "description": "UI component for Focus Card.",
+  "files": [
+    {
+      "path": "components/ui/focus-card.tsx",
+      "content": "import { motion } from \"motion/react\";\r\nimport { cn } from \"@/lib/utils\";\r\nimport { useState } from \"react\";\r\n\r\ninterface Card {\r\n  title?: string;\r\n  src?: string;\r\n}\r\n\r\nexport function Card({\r\n  card,\r\n  className,\r\n  hovered,\r\n  setHovered,\r\n  index,\r\n}: {\r\n  card: Card;\r\n  className?: string;\r\n  hovered: number | null;\r\n  setHovered: (index: number | null) => void;\r\n  index: number;\r\n}) {\r\n  return (\r\n    <motion.div\r\n      className={cn(\r\n        \"rounded-lg relative h-64 w-full overflow-hidden\",\r\n        className\r\n      )}\r\n      transition={{\r\n        ease: \"easeInOut\",\r\n        duration: 0.3,\r\n      }}\r\n      animate={{\r\n        filter:\r\n          hovered !== null && hovered !== index ? \"blur(10px)\" : \"blur(0px)\",\r\n        scale: hovered !== null && hovered !== index ? 0.95 : 1,\r\n      }}\r\n      onMouseEnter={() => setHovered(index)}\r\n      onMouseLeave={() => setHovered(null)}\r\n    >\r\n      <img\r\n        src={card.src}\r\n        alt={card.title}\r\n        className=\"object-cover absolute inset-0 w-full h-full rounded-lg\"\r\n      />\r\n      <motion.div\r\n        className=\"absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent px-4 py-6 z-10 flex items-end\"\r\n        transition={{\r\n          ease: \"easeInOut\",\r\n          duration: 0.3,\r\n        }}\r\n        animate={{\r\n          opacity: hovered === index ? 1 : 0,\r\n        }}\r\n      >\r\n        <h3 className=\"text-white text-2xl font-bold w-full\">{card.title}</h3>\r\n      </motion.div>\r\n    </motion.div>\r\n  );\r\n}\r\n\r\nexport function FocusCard({ cards }: { cards: Card[] }) {\r\n  const [hovered, setHovered] = useState<number | null>(null);\r\n  return (\r\n    <div className=\"grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto md:px-8 w-full\">\r\n      {cards.map((card, index) => (\r\n        <Card\r\n          key={card.title}\r\n          card={card}\r\n          hovered={hovered}\r\n          setHovered={setHovered}\r\n          index={index}\r\n        />\r\n      ))}\r\n    </div>\r\n  );\r\n}\r\n",
+      "type": "registry:component"
+    }
+  ]
+}
