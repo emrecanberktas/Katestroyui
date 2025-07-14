@@ -1,13 +1,14 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "acme",
-  "homepage": "https://acme.com",
+  "name": "katestroyui",
+  "homepage": "https://katestroyui.com",
   "items": [
     {
       "name": "accordion",
       "type": "registry:component",
       "title": "Accordion",
       "description": "UI component for Accordion.",
+      "dependencies": ["@radix-ui/react-accordion", "motion/react"],
       "files": [
         { "path": "components/ui/accordion.tsx", "type": "registry:component" }
       ]
