@@ -4,6 +4,7 @@
   "type": "registry:component",
   "title": "Accordion",
   "description": "UI component for Accordion.",
+  "dependencies": ["@radix-ui/react-accordion", "motion"],
   "files": [
     {
       "path": "components/ui/accordion.tsx",
