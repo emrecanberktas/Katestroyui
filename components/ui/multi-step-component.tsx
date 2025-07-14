@@ -12,6 +12,7 @@ import {
   CardFooter,
 } from "./card";
 import { Button } from "./button";
+import { Check } from "lucide-react";
 
 interface Step {
   title: string;
@@ -30,6 +31,74 @@ interface MultiStepProps {
   onNext?: (currentStep: number) => void;
   onBack?: (currentStep: number) => void;
   onComplete?: () => void;
+}
+
+function Stepper({
+  steps,
+  currentStep,
+}: {
+  steps: Step[];
+  currentStep: number;
+}) {
+  return (
+    <div className="flex items-center justify-center gap-2 mb-6 select-none">
+      {steps.map((_, idx) => (
+        <React.Fragment key={idx}>
+          <motion.div
+            initial={false}
+            animate={{
+              backgroundColor:
+                idx === currentStep
+                  ? "#2563eb" // blue-600
+                  : idx < currentStep
+                  ? "#22c55e" // green-500
+                  : "#e5e7eb", // zinc-200
+              borderColor:
+                idx === currentStep
+                  ? "#2563eb"
+                  : idx < currentStep
+                  ? "#22c55e"
+                  : "#e5e7eb",
+              scale: idx === currentStep ? 1.1 : 1,
+              boxShadow:
+                idx === currentStep
+                  ? "0 2px 8px 0 rgba(37,99,235,0.15)"
+                  : "none",
+            }}
+            transition={{ type: "spring", bounce: 0.3, duration: 0.4 }}
+            className={
+              "flex items-center justify-center w-8 h-8 rounded-full border-2 border-zinc-200 dark:border-zinc-700 relative z-10 bg-white dark:bg-zinc-900"
+            }
+          >
+            {idx < currentStep && (
+              <motion.span
+                initial={{ scale: 0, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0, opacity: 0 }}
+                transition={{ type: "spring", bounce: 0.5, duration: 0.3 }}
+                className="text-green-600 dark:text-green-400 text-xl font-bold"
+                style={{ lineHeight: 1 }}
+              >
+                <Check size={16} className="text-white dark:text-white" />
+              </motion.span>
+            )}
+          </motion.div>
+          {idx < steps.length - 1 && (
+            <motion.div
+              initial={false}
+              animate={{
+                backgroundColor: idx < currentStep ? "#22c55e" : "#e5e7eb",
+                scaleY: 1,
+              }}
+              transition={{ type: "spring", bounce: 0.3, duration: 0.4 }}
+              className="h-1 w-6 sm:w-10 rounded bg-zinc-200 dark:bg-zinc-700"
+              style={{ margin: "0 2px" }}
+            />
+          )}
+        </React.Fragment>
+      ))}
+    </div>
+  );
 }
 
 function MultiStep({
@@ -95,6 +164,7 @@ function MultiStep({
       )}
     >
       <MotionConfig transition={transition}>
+        <Stepper steps={steps} currentStep={currentStep} />
         <CardHeader className="text-center">
           <CardTitle className="text-xl sm:text-2xl font-semibold">
             <AnimatePresence
