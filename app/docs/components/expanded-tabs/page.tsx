@@ -112,7 +112,7 @@ export default function ExpandedTabsDocs() {
                   <h2 className="text-2xl font-semibold"> Profiliniz</h2>
                   <p className="text-muted-foreground">
                     Kişisel bilgilerinizi yönetin, yeni bir avatar yükleyin veya
-                    bio'nızı güncelleyin.
+                    bio&apos;nızı güncelleyin.
                   </p>
                   <div className="flex items-center gap-4">
                     <img
