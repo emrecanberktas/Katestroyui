@@ -73,11 +73,11 @@ export function TerminalBlock({
         </div>
       </div>
 
-      <div className="flex items-center gap-2 px-4 py-3 min-h-[32px] overflow-hidden">
+      <div className="flex items-center gap-2 px-3 sm:px-4 py-3 min-h-[32px] overflow-hidden">
         <AnimatePresence mode="popLayout" initial={false} custom={direction}>
           <motion.code
             key={activeTab}
-            className="whitespace-pre-wrap break-words text-sm w-full block"
+            className="whitespace-pre-wrap break-words text-xs sm:text-sm w-full block"
             variants={variants}
             initial="initial"
             animate="animate"

@@ -119,4 +119,35 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Mobile-specific improvements */
+  @media (max-width: 640px) {
+    /* Improve touch targets */
+    button,
+    [role="button"] {
+      min-height: 44px;
+      min-width: 44px;
+    }
+
+    /* Better text readability on mobile */
+    p,
+    span,
+    div {
+      line-height: 1.6;
+    }
+
+    /* Improve table readability on mobile */
+    table {
+      font-size: 0.875rem;
+    }
+
+    /* Better spacing for mobile */
+    .space-y-4 > * + * {
+      margin-top: 1rem;
+    }
+
+    .space-y-6 > * + * {
+      margin-top: 1.5rem;
+    }
+  }
 }

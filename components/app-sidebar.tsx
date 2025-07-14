@@ -23,7 +23,7 @@ export function AppSidebar() {
     <Sidebar>
       <SidebarContent>
         <div className="flex items-center gap-3 px-4 py-4 border-b border-zinc-200 dark:border-zinc-800">
-          <Link href="/" className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-2 ">
             <img
               src="/Logo.png"
               alt="Logo"
@@ -43,7 +43,11 @@ export function AppSidebar() {
               const isActive = pathname === `/docs/components/${comp.name}`;
               return (
                 <SidebarMenuItem key={comp.name}>
-                  <SidebarMenuButton asChild isActive={isActive}>
+                  <SidebarMenuButton
+                    asChild
+                    isActive={isActive}
+                    className="min-h-[44px]"
+                  >
                     <Link href={`/docs/components/${comp.name}`}>
                       {/* İleride ikon eklenebilir */}
                       <span>{comp.title}</span>

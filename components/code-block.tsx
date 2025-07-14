@@ -29,7 +29,7 @@ export const CodeBlock: React.FC<CodeBlockProps> = ({
       >
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
           <pre
-            className={`${className} text-sm overflow-auto p-4`}
+            className={`${className} text-xs sm:text-sm overflow-auto p-3 sm:p-4`}
             style={style}
           >
             {tokens.map((line, i) => {

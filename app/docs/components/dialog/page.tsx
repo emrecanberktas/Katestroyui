@@ -68,10 +68,10 @@ const manualCommands = {
 
 export default function DialogDocs() {
   return (
-    <div className="max-w-2xl mx-auto py-10 px-4 flex flex-col gap-10">
+    <div className="max-w-2xl mx-auto py-6 sm:py-10 px-4 sm:px-6 flex flex-col gap-6 sm:gap-10">
       <div className="mb-4">
-        <h1 className="text-3xl font-bold mb-3">Dialog</h1>
-        <p className="text-muted-foreground text-lg">
+        <h1 className="text-2xl sm:text-3xl font-bold mb-2 sm:mb-3">Dialog</h1>
+        <p className="text-muted-foreground text-base sm:text-lg">
           Animasyonlu, erişilebilir ve özelleştirilebilir bir Dialog componenti.
         </p>
       </div>

@@ -52,22 +52,28 @@ const manualCommands = {
 
 export default function AccordionDocs() {
   return (
-    <div className="max-w-2xl mx-auto py-10 px-4 flex flex-col gap-10">
+    <div className="max-w-2xl mx-auto py-6 sm:py-10 px-4 sm:px-6 flex flex-col gap-6 sm:gap-10">
       <div className="mb-4">
-        <h1 className="text-3xl font-bold mb-3">Accordion</h1>
-        <p className="text-muted-foreground text-lg">
+        <h1 className="text-2xl sm:text-3xl font-bold mb-2 sm:mb-3">
+          Accordion
+        </h1>
+        <p className="text-muted-foreground text-base sm:text-lg">
           Animasyonlu, erişilebilir ve özelleştirilebilir bir Accordion
           componenti.
         </p>
       </div>
 
       <Tabs defaultValue="demo">
-        <TabsList className="mb-3">
-          <TabsTrigger value="demo">Canlı Demo</TabsTrigger>
-          <TabsTrigger value="code">Kod</TabsTrigger>
+        <TabsList className="mb-3 ">
+          <TabsTrigger value="demo" className="flex-1 sm:flex-none">
+            Canlı Demo
+          </TabsTrigger>
+          <TabsTrigger value="code" className="flex-1 sm:flex-none">
+            Kod
+          </TabsTrigger>
         </TabsList>
         <TabsContent value="demo">
-          <div className="bg-background border rounded-lg p-6 shadow flex flex-col gap-4 mb-6">
+          <div className="bg-background border rounded-lg p-4 sm:p-6 shadow flex flex-col gap-4 mb-6">
             <Accordion type="single" defaultValue="item-1">
               <AccordionItem value="item-1">
                 <AccordionTrigger>Accordion Başlık</AccordionTrigger>
@@ -85,18 +91,22 @@ export default function AccordionDocs() {
           </div>
         </TabsContent>
         <TabsContent value="code">
-          <div className="rounded-lg p-4 text-sm font-mono relative mt-2 overflow-x-auto border shadow mb-6">
+          <div className="rounded-lg p-2 sm:p-4 text-sm font-mono relative mt-2 overflow-x-auto border shadow mb-6">
             <CodeBlock code={codeExample} />
           </div>
         </TabsContent>
       </Tabs>
 
       <div className="mt-2 mb-8">
-        <h2 className="text-xl font-semibold mb-4">Kurulum</h2>
+        <h2 className="text-lg sm:text-xl font-semibold mb-4">Kurulum</h2>
         <Tabs defaultValue="cli">
           <TabsList className="mb-3">
-            <TabsTrigger value="cli">CLI</TabsTrigger>
-            <TabsTrigger value="manual">Manual</TabsTrigger>
+            <TabsTrigger value="cli" className="flex-1 sm:flex-none">
+              CLI
+            </TabsTrigger>
+            <TabsTrigger value="manual" className="flex-1 sm:flex-none">
+              Manual
+            </TabsTrigger>
           </TabsList>
           <TabsContent value="cli">
             <div className="mb-6">
@@ -104,7 +114,7 @@ export default function AccordionDocs() {
             </div>
           </TabsContent>
           <TabsContent value="manual">
-            <p className="text-muted-foreground text-base mb-4">
+            <p className="text-muted-foreground text-sm sm:text-base mb-4">
               Aşağıdaki bağımlılıkları yükleyin:
             </p>
             <div className="mb-6">
@@ -295,8 +305,8 @@ export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };
       </div>
 
       <div className="mt-2 mb-8">
-        <h2 className="text-xl font-semibold mb-4">Kullanım</h2>
-        <div className="bg-background border rounded-lg p-6 shadow mb-6">
+        <h2 className="text-lg sm:text-xl font-semibold mb-4">Kullanım</h2>
+        <div className="bg-background border rounded-lg p-4 sm:p-6 shadow mb-6">
           <CodeBlock
             code={`
 import {
@@ -318,47 +328,57 @@ import {
       </div>
 
       <div className="mt-2 mb-8">
-        <h2 className="text-xl font-semibold mb-4">Props</h2>
-        <div className="overflow-x-auto bg-background border rounded-lg p-4 shadow">
-          <table className="min-w-full text-sm border rounded-lg overflow-hidden">
+        <h2 className="text-lg sm:text-xl font-semibold mb-4">Props</h2>
+        <div className="overflow-x-auto bg-background border rounded-lg p-2 sm:p-4 shadow">
+          <table className="min-w-full text-xs sm:text-sm border rounded-lg overflow-hidden">
             <thead className="bg-zinc-100 dark:bg-zinc-800">
               <tr>
-                <th className="px-4 py-2 text-left">Prop</th>
-                <th className="px-4 py-2 text-left">Tip</th>
-                <th className="px-4 py-2 text-left">Açıklama</th>
-                <th className="px-4 py-2 text-left">Varsayılan</th>
+                <th className="px-2 sm:px-4 py-2 text-left">Prop</th>
+                <th className="px-2 sm:px-4 py-2 text-left">Tip</th>
+                <th className="px-2 sm:px-4 py-2 text-left">Açıklama</th>
+                <th className="px-2 sm:px-4 py-2 text-left">Varsayılan</th>
               </tr>
             </thead>
             <tbody>
               <tr className="border-t">
-                <td className="px-4 py-2 font-mono">type</td>
-                <td className="px-4 py-2 font-mono">
+                <td className="px-2 sm:px-4 py-2 font-mono">type</td>
+                <td className="px-2 sm:px-4 py-2 font-mono">
                   &quot;single&quot; | &quot;multiple&quot;
                 </td>
-                <td className="px-4 py-2">
+                <td className="px-2 sm:px-4 py-2">
                   Accordion tipi (tekli veya çoklu seçim)
                 </td>
-                <td className="px-4 py-2">&quot;single&quot;</td>
+                <td className="px-2 sm:px-4 py-2">&quot;single&quot;</td>
               </tr>
               <tr className="border-t">
-                <td className="px-4 py-2 font-mono">defaultValue</td>
-                <td className="px-4 py-2 font-mono">string | string[]</td>
-                <td className="px-4 py-2">Başlangıçta açık olan item(lar)</td>
-                <td className="px-4 py-2">-</td>
+                <td className="px-2 sm:px-4 py-2 font-mono">defaultValue</td>
+                <td className="px-2 sm:px-4 py-2 font-mono">
+                  string | string[]
+                </td>
+                <td className="px-2 sm:px-4 py-2">
+                  Başlangıçta açık olan item(lar)
+                </td>
+                <td className="px-2 sm:px-4 py-2">-</td>
               </tr>
               <tr className="border-t">
-                <td className="px-4 py-2 font-mono">value</td>
-                <td className="px-4 py-2 font-mono">string | string[]</td>
-                <td className="px-4 py-2">
+                <td className="px-2 sm:px-4 py-2 font-mono">value</td>
+                <td className="px-2 sm:px-4 py-2 font-mono">
+                  string | string[]
+                </td>
+                <td className="px-2 sm:px-4 py-2">
                   Kontrollü değer (controlled usage)
                 </td>
-                <td className="px-4 py-2">-</td>
+                <td className="px-2 sm:px-4 py-2">-</td>
               </tr>
               <tr className="border-t">
-                <td className="px-4 py-2 font-mono">onValueChange</td>
-                <td className="px-4 py-2 font-mono">(value) =&gt; void</td>
-                <td className="px-4 py-2">Değer değiştiğinde çağrılır</td>
-                <td className="px-4 py-2">-</td>
+                <td className="px-2 sm:px-4 py-2 font-mono">onValueChange</td>
+                <td className="px-2 sm:px-4 py-2 font-mono">
+                  (value) =&gt; void
+                </td>
+                <td className="px-2 sm:px-4 py-2">
+                  Değer değiştiğinde çağrılır
+                </td>
+                <td className="px-2 sm:px-4 py-2">-</td>
               </tr>
             </tbody>
           </table>
