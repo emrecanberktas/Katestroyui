@@ -119,7 +119,8 @@ export default function Home() {
           />
         </div>
         <span className="text-muted-foreground text-xs sm:text-sm text-center">
-          Find installation and usage details in each component's documentation.
+          Find installation and usage details in each component&apos;s
+          documentation.
         </span>
       </section>
 
