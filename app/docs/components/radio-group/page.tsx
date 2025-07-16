@@ -9,7 +9,7 @@ import React from "react";
 const codeExample = `import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import React from "react";
 
-function Example() {
+export function Example() {
   const [value, setValue] = React.useState("option1");
   return (
     <RadioGroup value={value} onValueChange={setValue}>
@@ -79,15 +79,20 @@ export default function RadioGroupDocs() {
             </div>
           </TabsContent>
           <TabsContent value="manual">
-            <p className="text-muted-foreground text-base mb-4">
+            <p className="text-base mb-4 font-bold">
               Install the following dependencies:
             </p>
             <div className="mb-6">
               <TerminalBlock commands={manualCommands} />
             </div>
+            <p className="text-base mb-4 font-bold">
+              Copy and paste the following code into your project:
+            </p>
             <div className="mb-6">
               <CodeBlock
-                code={`import * as React from "react";
+                code={` 'use client';
+                  
+import * as React from "react";
 import * as RadioGroupPrimitive from "@radix-ui/react-radio-group";
 import { CircleIcon } from "lucide-react";
 

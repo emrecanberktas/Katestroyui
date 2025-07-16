@@ -17,7 +17,7 @@ const codeExample = `import {
   AccordionContent,
 } from "@/components/ui/accordion";
 
-export default function Example() {
+export function Example() {
   return (
     <Accordion type="single" defaultValue="item-1">
       <AccordionItem value="item-1">
@@ -44,9 +44,9 @@ const cliCommands = {
 };
 
 const manualCommands = {
+  pnpm: "pnpm install @radix-ui/react-accordion motion",
   npm: "npm install @radix-ui/react-accordion motion",
   yarn: "yarn add @radix-ui/react-accordion motion",
-  pnpm: "pnpm install @radix-ui/react-accordion motion",
   bun: "bun add @radix-ui/react-accordion motion",
 };
 
@@ -119,16 +119,20 @@ export default function AccordionDocs() {
             </div>
           </TabsContent>
           <TabsContent value="manual">
-            <p className="text-muted-foreground text-base mb-4">
+            <p className="text-base mb-4 font-bold">
               Install the following dependencies:
             </p>
             <div className="mb-6">
               <TerminalBlock commands={manualCommands} />
             </div>
+            <p className="text-base mb-4 font-bold">
+              Copy and paste the following code into your project:
+            </p>
             <div className="mb-6">
               <CodeBlock
-                code={`
-                import * as React from "react";
+                code={` 'use client'
+                  
+import * as React from "react";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import { ChevronDownIcon } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";

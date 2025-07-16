@@ -17,7 +17,7 @@ import { Button } from "@/components/ui/button";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import React from "react";
 
-function Example() {
+export function Example() {
   const [name, setName] = React.useState("");
   const [prefs, setPrefs] = React.useState({ email: false, sms: false, push: false });
   const [gender, setGender] = React.useState("");
@@ -85,6 +85,13 @@ const cliCommands = {
   npm: "npx shadcn@latest add https://www.katestroyui.com/r/multi-step-component",
   yarn: "yarn dlx shadcn@latest add https://www.katestroyui.com/r/multi-step-component",
   bun: "bunx shadcn@latest add https://www.katestroyui.com/r/multi-step-component",
+};
+
+const registeryCommands = {
+  pnpm: "pnpm dlx shadcn@latest add https://www.katestroyui.com/r/button",
+  npm: "npx shadcn@latest add https://www.katestroyui.com/r/button",
+  yarn: "yarn dlx shadcn@latest add https://www.katestroyui.com/r/button",
+  bun: "bunx shadcn@latest add https://www.katestroyui.com/r/button",
 };
 
 const manualCommands = {
@@ -212,15 +219,26 @@ export default function MultiStepComponentDocs() {
             </div>
           </TabsContent>
           <TabsContent value="manual">
-            <p className="text-muted-foreground text-base mb-4">
+            <p className="text-base mb-4 font-bold">
               Install the following dependencies:
             </p>
             <div className="mb-6">
               <TerminalBlock commands={manualCommands} />
             </div>
+            <p className="text-base mb-4 font-bold">
+              Install the following registry dependencies:
+            </p>
+            <div className="mb-6">
+              <TerminalBlock commands={registeryCommands} />
+            </div>
+            <p className="text-base mb-4 font-bold">
+              Copy and paste the following code into your project:
+            </p>
             <div className="mb-6">
               <CodeBlock
-                code={`import * as React from "react";
+                code={` 'use client';
+                  
+import * as React from "react";
 import { useState, useMemo } from "react";
 import { motion, AnimatePresence, MotionConfig } from "motion/react";
 import type { Transition } from "motion";

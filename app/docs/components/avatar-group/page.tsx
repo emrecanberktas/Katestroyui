@@ -16,7 +16,14 @@ const avatars = [
   { src: "/avatars/6.jpg", alt: "Frank" },
 ];
 
-<AvatarGroup avatars={avatars} max={5} size="lg" />
+export function Example() {
+
+return (
+  <div className="bg-background border rounded-lg p-6 shadow flex flex-col gap-6 mb-6 items-center justify-center">
+    <AvatarGroup avatars={avatars} max={5} size="lg" />
+  </div>
+  );
+}
 `;
 
 const cliCommands = {
@@ -85,16 +92,20 @@ export default function AvatarGroupDocs() {
             </div>
           </TabsContent>
           <TabsContent value="manual">
-            <p className="text-muted-foreground text-base mb-4">
+            <p className="text-base mb-4 font-bold">
               Install the following dependencies:
             </p>
             <div className="mb-6">
               <TerminalBlock commands={manualCommands} />
             </div>
+            <p className="text-base mb-4 font-bold">
+              Copy and paste the following code into your project:
+            </p>
             <div className="mb-6">
               <CodeBlock
-                code={`
-                import * as React from "react";
+                code={` 'use client';
+                  
+import * as React from "react";
 import { Avatar, AvatarImage, AvatarFallback } from "./avatar";
 import { cn } from "@/lib/utils";
 import {

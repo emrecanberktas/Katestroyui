@@ -29,7 +29,7 @@ const codeExample = `import {
 } from "@/components/ui/alert-dialog";
 import { Button } from "@/components/ui/button";
 
-export default function Example() {
+export function Example() {
   return (
     <AlertDialog>
       <AlertDialogTrigger asChild>
@@ -57,6 +57,13 @@ const cliCommands = {
   npm: "npx shadcn@latest add https://www.katestroyui.com/r/alert-dialog",
   yarn: "yarn dlx shadcn@latest add https://www.katestroyui.com/r/alert-dialog",
   bun: "bunx shadcn@latest add https://www.katestroyui.com/r/alert-dialog",
+};
+
+const registeryCommands = {
+  pnpm: "pnpm dlx shadcn@latest add https://www.katestroyui.com/r/button",
+  npm: "npx shadcn@latest add https://www.katestroyui.com/r/button",
+  yarn: "yarn dlx shadcn@latest add https://www.katestroyui.com/r/button",
+  bun: "bunx shadcn@latest add https://www.katestroyui.com/r/button",
 };
 
 const manualCommands = {
@@ -127,15 +134,25 @@ export default function AlertDialogDocs() {
             </div>
           </TabsContent>
           <TabsContent value="manual">
-            <p className="text-muted-foreground text-base mb-4">
+            <p className="text-base mb-4 font-bold">
               Install the following dependencies:
             </p>
             <div className="mb-6">
               <TerminalBlock commands={manualCommands} />
             </div>
+            <p className="text-base mb-4 font-bold">
+              Install the following registry dependencies:
+            </p>
+            <div className="mb-6">
+              <TerminalBlock commands={registeryCommands} />
+            </div>
+            <p className="text-base mb-4 font-bold">
+              Copy and paste the following code into your project:
+            </p>
             <div className="mb-6">
               <CodeBlock
-                code={`
+                code={` 'use client';
+
 import * as React from "react";
 import * as AlertDialogPrimitive from "@radix-ui/react-alert-dialog";
 import { cn } from "@/lib/utils";

@@ -31,7 +31,7 @@ const codeExample = `import {
   DropdownMenuSubTrigger,
 } from "@/components/ui/dropdown-menu";
 
-function Example() {
+export function Example() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -98,6 +98,13 @@ const cliCommands = {
   npm: "npx shadcn@latest add https://www.katestroyui.com/r/dropdown-menu",
   yarn: "yarn dlx shadcn@latest add https://www.katestroyui.com/r/dropdown-menu",
   bun: "bunx shadcn@latest add https://www.katestroyui.com/r/dropdown-menu",
+};
+
+const registeryCommands = {
+  pnpm: "pnpm dlx shadcn@latest add https://www.katestroyui.com/r/checkbox",
+  npm: "npx shadcn@latest add https://www.katestroyui.com/r/checkbox",
+  yarn: "yarn dlx shadcn@latest add https://www.katestroyui.com/r/checkbox",
+  bun: "bunx shadcn@latest add https://www.katestroyui.com/r/checkbox",
 };
 
 const manualCommands = {
@@ -206,15 +213,23 @@ export default function DropdownMenuDocs() {
             </div>
           </TabsContent>
           <TabsContent value="manual">
-            <p className="text-muted-foreground text-base mb-4">
+            <p className="text-base mb-4 font-bold">
               Install the following dependencies:
+            </p>
+            <div className="mb-6">
+              <TerminalBlock commands={registeryCommands} />
+            </div>
+            <p className="text-base mb-4 font-bold">
+              Install the following registry dependencies:
             </p>
             <div className="mb-6">
               <TerminalBlock commands={manualCommands} />
             </div>
             <div className="mb-6">
               <CodeBlock
-                code={`import * as React from "react";
+                code={`'use client';
+                  
+import * as React from "react";
 import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu";
 import { ChevronRightIcon, CircleIcon } from "lucide-react";
 

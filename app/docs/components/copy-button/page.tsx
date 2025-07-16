@@ -7,7 +7,10 @@ import { TerminalBlock } from "@/components/terminal-block";
 
 const codeExample = `import { CopyButton } from "@/components/ui/copy-button";
 
-<CopyButton content="This is awesome!" />
+export function Example() {
+  return (
+    <CopyButton content="This is awesome!" />
+)
 `;
 
 const cliCommands = {
@@ -17,11 +20,18 @@ const cliCommands = {
   bun: "bunx shadcn@latest add https://www.katestroyui.com/r/copy-button",
 };
 
+const registeryCommands = {
+  pnpm: "pnpm dlx shadcn@latest add https://www.katestroyui.com/r/button",
+  npm: "npx shadcn@latest add https://www.katestroyui.com/r/button",
+  yarn: "yarn dlx shadcn@latest add https://www.katestroyui.com/r/button",
+  bun: "bunx shadcn@latest add https://www.katestroyui.com/r/button",
+};
+
 const manualCommands = {
-  pnpm: "pnpm install motion class-variance-authority @radix-ui/react-slot lucide-react",
-  npm: "npm install motion class-variance-authority @radix-ui/react-slot lucide-react",
-  yarn: "yarn add motion class-variance-authority @radix-ui/react-slot lucide-react",
-  bun: "bun add motion class-variance-authority @radix-ui/react-slot lucide-react",
+  pnpm: "pnpm install motion",
+  npm: "npm install motion",
+  yarn: "yarn add motion",
+  bun: "bun add motion",
 };
 
 export default function CopyButtonDocs() {
@@ -62,15 +72,26 @@ export default function CopyButtonDocs() {
             </div>
           </TabsContent>
           <TabsContent value="manual">
-            <p className="text-muted-foreground text-base mb-4">
+            <p className="text-base mb-4 font-bold">
               Install the following dependencies:
             </p>
             <div className="mb-6">
               <TerminalBlock commands={manualCommands} />
             </div>
+            <p className="text-base mb-4 font-bold">
+              Install the following registry dependencies:
+            </p>
+            <div className="mb-6">
+              <TerminalBlock commands={registeryCommands} />
+            </div>
+            <p className="text-base mb-4 font-bold">
+              Copy and paste the following code into your project:
+            </p>
             <div className="mb-6">
               <CodeBlock
-                code={`import { Button } from "@/components/ui/button";
+                code={` 'use client';
+                  
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";

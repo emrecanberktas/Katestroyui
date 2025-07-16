@@ -8,7 +8,7 @@ import React from "react";
 const codeExample = `import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import React from "react";
 
-function Example() {
+export function Example() {
   return (
     <Tabs defaultValue="profile">
       <TabsList className="justify-center">
@@ -148,15 +148,20 @@ export default function TabsDocs() {
             </div>
           </TabsContent>
           <TabsContent value="manual">
-            <p className="text-muted-foreground text-base mb-4">
+            <p className="text-base mb-4 font-bold">
               Install the following dependencies:
             </p>
             <div className="mb-6">
               <TerminalBlock commands={manualCommands} />
             </div>
+            <p className="text-base mb-4 font-bold">
+              Copy and paste the following code into your project:
+            </p>
             <div className="mb-6">
               <CodeBlock
-                code={`import * as React from "react";
+                code={` 'use client';
+                  
+import * as React from "react";
 import * as TabsPrimitive from "@radix-ui/react-tabs";
 import { motion } from "motion/react";
 

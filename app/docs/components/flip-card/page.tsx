@@ -9,7 +9,7 @@ import { TerminalBlock } from "@/components/terminal-block";
 const codeExample = `import { FlipCard } from "@/components/ui/flip-card";
 import React, { useRef } from "react";
 
-function Example() {
+export function Example() {
   const flipCardRef = useRef(null);
 
   return (
@@ -113,12 +113,15 @@ export default function FlipCardDocs() {
             </div>
           </TabsContent>
           <TabsContent value="manual">
-            <p className="text-muted-foreground text-base mb-4">
+            <p className="text-base mb-4 font-bold">
               Install the following dependencies:
             </p>
             <div className="mb-6">
               <TerminalBlock commands={manualCommands} />
             </div>
+            <p className="text-base mb-4 font-bold">
+              Copy and paste the following code into your project:
+            </p>
             <div className="mb-6">
               <CodeBlock
                 code={`import React, { useState, useImperativeHandle, forwardRef } from "react";

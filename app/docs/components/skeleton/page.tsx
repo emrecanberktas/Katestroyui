@@ -9,7 +9,7 @@ import React from "react";
 const codeExample = `import { Skeleton } from "@/components/ui/skeleton";
 import React from "react";
 
-function Example() {
+export function Example() {
   return (
     <div className="flex flex-col gap-4 w-64">
       <Skeleton className="h-8 w-full" />
@@ -76,7 +76,7 @@ export default function SkeletonDocs() {
         </TabsContent>
       </Tabs>
       <div className="mt-2 mb-8">
-        <h2 className="text-xl font-semibold mb-4">Installation</h2>
+        <h2 className="text-xl font-semibold mb-4">Install</h2>
         <Tabs defaultValue="cli">
           <TabsList className="mb-3">
             <TabsTrigger value="cli">CLI</TabsTrigger>
@@ -88,15 +88,20 @@ export default function SkeletonDocs() {
             </div>
           </TabsContent>
           <TabsContent value="manual">
-            <p className="text-muted-foreground text-base mb-4">
+            <p className="text-base mb-4 font-bold">
               Install the following dependencies:
             </p>
             <div className="mb-6">
               <TerminalBlock commands={manualCommands} />
             </div>
+            <p className="text-base mb-4 font-bold">
+              Copy and paste the following code into your project:
+            </p>
             <div className="mb-6">
               <CodeBlock
-                code={`import { motion } from "motion/react";
+                code={` 'use client';
+                  
+import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 
 function Skeleton({

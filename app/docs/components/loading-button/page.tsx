@@ -10,13 +10,17 @@ import { useState } from "react";
 const codeExample = `import { LoadingButton } from "@/components/ui/loading-button";
 import { Loader2Icon } from "lucide-react";
 
-<LoadingButton
+export function Example() {
+  return (
+    <LoadingButton
   state="idle"
   onClick={() => {}}
-  idleText="Kaydet"
+  idleText="Save"
   loadingIndicator={<Loader2Icon className="animate-spin" />} 
-  successText="Başarılı!"
-/>
+  successText="Success!"
+    />
+  );
+}
 `;
 
 const cliCommands = {
@@ -84,15 +88,20 @@ export default function LoadingButtonDocs() {
             </div>
           </TabsContent>
           <TabsContent value="manual">
-            <p className="text-muted-foreground text-base mb-4">
+            <p className="text-base mb-4 font-bold">
               Install the following dependencies:
             </p>
             <div className="mb-6">
               <TerminalBlock commands={manualCommands} />
             </div>
+            <p className="text-base mb-4 font-bold">
+              Copy and paste the following code into your project:
+            </p>
             <div className="mb-6">
               <CodeBlock
-                code={`import { Button } from "@/components/ui/button";
+                code={` 'use client';
+                  
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "motion/react";
 import { Loader2Icon } from "lucide-react";

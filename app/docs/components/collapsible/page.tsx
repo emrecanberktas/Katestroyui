@@ -14,16 +14,16 @@ import { ChevronsUpDown } from "lucide-react";
 const codeExample = `import { Collapsible, CollapsibleTrigger, CollapsibleContent } from "@/components/ui/collapsible";
 import { Button } from "@/components/ui/button";
 
-function Example() {
+export function Example() {
   return (
-    <Collapsible>
+      <Collapsible>
       <CollapsibleTrigger asChild>
         <Button>Show Details</Button>
       </CollapsibleTrigger>
       <CollapsibleContent>
         <div className="p-4 border rounded mt-2">Here is detailed content!</div>
-      </CollapsibleContent>
-    </Collapsible>
+        </CollapsibleContent>
+      </Collapsible>
   );
 }
 `;
@@ -107,16 +107,20 @@ export default function CollapsibleDocs() {
             </div>
           </TabsContent>
           <TabsContent value="manual">
-            <p className="text-muted-foreground text-base mb-4">
+            <p className="text-base mb-4 font-bold">
               Install the following dependencies:
             </p>
             <div className="mb-6">
               <TerminalBlock commands={manualCommands} />
             </div>
+            <p className="text-base mb-4 font-bold">
+              Copy and paste the following code into your project:
+            </p>
             <div className="mb-6">
               <CodeBlock
-                code={`
-                import * as CollapsiblePrimitive from "@radix-ui/react-collapsible";
+                code={` 'use client';
+                  
+import * as CollapsiblePrimitive from "@radix-ui/react-collapsible";
 import { AnimatePresence, motion } from "motion/react";
 import React, { createContext, useContext, useMemo, useState } from "react";
 

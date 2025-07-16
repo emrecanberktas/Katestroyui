@@ -9,18 +9,18 @@ import React from "react";
 const codeExample = `import { ScrollArea, ScrollAreaItem } from "@/components/ui/scroll-area";
 import React from "react";
 
-function Example() {
+export function Example() {
   return (
-<ScrollArea className="h-72 w-64 rounded-lg border p-4">
-  <ul className="space-y-4">
-    {Array.from({ length: 20 }).map((_, i) => (
-      <ScrollAreaItem
-        key={i}
-        className="h-10 w-full rounded-md bg-blue-100 flex items-center justify-center"
-      />
-    ))}
-  </ul>
-</ScrollArea>;
+    <ScrollArea className="h-72 w-64 rounded-lg border p-4">
+      <ul className="space-y-4">
+        {Array.from({ length: 20 }).map((_, i) => (
+          <ScrollAreaItem
+            key={i}
+            className="h-10 w-full rounded-md bg-blue-100 flex items-center justify-center"
+          />
+        ))}
+      </ul>
+    </ScrollArea>
   );
 }
 `;
@@ -86,15 +86,20 @@ export default function ScrollAreaDocs() {
             </div>
           </TabsContent>
           <TabsContent value="manual">
-            <p className="text-muted-foreground text-base mb-4">
+            <p className="text-base mb-4 font-bold">
               Install the following dependencies:
             </p>
             <div className="mb-6">
               <TerminalBlock commands={manualCommands} />
             </div>
+            <p className="text-base mb-4 font-bold">
+              Copy and paste the following code into your project:
+            </p>
             <div className="mb-6">
               <CodeBlock
-                code={`import * as React from "react";
+                code={` 'use client';
+                  
+import * as React from "react";
 import * as ScrollAreaPrimitive from "@radix-ui/react-scroll-area";
 import { motion, useAnimation } from "motion/react";
 import { cn } from "@/lib/utils";
