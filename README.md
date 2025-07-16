@@ -1,6 +1,6 @@
 # KatestroyUI
 
-KatestroyUI is an open-source UI library that offers animated and easy-to-use React components, built with React, TypeScript, Tailwind CSS, and Motion.
+KatestroyUI is an open-source UI library that offers animated and easy-to-use React components, built with TypeScript, Tailwind CSS, and Motion.
 
 ## Features
 
