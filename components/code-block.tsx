@@ -17,6 +17,13 @@ export const CodeBlock: React.FC<CodeBlockProps> = ({
 }) => {
   const { theme } = useTheme();
 
+  // Only render when theme is determined
+  if (theme !== "dark" && theme !== "light") {
+    return (
+      <div className={`relative rounded-md overflow-hidden ${className}`} />
+    );
+  }
+
   return (
     <div className={`relative rounded-md overflow-hidden ${className}`}>
       <div className="absolute top-2 right-2 z-10">
