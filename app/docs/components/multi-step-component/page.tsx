@@ -25,55 +25,54 @@ function Example() {
 
   const steps = [
     {
-      title: "Kullanıcı Bilgileri",
+      title: "User Information",
       content: (
         <Input
-          placeholder="Adınızı girin"
+          placeholder="Enter your name"
           value={name}
           onChange={e => setName(e.target.value)}
         />
       ),
-      description: "Lütfen adınızı girin."
+      description: "Please enter your name."
     },
     {
-      title: "Bildirim Tercihleri",
+      title: "Notification Preferences",
       content: (
         <div className="flex flex-col gap-2">
           <label className="flex items-center gap-2">
-            <Checkbox checked={prefs.email} onCheckedChange={v => setPrefs(p => ({ ...p, email: !!v }))} /> E-posta
+            <Checkbox checked={prefs.email} onCheckedChange={v => setPrefs(p => ({ ...p, email: !!v }))} /> Email
           </label>
           <label className="flex items-center gap-2">
             <Checkbox checked={prefs.sms} onCheckedChange={v => setPrefs(p => ({ ...p, sms: !!v }))} /> SMS
           </label>
           <label className="flex items-center gap-2">
-            <Checkbox checked={prefs.push} onCheckedChange={v => setPrefs(p => ({ ...p, push: !!v }))} /> Push Bildirim
+            <Checkbox checked={prefs.push} onCheckedChange={v => setPrefs(p => ({ ...p, push: !!v }))} /> Push Notification
           </label>
         </div>
       ),
-      description: "Bildirim tercihlerinizi seçin."
+      description: "Select your notification preferences."
     },
     {
-      title: "Cinsiyet Seçimi",
+      title: "Gender Selection",
       content: (
         <RadioGroup value={gender} onValueChange={setGender}>
-          <RadioGroupItem value="erkek">Erkek</RadioGroupItem>
-          <RadioGroupItem value="kadin">Kadın</RadioGroupItem>
-          <RadioGroupItem value="diger">Diğer</RadioGroupItem>
+          <RadioGroupItem value="male">Male</RadioGroupItem>
+          <RadioGroupItem value="female">Female</RadioGroupItem>
         </RadioGroup>
       ),
-      description: "Cinsiyetinizi seçin."
+      description: "Select your gender."
     },
     {
-      title: "Onay ve Gönder",
+      title: "Confirm and Submit",
       content: (
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-3"> 
           <label className="flex items-center gap-2">
-            <Checkbox checked={approved} onCheckedChange={v => setApproved(!!v)} /> Tüm bilgilerin doğru olduğunu onaylıyorum.
+            <Checkbox checked={approved} onCheckedChange={v => setApproved(!!v)} /> I confirm that all information is correct.
           </label>
-          <Button disabled={!approved} className="mt-2">Gönder</Button>
+          <Button disabled={!approved} className="mt-2">Submit</Button>
         </div>
       ),
-      description: "Son adım: Onaylayıp gönderin."
+      description: "Final step: Confirm and submit."
     }
   ];
 
@@ -107,18 +106,18 @@ export default function MultiStepComponentDocs() {
 
   const steps = [
     {
-      title: "Kullanıcı Bilgileri",
+      title: "User Information",
       content: (
         <Input
-          placeholder="Adınızı girin"
+          placeholder="Enter your name"
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
       ),
-      description: "Lütfen adınızı girin.",
+      description: "Please enter your name.",
     },
     {
-      title: "Bildirim Tercihleri",
+      title: "Notification Preferences",
       content: (
         <div className="flex flex-col gap-2">
           <label className="flex items-center gap-2">
@@ -126,7 +125,7 @@ export default function MultiStepComponentDocs() {
               checked={prefs.email}
               onCheckedChange={(v) => setPrefs((p) => ({ ...p, email: !!v }))}
             />{" "}
-            E-posta
+            Email
           </label>
           <label className="flex items-center gap-2">
             <Checkbox
@@ -140,25 +139,24 @@ export default function MultiStepComponentDocs() {
               checked={prefs.push}
               onCheckedChange={(v) => setPrefs((p) => ({ ...p, push: !!v }))}
             />{" "}
-            Push Bildirim
+            Push Notification
           </label>
         </div>
       ),
-      description: "Bildirim tercihlerinizi seçin.",
+      description: "Select your notification preferences.",
     },
     {
-      title: "Cinsiyet Seçimi",
+      title: "Gender Selection",
       content: (
         <RadioGroup value={gender} onValueChange={setGender}>
-          <RadioGroupItem value="erkek">Erkek</RadioGroupItem>
-          <RadioGroupItem value="kadin">Kadın</RadioGroupItem>
-          <RadioGroupItem value="diger">Diğer</RadioGroupItem>
+          <RadioGroupItem value="male">Male</RadioGroupItem>
+          <RadioGroupItem value="female">Female</RadioGroupItem>
         </RadioGroup>
       ),
-      description: "Cinsiyetinizi seçin.",
+      description: "Select your gender.",
     },
     {
-      title: "Onay ve Gönder",
+      title: "Confirm and Submit",
       content: (
         <div className="flex flex-col gap-3">
           <label className="flex items-center gap-2">
@@ -166,14 +164,14 @@ export default function MultiStepComponentDocs() {
               checked={approved}
               onCheckedChange={(v) => setApproved(!!v)}
             />{" "}
-            Tüm bilgilerin doğru olduğunu onaylıyorum.
+            I confirm that all information is correct.
           </label>
           <Button disabled={!approved} className="mt-2">
-            Gönder
+            Submit
           </Button>
         </div>
       ),
-      description: "Son adım: Onaylayıp gönderin.",
+      description: "Final step: Confirm and submit.",
     },
   ];
 
@@ -182,14 +180,13 @@ export default function MultiStepComponentDocs() {
       <div className="mb-4">
         <h1 className="text-3xl font-bold mb-3">Multi Step Component</h1>
         <p className="text-muted-foreground text-lg">
-          Çok adımlı, animasyonlu ve erişilebilir bir form veya işlem akışı
-          bileşeni.
+          A multi-step, animated, and accessible form or process flow component.
         </p>
       </div>
       <Tabs defaultValue="demo">
         <TabsList className="mb-3">
-          <TabsTrigger value="demo">Canlı Demo</TabsTrigger>
-          <TabsTrigger value="code">Kod</TabsTrigger>
+          <TabsTrigger value="demo">Live Demo</TabsTrigger>
+          <TabsTrigger value="code">Code</TabsTrigger>
         </TabsList>
         <TabsContent value="demo">
           <div className="bg-background border rounded-lg p-6 shadow flex flex-col gap-6 mb-6 items-center justify-center">
@@ -203,7 +200,7 @@ export default function MultiStepComponentDocs() {
         </TabsContent>
       </Tabs>
       <div className="mt-2 mb-8">
-        <h2 className="text-xl font-semibold mb-4">Kurulum</h2>
+        <h2 className="text-xl font-semibold mb-4">Install</h2>
         <Tabs defaultValue="cli">
           <TabsList className="mb-3">
             <TabsTrigger value="cli">CLI</TabsTrigger>
@@ -216,7 +213,7 @@ export default function MultiStepComponentDocs() {
           </TabsContent>
           <TabsContent value="manual">
             <p className="text-muted-foreground text-base mb-4">
-              Aşağıdaki bağımlılıkları yükleyin:
+              Install the following dependencies:
             </p>
             <div className="mb-6">
               <TerminalBlock commands={manualCommands} />
@@ -417,7 +414,7 @@ export type { Step };
         </Tabs>
       </div>
       <div className="mt-2 mb-8">
-        <h2 className="text-xl font-semibold mb-4">Kullanım</h2>
+        <h2 className="text-xl font-semibold mb-4">Usage</h2>
         <div className="bg-background border rounded-lg p-6 shadow mb-6">
           <CodeBlock code={codeExample} />
         </div>
@@ -429,9 +426,9 @@ export type { Step };
             <thead className="bg-zinc-100 dark:bg-zinc-800">
               <tr>
                 <th className="px-4 py-2 text-left">Prop</th>
-                <th className="px-4 py-2 text-left">Tip</th>
-                <th className="px-4 py-2 text-left">Açıklama</th>
-                <th className="px-4 py-2 text-left">Varsayılan</th>
+                <th className="px-4 py-2 text-left">Type</th>
+                <th className="px-4 py-2 text-left">Description</th>
+                <th className="px-4 py-2 text-left">Default</th>
               </tr>
             </thead>
             <tbody>
@@ -439,44 +436,44 @@ export type { Step };
                 <td className="px-4 py-2 font-mono">steps</td>
                 <td className="px-4 py-2 font-mono">Step[]</td>
                 <td className="px-4 py-2">
-                  Adım başlıkları, içerikleri ve açıklamaları
+                  Step titles, contents, and descriptions
                 </td>
                 <td className="px-4 py-2">-</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">defaultStep</td>
                 <td className="px-4 py-2 font-mono">number</td>
-                <td className="px-4 py-2">Başlangıç adımı</td>
+                <td className="px-4 py-2">Initial step</td>
                 <td className="px-4 py-2">0</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">className</td>
                 <td className="px-4 py-2 font-mono">string</td>
-                <td className="px-4 py-2">Ekstra CSS sınıfları</td>
+                <td className="px-4 py-2">Extra CSS classes</td>
                 <td className="px-4 py-2">-</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">backButtonLabel</td>
                 <td className="px-4 py-2 font-mono">string</td>
-                <td className="px-4 py-2">Geri butonu metni</td>
-                <td className="px-4 py-2">&quot;Back&quot;</td>
+                <td className="px-4 py-2">Back button label</td>
+                <td className="px-4 py-2">"Back"</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">nextButtonLabel</td>
                 <td className="px-4 py-2 font-mono">string</td>
-                <td className="px-4 py-2">İleri butonu metni</td>
-                <td className="px-4 py-2">&quot;Continue&quot;</td>
+                <td className="px-4 py-2">Next button label</td>
+                <td className="px-4 py-2">"Continue"</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">completeButtonLabel</td>
                 <td className="px-4 py-2 font-mono">string</td>
-                <td className="px-4 py-2">Son adım butonu metni</td>
-                <td className="px-4 py-2">&quot;Finish&quot;</td>
+                <td className="px-4 py-2">Final step button label</td>
+                <td className="px-4 py-2">"Finish"</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">transition</td>
                 <td className="px-4 py-2 font-mono">Transition</td>
-                <td className="px-4 py-2">Animasyon geçiş ayarları</td>
+                <td className="px-4 py-2">Animation transition settings</td>
                 <td className="px-4 py-2">
                   {"{ duration: 0.5, type: 'spring', bounce: 0 }"}
                 </td>
@@ -486,7 +483,7 @@ export type { Step };
                 <td className="px-4 py-2 font-mono">
                   (currentStep: number) =&gt; void
                 </td>
-                <td className="px-4 py-2">İleriye geçildiğinde çağrılır</td>
+                <td className="px-4 py-2">Called when moving forward</td>
                 <td className="px-4 py-2">-</td>
               </tr>
               <tr className="border-t">
@@ -494,14 +491,14 @@ export type { Step };
                 <td className="px-4 py-2 font-mono">
                   (currentStep: number) =&gt; void
                 </td>
-                <td className="px-4 py-2">Geriye dönüldüğünde çağrılır</td>
+                <td className="px-4 py-2">Called when moving backward</td>
                 <td className="px-4 py-2">-</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">onComplete</td>
                 <td className="px-4 py-2 font-mono">() =&gt; void</td>
                 <td className="px-4 py-2">
-                  Tüm adımlar tamamlandığında çağrılır
+                  Called when all steps are completed
                 </td>
                 <td className="px-4 py-2">-</td>
               </tr>

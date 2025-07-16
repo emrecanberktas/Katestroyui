@@ -33,18 +33,18 @@ export default function Example() {
   return (
     <AlertDialog>
       <AlertDialogTrigger asChild>
-        <Button>Uyarı Aç</Button>
+        <Button>Open Warning</Button>
       </AlertDialogTrigger>
       <AlertDialogContent>
         <AlertDialogHeader>
-          <AlertDialogTitle>Uyarı</AlertDialogTitle>
+          <AlertDialogTitle>Warning</AlertDialogTitle>
           <AlertDialogDescription>
-            Bu işlemi yapmak istediğinize emin misiniz?
+            Are you sure you want to perform this action?
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
-          <AlertDialogCancel>Vazgeç</AlertDialogCancel>
-          <AlertDialogAction>Devam Et</AlertDialogAction>
+          <AlertDialogCancel>Cancel</AlertDialogCancel>
+          <AlertDialogAction>Continue</AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>
@@ -72,32 +72,36 @@ export default function AlertDialogDocs() {
       <div className="mb-4">
         <h1 className="text-3xl font-bold mb-3">Alert Dialog</h1>
         <p className="text-muted-foreground text-lg">
-          Kullanıcıdan onay almak için kullanılan, animasyonlu ve erişilebilir
-          bir Alert Dialog componenti.
+          An animated and accessible Alert Dialog component used to get
+          confirmation from the user.
         </p>
       </div>
 
       <Tabs defaultValue="demo">
         <TabsList className="mb-3">
-          <TabsTrigger value="demo">Canlı Demo</TabsTrigger>
-          <TabsTrigger value="code">Kod</TabsTrigger>
+          <TabsTrigger value="demo" className="flex-1 sm:flex-none">
+            Live Demo
+          </TabsTrigger>
+          <TabsTrigger value="code" className="flex-1 sm:flex-none">
+            Code
+          </TabsTrigger>
         </TabsList>
         <TabsContent value="demo">
           <div className="bg-background border rounded-lg p-6 shadow flex flex-col gap-4 mb-6">
             <AlertDialog>
               <AlertDialogTrigger asChild>
-                <Button>Uyarı Aç</Button>
+                <Button>Open Warning</Button>
               </AlertDialogTrigger>
               <AlertDialogContent>
                 <AlertDialogHeader>
-                  <AlertDialogTitle>Uyarı</AlertDialogTitle>
+                  <AlertDialogTitle>Warning</AlertDialogTitle>
                   <AlertDialogDescription>
-                    Bu işlemi yapmak istediğinize emin misiniz?
+                    Are you sure you want to perform this action?
                   </AlertDialogDescription>
                 </AlertDialogHeader>
                 <AlertDialogFooter>
-                  <AlertDialogCancel>Vazgeç</AlertDialogCancel>
-                  <AlertDialogAction>Devam Et</AlertDialogAction>
+                  <AlertDialogCancel>Cancel</AlertDialogCancel>
+                  <AlertDialogAction>Continue</AlertDialogAction>
                 </AlertDialogFooter>
               </AlertDialogContent>
             </AlertDialog>
@@ -111,7 +115,7 @@ export default function AlertDialogDocs() {
       </Tabs>
 
       <div className="mt-2 mb-8">
-        <h2 className="text-xl font-semibold mb-4">Kurulum</h2>
+        <h2 className="text-xl font-semibold mb-4">Install</h2>
         <Tabs defaultValue="cli">
           <TabsList className="mb-3">
             <TabsTrigger value="cli">CLI</TabsTrigger>
@@ -124,7 +128,7 @@ export default function AlertDialogDocs() {
           </TabsContent>
           <TabsContent value="manual">
             <p className="text-muted-foreground text-base mb-4">
-              Aşağıdaki bağımlılıkları yükleyin:
+              Install the following dependencies:
             </p>
             <div className="mb-6">
               <TerminalBlock commands={manualCommands} />
@@ -383,7 +387,7 @@ export {
       </div>
 
       <div className="mt-2 mb-8">
-        <h2 className="text-xl font-semibold mb-4">Kullanım</h2>
+        <h2 className="text-xl font-semibold mb-4">Usage</h2>
         <div className="bg-background border rounded-lg p-6 shadow mb-6">
           <CodeBlock
             code={`import {
@@ -400,12 +404,12 @@ export {
 <AlertDialog>
   <AlertDialogContent>
     <AlertDialogHeader>
-      <AlertDialogTitle>Uyarı</AlertDialogTitle>
-      <AlertDialogDescription>Bu işlemi yapmak istediğinize emin misiniz?</AlertDialogDescription>
+      <AlertDialogTitle>Warning</AlertDialogTitle>
+      <AlertDialogDescription>Are you sure you want to perform this action?</AlertDialogDescription>
     </AlertDialogHeader>
     <AlertDialogFooter>
-      <AlertDialogCancel>Vazgeç</AlertDialogCancel>
-      <AlertDialogAction>Devam Et</AlertDialogAction>
+      <AlertDialogCancel>Cancel</AlertDialogCancel>
+      <AlertDialogAction>Continue</AlertDialogAction>
     </AlertDialogFooter>
   </AlertDialogContent>
 </AlertDialog>
@@ -421,16 +425,16 @@ export {
             <thead className="bg-zinc-100 dark:bg-zinc-800">
               <tr>
                 <th className="px-4 py-2 text-left">Prop</th>
-                <th className="px-4 py-2 text-left">Tip</th>
-                <th className="px-4 py-2 text-left">Açıklama</th>
-                <th className="px-4 py-2 text-left">Varsayılan</th>
+                <th className="px-4 py-2 text-left">Type</th>
+                <th className="px-4 py-2 text-left">Description</th>
+                <th className="px-4 py-2 text-left">Default</th>
               </tr>
             </thead>
             <tbody>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">open</td>
                 <td className="px-4 py-2 font-mono">boolean</td>
-                <td className="px-4 py-2">Dialogun açık olup olmadığı</td>
+                <td className="px-4 py-2">Whether the dialog is open</td>
                 <td className="px-4 py-2">false</td>
               </tr>
               <tr className="border-t">
@@ -439,14 +443,14 @@ export {
                   (open: boolean) =&gt; void
                 </td>
                 <td className="px-4 py-2">
-                  Açık/kapalı durumu değiştiğinde çağrılır
+                  Callback when open/close state changes
                 </td>
                 <td className="px-4 py-2">-</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">children</td>
                 <td className="px-4 py-2 font-mono">React.ReactNode</td>
-                <td className="px-4 py-2">Dialog içeriği</td>
+                <td className="px-4 py-2">Dialog content</td>
                 <td className="px-4 py-2">-</td>
               </tr>
             </tbody>

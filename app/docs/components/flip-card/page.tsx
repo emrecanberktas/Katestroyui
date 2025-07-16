@@ -20,14 +20,14 @@ function Example() {
         height="h-80"
         frontContent={
           <div className="flex flex-col items-center justify-center h-full w-full bg-primary text-primary-foreground rounded-lg p-4">
-            <span className="text-lg font-semibold">Ön Yüz</span>
-            <span className="text-sm mt-2">Burada kartın ön yüzü var.</span>
+            <span className="text-lg font-semibold">Front Side</span>
+            <span className="text-sm mt-2">This is the front side of the card.</span>
           </div>
         }
         backContent={
           <div className="flex flex-col items-center justify-center h-full w-full bg-secondary text-secondary-foreground rounded-lg p-4">
-            <span className="text-lg font-semibold">Arka Yüz</span>
-            <span className="text-sm mt-2">Burası kartın arka yüzü.</span>
+            <span className="text-lg font-semibold">Back Side</span>
+            <span className="text-sm mt-2">This is the back side of the card.</span>
           </div>
         }
         flipDirection="horizontal"
@@ -59,14 +59,14 @@ export default function FlipCardDocs() {
       <div className="mb-4">
         <h1 className="text-3xl font-bold mb-3">Flip Card</h1>
         <p className="text-muted-foreground text-lg">
-          Kartın ön ve arka yüzünü animasyonlu şekilde döndüren, bilgi kartları,
-          oyunlar veya etkileşimli içerikler için ideal bir bileşen.
+          A card component that animates flipping between front and back, ideal
+          for info cards, games, or interactive content.
         </p>
       </div>
       <Tabs defaultValue="demo">
         <TabsList className="mb-3">
-          <TabsTrigger value="demo">Canlı Demo</TabsTrigger>
-          <TabsTrigger value="code">Kod</TabsTrigger>
+          <TabsTrigger value="demo">Live Demo</TabsTrigger>
+          <TabsTrigger value="code">Code</TabsTrigger>
         </TabsList>
         <TabsContent value="demo">
           <div className="bg-background border rounded-lg p-6 shadow flex flex-col gap-6 mb-6 items-center justify-center">
@@ -76,16 +76,18 @@ export default function FlipCardDocs() {
               height="h-80"
               frontContent={
                 <div className="flex flex-col items-center justify-center h-full w-full bg-primary text-primary-foreground rounded-lg p-4">
-                  <span className="text-lg font-semibold">Ön Yüz</span>
+                  <span className="text-lg font-semibold">Front Side</span>
                   <span className="text-sm mt-2">
-                    Burada kartın ön yüzü var.
+                    This is the front side of the card.
                   </span>
                 </div>
               }
               backContent={
                 <div className="flex flex-col items-center justify-center h-full w-full bg-secondary text-secondary-foreground rounded-lg p-4">
-                  <span className="text-lg font-semibold">Arka Yüz</span>
-                  <span className="text-sm mt-2">Burası kartın arka yüzü.</span>
+                  <span className="text-lg font-semibold">Back Side</span>
+                  <span className="text-sm mt-2">
+                    This is the back side of the card.
+                  </span>
                 </div>
               }
               flipDirection="horizontal"
@@ -112,7 +114,7 @@ export default function FlipCardDocs() {
           </TabsContent>
           <TabsContent value="manual">
             <p className="text-muted-foreground text-base mb-4">
-              Aşağıdaki bağımlılıkları yükleyin:
+              Install the following dependencies:
             </p>
             <div className="mb-6">
               <TerminalBlock commands={manualCommands} />
@@ -279,7 +281,7 @@ export { FlipCard };
         </Tabs>
       </div>
       <div className="mt-2 mb-8">
-        <h2 className="text-xl font-semibold mb-4">Kullanım</h2>
+        <h2 className="text-xl font-semibold mb-4">Usage</h2>
         <div className="bg-background border rounded-lg p-6 shadow mb-6">
           <CodeBlock code={codeExample} />
         </div>
@@ -291,9 +293,9 @@ export { FlipCard };
             <thead className="bg-zinc-100 dark:bg-zinc-800">
               <tr>
                 <th className="px-4 py-2 text-left">Prop</th>
-                <th className="px-4 py-2 text-left">Tip</th>
-                <th className="px-4 py-2 text-left">Açıklama</th>
-                <th className="px-4 py-2 text-left">Varsayılan</th>
+                <th className="px-4 py-2 text-left">Type</th>
+                <th className="px-4 py-2 text-left">Description</th>
+                <th className="px-4 py-2 text-left">Default</th>
               </tr>
             </thead>
             <tbody>
@@ -301,7 +303,7 @@ export { FlipCard };
                 <td className="px-4 py-2 font-mono">frontContent</td>
                 <td className="px-4 py-2 font-mono">ReactNode</td>
                 <td className="px-4 py-2">
-                  Kartın ön yüzünde gösterilecek içerik.
+                  Content to be displayed on the front of the card.
                 </td>
                 <td className="px-4 py-2">-</td>
               </tr>
@@ -309,24 +311,20 @@ export { FlipCard };
                 <td className="px-4 py-2 font-mono">backContent</td>
                 <td className="px-4 py-2 font-mono">ReactNode</td>
                 <td className="px-4 py-2">
-                  Kartın arka yüzünde gösterilecek içerik.
+                  Content to be displayed on the back of the card.
                 </td>
                 <td className="px-4 py-2">-</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">width</td>
                 <td className="px-4 py-2 font-mono">string</td>
-                <td className="px-4 py-2">
-                  Kartın genişliği (Tailwind sınıfı).
-                </td>
+                <td className="px-4 py-2">Card width (Tailwind class).</td>
                 <td className="px-4 py-2">&quot;w-80&quot;</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">height</td>
                 <td className="px-4 py-2 font-mono">string</td>
-                <td className="px-4 py-2">
-                  Kartın yüksekliği (Tailwind sınıfı).
-                </td>
+                <td className="px-4 py-2">Card height (Tailwind class).</td>
                 <td className="px-4 py-2">&quot;h-96&quot;</td>
               </tr>
               <tr className="border-t">
@@ -334,28 +332,30 @@ export { FlipCard };
                 <td className="px-4 py-2 font-mono">
                   &quot;horizontal&quot; | &quot;vertical&quot;
                 </td>
-                <td className="px-4 py-2">Dönüş yönü (yatay/dikey).</td>
+                <td className="px-4 py-2">
+                  Flip direction (horizontal/vertical).
+                </td>
                 <td className="px-4 py-2">&quot;horizontal&quot;</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">className</td>
                 <td className="px-4 py-2 font-mono">string</td>
                 <td className="px-4 py-2">
-                  Ekstra Tailwind/özelleştirme sınıfları.
+                  Extra Tailwind/customization classes.
                 </td>
                 <td className="px-4 py-2">-</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">disabled</td>
                 <td className="px-4 py-2 font-mono">boolean</td>
-                <td className="px-4 py-2">Kartı devre dışı bırakır.</td>
+                <td className="px-4 py-2">Disables the card.</td>
                 <td className="px-4 py-2">false</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">initialFlipped</td>
                 <td className="px-4 py-2 font-mono">boolean</td>
                 <td className="px-4 py-2">
-                  Kartın başlangıçta çevrilmiş olup olmadığını belirler.
+                  Determines if the card is initially flipped.
                 </td>
                 <td className="px-4 py-2">false</td>
               </tr>
@@ -364,7 +364,7 @@ export { FlipCard };
                 <td className="px-4 py-2 font-mono">
                   (isFlipped: boolean) =&gt; void
                 </td>
-                <td className="px-4 py-2">Kart çevrildiğinde çağrılır.</td>
+                <td className="px-4 py-2">Called when the card is flipped.</td>
                 <td className="px-4 py-2">-</td>
               </tr>
               <tr className="border-t">
@@ -373,22 +373,20 @@ export { FlipCard };
                   &quot;click&quot; | &quot;hover&quot; | &quot;manual&quot;
                 </td>
                 <td className="px-4 py-2">
-                  Çevirme tetikleyicisi (tıkla, hover, manuel).
+                  Flip trigger (click, hover, manual).
                 </td>
                 <td className="px-4 py-2">&quot;click&quot;</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">duration</td>
                 <td className="px-4 py-2 font-mono">number</td>
-                <td className="px-4 py-2">
-                  Animasyon süresi (saniye cinsinden).
-                </td>
+                <td className="px-4 py-2">Animation duration (seconds).</td>
                 <td className="px-4 py-2">0.6</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">easing</td>
                 <td className="px-4 py-2 font-mono">Easing | Easing[]</td>
-                <td className="px-4 py-2">Animasyon eğrisi.</td>
+                <td className="px-4 py-2">Animation curve.</td>
                 <td className="px-4 py-2">&quot;easeInOut&quot;</td>
               </tr>
             </tbody>

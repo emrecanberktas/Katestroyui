@@ -20,7 +20,7 @@ const listItems = [
     gradient: "from-blue-500 to-purple-600",
     description: "Item 1 description",
     icon: "🚀",
-    status: "Aktif",
+    status: "Active",
   },
   {
     id: 2,
@@ -28,7 +28,7 @@ const listItems = [
     gradient: "from-green-500 to-teal-600",
     description: "Item 2 description",
     icon: "📦",
-    status: "Pasif",
+    status: "Inactive",
   },
   {
     id: 3,
@@ -36,7 +36,7 @@ const listItems = [
     gradient: "from-orange-500 to-red-600",
     description: "Item 3 description",
     icon: "💡",
-    status: "Aktif",
+    status: "Active",
   },
   {
     id: 4,
@@ -44,7 +44,7 @@ const listItems = [
     gradient: "from-purple-500 to-pink-600",
     description: "Item 4 description",
     icon: "🎯",
-    status: "Beklemede",
+    status: "Pending",
   },
   {
     id: 5,
@@ -52,7 +52,7 @@ const listItems = [
     gradient: "from-teal-500 to-cyan-600",
     description: "Item 5 description",
     icon: "🔒",
-    status: "Aktif",
+    status: "Active",
   },
   {
     id: 6,
@@ -60,7 +60,7 @@ const listItems = [
     gradient: "from-indigo-500 to-blue-600",
     description: "Item 6 description",
     icon: "⚡",
-    status: "Pasif",
+    status: "Inactive",
   },
 ];
 
@@ -167,7 +167,7 @@ export default function AnimatedListDocs() {
         gradient: "from-blue-500 to-purple-600",
         description: "Item 1 description",
         icon: "🚀",
-        status: "Aktif",
+        status: "Active",
       },
       {
         id: 2,
@@ -175,7 +175,7 @@ export default function AnimatedListDocs() {
         gradient: "from-green-500 to-teal-600",
         description: "Item 2 description",
         icon: "📦",
-        status: "Pasif",
+        status: "Inactive",
       },
       {
         id: 3,
@@ -183,7 +183,7 @@ export default function AnimatedListDocs() {
         gradient: "from-orange-500 to-red-600",
         description: "Item 3 description",
         icon: "💡",
-        status: "Aktif",
+        status: "Active",
       },
       {
         id: 4,
@@ -191,7 +191,7 @@ export default function AnimatedListDocs() {
         gradient: "from-purple-500 to-pink-600",
         description: "Item 4 description",
         icon: "🎯",
-        status: "Beklemede",
+        status: "Pending",
       },
       {
         id: 5,
@@ -199,7 +199,7 @@ export default function AnimatedListDocs() {
         gradient: "from-teal-500 to-cyan-600",
         description: "Item 5 description",
         icon: "🔒",
-        status: "Aktif",
+        status: "Active",
       },
       {
         id: 6,
@@ -207,7 +207,7 @@ export default function AnimatedListDocs() {
         gradient: "from-indigo-500 to-blue-600",
         description: "Item 6 description",
         icon: "⚡",
-        status: "Pasif",
+        status: "Inactive",
       },
     ],
     []
@@ -294,14 +294,14 @@ export default function AnimatedListDocs() {
       <div className="mb-4">
         <h1 className="text-3xl font-bold mb-3">Animated List</h1>
         <p className="text-muted-foreground text-lg">
-          Sıralı animasyonlarla öğeleri listeleyen, erişilebilir ve
-          özelleştirilebilir bir AnimatedList componenti.
+          An accessible and customizable AnimatedList component that lists items
+          with sequential animations.
         </p>
       </div>
       <Tabs defaultValue="demo">
         <TabsList className="mb-3">
-          <TabsTrigger value="demo">Canlı Demo</TabsTrigger>
-          <TabsTrigger value="code">Kod</TabsTrigger>
+          <TabsTrigger value="demo">Live Demo</TabsTrigger>
+          <TabsTrigger value="code">Code</TabsTrigger>
         </TabsList>
         <TabsContent value="demo">
           <div className="bg-background border rounded-lg p-6 shadow flex flex-col gap-4 mb-6">
@@ -329,7 +329,7 @@ export default function AnimatedListDocs() {
               itemClassName={listDirection === "horizontal" ? "" : "w-full"}
               delayFactor={0.1}
               direction={listDirection}
-              emptyMessage="Henüz eleman yok"
+              emptyMessage="No items yet"
             >
               {animatedListChildren}
             </AnimatedList>
@@ -342,7 +342,7 @@ export default function AnimatedListDocs() {
         </TabsContent>
       </Tabs>
       <div className="mt-2 mb-8">
-        <h2 className="text-xl font-semibold mb-4">Kurulum</h2>
+        <h2 className="text-xl font-semibold mb-4">Install</h2>
         <Tabs defaultValue="cli">
           <TabsList className="mb-3">
             <TabsTrigger value="cli">CLI</TabsTrigger>
@@ -355,7 +355,7 @@ export default function AnimatedListDocs() {
           </TabsContent>
           <TabsContent value="manual">
             <p className="text-muted-foreground text-base mb-4">
-              Aşağıdaki bağımlılıkları yükleyin:
+              Install the following dependencies:
             </p>
             <div className="mb-6">
               <TerminalBlock commands={manualCommands} />
@@ -550,7 +550,7 @@ export function AnimatedList({
         </Tabs>
       </div>
       <div className="mt-2 mb-8">
-        <h2 className="text-xl font-semibold mb-4">Kullanım</h2>
+        <h2 className="text-xl font-semibold mb-4">Usage</h2>
         <div className="bg-background border rounded-lg p-6 shadow mb-6">
           <CodeBlock code={codeExample} />
         </div>
@@ -562,16 +562,16 @@ export function AnimatedList({
             <thead className="bg-zinc-100 dark:bg-zinc-800">
               <tr>
                 <th className="px-4 py-2 text-left">Prop</th>
-                <th className="px-4 py-2 text-left">Tip</th>
-                <th className="px-4 py-2 text-left">Açıklama</th>
-                <th className="px-4 py-2 text-left">Varsayılan</th>
+                <th className="px-4 py-2 text-left">Type</th>
+                <th className="px-4 py-2 text-left">Description</th>
+                <th className="px-4 py-2 text-left">Default</th>
               </tr>
             </thead>
             <tbody>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">children</td>
                 <td className="px-4 py-2 font-mono">React.ReactNode</td>
-                <td className="px-4 py-2">Liste öğeleri</td>
+                <td className="px-4 py-2">List items</td>
                 <td className="px-4 py-2">-</td>
               </tr>
             </tbody>

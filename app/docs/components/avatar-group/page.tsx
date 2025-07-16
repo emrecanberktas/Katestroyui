@@ -34,7 +34,7 @@ const manualCommands = {
 };
 
 const avatars = [
-  { src: "https://github.com/emrecanberktas.png", alt: "Emre" },
+  { src: "/avatars/1.jpg", alt: "Alice" },
   { src: "/avatars/2.jpg", alt: "Bob" },
   { src: "/avatars/3.jpg", alt: "Charlie" },
   { src: "/avatars/4.jpg", alt: "Diana" },
@@ -48,14 +48,18 @@ export default function AvatarGroupDocs() {
       <div className="mb-4">
         <h1 className="text-3xl font-bold mb-3">Avatar Group</h1>
         <p className="text-muted-foreground text-lg">
-          Birden fazla kullanıcıyı veya öğeyi grup halinde göstermek için
-          kullanılan, animasyonlu ve erişilebilir bir avatar grubu bileşeni.
+          An animated and accessible avatar group component used to display
+          multiple users or items as a group.
         </p>
       </div>
       <Tabs defaultValue="demo">
         <TabsList className="mb-3">
-          <TabsTrigger value="demo">Canlı Demo</TabsTrigger>
-          <TabsTrigger value="code">Kod</TabsTrigger>
+          <TabsTrigger value="demo" className="flex-1 sm:flex-none">
+            Live Demo
+          </TabsTrigger>
+          <TabsTrigger value="code" className="flex-1 sm:flex-none">
+            Code
+          </TabsTrigger>
         </TabsList>
         <TabsContent value="demo">
           <div className="bg-background border rounded-lg p-6 shadow flex flex-col gap-6 mb-6 justify-center items-center">
@@ -69,7 +73,7 @@ export default function AvatarGroupDocs() {
         </TabsContent>
       </Tabs>
       <div className="mt-2 mb-8">
-        <h2 className="text-xl font-semibold mb-4">Kurulum</h2>
+        <h2 className="text-xl font-semibold mb-4">Install</h2>
         <Tabs defaultValue="cli">
           <TabsList className="mb-3">
             <TabsTrigger value="cli">CLI</TabsTrigger>
@@ -82,7 +86,7 @@ export default function AvatarGroupDocs() {
           </TabsContent>
           <TabsContent value="manual">
             <p className="text-muted-foreground text-base mb-4">
-              Aşağıdaki bağımlılıkları yükleyin:
+              Install the following dependencies:
             </p>
             <div className="mb-6">
               <TerminalBlock commands={manualCommands} />
@@ -197,7 +201,7 @@ export function AvatarGroup({
         </Tabs>
       </div>
       <div className="mt-2 mb-8">
-        <h2 className="text-xl font-semibold mb-4">Kullanım</h2>
+        <h2 className="text-xl font-semibold mb-4">Usage</h2>
         <div className="bg-background border rounded-lg p-6 shadow mb-6">
           <CodeBlock code={codeExample} />
         </div>
@@ -209,9 +213,9 @@ export function AvatarGroup({
             <thead className="bg-zinc-100 dark:bg-zinc-800">
               <tr>
                 <th className="px-4 py-2 text-left">Prop</th>
-                <th className="px-4 py-2 text-left">Tip</th>
-                <th className="px-4 py-2 text-left">Açıklama</th>
-                <th className="px-4 py-2 text-left">Varsayılan</th>
+                <th className="px-4 py-2 text-left">Type</th>
+                <th className="px-4 py-2 text-left">Description</th>
+                <th className="px-4 py-2 text-left">Default</th>
               </tr>
             </thead>
             <tbody>
@@ -220,14 +224,14 @@ export function AvatarGroup({
                 <td className="px-4 py-2 font-mono">
                   {`{ src?: string; alt?: string; fallback?: string; }[]`}
                 </td>
-                <td className="px-4 py-2">Gösterilecek avatarlar</td>
+                <td className="px-4 py-2">Avatars to be displayed</td>
                 <td className="px-4 py-2">-</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">max</td>
                 <td className="px-4 py-2 font-mono">number</td>
                 <td className="px-4 py-2">
-                  Aynı anda gösterilecek maksimum avatar sayısı
+                  Maximum number of avatars to display at the same time
                 </td>
                 <td className="px-4 py-2">5</td>
               </tr>
@@ -236,13 +240,13 @@ export function AvatarGroup({
                 <td className="px-4 py-2 font-mono">
                   &quot;sm&quot; | &quot;md&quot; | &quot;lg&quot;
                 </td>
-                <td className="px-4 py-2">Avatar boyutu</td>
+                <td className="px-4 py-2">Avatar size</td>
                 <td className="px-4 py-2">&quot;md&quot;</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">className</td>
                 <td className="px-4 py-2 font-mono">string</td>
-                <td className="px-4 py-2">Ekstra CSS sınıfları</td>
+                <td className="px-4 py-2">Extra CSS classes</td>
                 <td className="px-4 py-2">-</td>
               </tr>
             </tbody>

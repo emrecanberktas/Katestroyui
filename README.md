@@ -1,33 +1,30 @@
 # KatestroyUI
 
-KatestroyUI React, TypeScript, Tailwind CSS, ve Motion kullanarak, animasyonlu ve kullanımı kolay React bileşenleri sunan açık kaynaklı bir UI kütüphanesidir.
-![Logo](public/Logo.png)
+KatestroyUI is an open-source UI library that offers animated and easy-to-use React components, built with React, TypeScript, Tailwind CSS, and Motion.
 
-## Özellikler
+## Features
 
-- **Modern Tasarım:** Şık, güncel ve tamamen özelleştirilebilir arayüz bileşenleri.
-- **Kolay Entegrasyon:** Hızlı kurulum, sade API ve kapsamlı dökümantasyon.
-- **Animasyonlu Bileşenler:** Motion tabanlı animasyonlar ile canlı kullanıcı deneyimi.
-- **Açık Kaynak:** MIT lisansı ile tamamen ücretsiz ve topluluğa açık.
+- **Modern Design:** Stylish, up-to-date, and fully customizable UI components.
+- **Easy Integration:** Quick setup, simple API, and comprehensive documentation.
+- **Animated Components:** Lively user experience with motion-based animations.
+- **Open Source:** Completely free and community-driven with MIT license.
 
-## Dokümantasyon
+## Documentation
 
-Her bileşenin dokümantasyon sayfasında:
+Each component's documentation page includes:
 
-- Canlı demo
-- Kod örneği
-- Kurulum talimatları
-- Kullanım açıklamaları
-- Props tablosu
+- Live demo
+- Code example
+- Installation instructions
+- Usage explanations
+- Props table
 
-bulunmaktadır.
+For more information: [KatestroyUI Documentation](https://www.katestroyui.com)
 
-Daha fazla bilgi için: [KatestroyUI Dökümantasyon](https://www.katestroyui.com)
+## Contributing
 
-## Katkıda Bulunun
+We welcome your contributions! Please open an issue or submit a pull request via [GitHub](https://github.com/emrecanberktas/Katestroyui) first.
 
-Katkılarınızı bekliyoruz! Lütfen önce [GitHub](https://github.com/emrecanberktas/Katestroyui) üzerinden bir issue açın veya pull request gönderin.
-
-## Lisans
+## License
 
 MIT

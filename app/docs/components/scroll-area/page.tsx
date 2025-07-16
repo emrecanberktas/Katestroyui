@@ -45,14 +45,13 @@ export default function ScrollAreaDocs() {
       <div className="mb-4">
         <h1 className="text-3xl font-bold mb-3">Scroll Area</h1>
         <p className="text-muted-foreground text-lg">
-          Uzun veya geniş içerikleri kaydırılabilir ve animasyonlu bir alanda
-          göstermek için kullanılır.
+          Used to display long or wide content in a scrollable, animated area.
         </p>
       </div>
       <Tabs defaultValue="demo">
         <TabsList className="mb-3">
-          <TabsTrigger value="demo">Canlı Demo</TabsTrigger>
-          <TabsTrigger value="code">Kod</TabsTrigger>
+          <TabsTrigger value="demo">Live Demo</TabsTrigger>
+          <TabsTrigger value="code">Code</TabsTrigger>
         </TabsList>
         <TabsContent value="demo">
           <div className="bg-background border rounded-lg p-6 shadow flex flex-col gap-6 mb-6 items-center justify-center">
@@ -75,7 +74,7 @@ export default function ScrollAreaDocs() {
         </TabsContent>
       </Tabs>
       <div className="mt-2 mb-8">
-        <h2 className="text-xl font-semibold mb-4">Kurulum</h2>
+        <h2 className="text-xl font-semibold mb-4">Install</h2>
         <Tabs defaultValue="cli">
           <TabsList className="mb-3">
             <TabsTrigger value="cli">CLI</TabsTrigger>
@@ -88,7 +87,7 @@ export default function ScrollAreaDocs() {
           </TabsContent>
           <TabsContent value="manual">
             <p className="text-muted-foreground text-base mb-4">
-              Aşağıdaki bağımlılıkları yükleyin:
+              Install the following dependencies:
             </p>
             <div className="mb-6">
               <TerminalBlock commands={manualCommands} />
@@ -269,7 +268,7 @@ export { ScrollArea, ScrollBar, ScrollAreaItem };
         </Tabs>
       </div>
       <div className="mt-2 mb-8">
-        <h2 className="text-xl font-semibold mb-4">Kullanım</h2>
+        <h2 className="text-xl font-semibold mb-4">Usage</h2>
         <div className="bg-background border rounded-lg p-6 shadow mb-6">
           <CodeBlock code={codeExample} />
         </div>

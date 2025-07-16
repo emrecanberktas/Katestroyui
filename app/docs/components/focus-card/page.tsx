@@ -84,13 +84,18 @@ export default function FocusCardDocs() {
       <div className="mb-4">
         <h1 className="text-3xl font-bold mb-3">Focus Card</h1>
         <p className="text-muted-foreground text-lg">
-          Hover ile öne çıkan, animasyonlu ve modern bir kart grubu bileşeni.
+          A modern card group component that highlights on hover, animated and
+          visually appealing.
         </p>
       </div>
       <Tabs defaultValue="demo">
         <TabsList className="mb-3">
-          <TabsTrigger value="demo">Canlı Demo</TabsTrigger>
-          <TabsTrigger value="code">Kod</TabsTrigger>
+          <TabsTrigger value="demo" className="flex-1 sm:flex-none">
+            Live Demo
+          </TabsTrigger>
+          <TabsTrigger value="code" className="flex-1 sm:flex-none">
+            Code
+          </TabsTrigger>
         </TabsList>
         <TabsContent value="demo">
           <div className="bg-background border rounded-lg p-6 shadow flex flex-col gap-6 mb-6 justify-center items-center">
@@ -104,7 +109,7 @@ export default function FocusCardDocs() {
         </TabsContent>
       </Tabs>
       <div className="mt-2 mb-8">
-        <h2 className="text-xl font-semibold mb-4">Kurulum</h2>
+        <h2 className="text-xl font-semibold mb-4">Install</h2>
         <Tabs defaultValue="cli">
           <TabsList className="mb-3">
             <TabsTrigger value="cli">CLI</TabsTrigger>
@@ -117,7 +122,7 @@ export default function FocusCardDocs() {
           </TabsContent>
           <TabsContent value="manual">
             <p className="text-muted-foreground text-base mb-4">
-              Aşağıdaki bağımlılıkları yükleyin:
+              Install the following dependencies:
             </p>
             <div className="mb-6">
               <TerminalBlock commands={manualCommands} />
@@ -207,7 +212,7 @@ export function FocusCard({ cards }: { cards: Card[] }) {
         </Tabs>
       </div>
       <div className="mt-2 mb-8">
-        <h2 className="text-xl font-semibold mb-4">Kullanım</h2>
+        <h2 className="text-xl font-semibold mb-4">Usage</h2>
         <div className="bg-background border rounded-lg p-6 shadow mb-6">
           <CodeBlock code={codeExample} />
         </div>
@@ -219,42 +224,42 @@ export function FocusCard({ cards }: { cards: Card[] }) {
             <thead className="bg-zinc-100 dark:bg-zinc-800">
               <tr>
                 <th className="px-4 py-2 text-left">Prop</th>
-                <th className="px-4 py-2 text-left">Tip</th>
-                <th className="px-4 py-2 text-left">Açıklama</th>
-                <th className="px-4 py-2 text-left">Varsayılan</th>
+                <th className="px-4 py-2 text-left">Type</th>
+                <th className="px-4 py-2 text-left">Description</th>
+                <th className="px-4 py-2 text-left">Default</th>
               </tr>
             </thead>
             <tbody>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">cards</td>
                 <td className="px-4 py-2 font-mono">{`Card[]`}</td>
-                <td className="px-4 py-2">Kart verilerinin listesi</td>
+                <td className="px-4 py-2">List of card data</td>
                 <td className="px-4 py-2">-</td>
               </tr>
             </tbody>
           </table>
         </div>
         <div className="mt-4">
-          <h3 className="text-lg font-semibold mb-2">Card Tipi</h3>
+          <h3 className="text-lg font-semibold mb-2">Card Type</h3>
           <div className="overflow-x-auto bg-background border rounded-lg p-4 shadow">
             <table className="min-w-full text-sm border rounded-lg overflow-hidden">
               <thead className="bg-zinc-100 dark:bg-zinc-800">
                 <tr>
-                  <th className="px-4 py-2 text-left">Alan</th>
-                  <th className="px-4 py-2 text-left">Tip</th>
-                  <th className="px-4 py-2 text-left">Açıklama</th>
+                  <th className="px-4 py-2 text-left">Field</th>
+                  <th className="px-4 py-2 text-left">Type</th>
+                  <th className="px-4 py-2 text-left">Description</th>
                 </tr>
               </thead>
               <tbody>
                 <tr className="border-t">
                   <td className="px-4 py-2 font-mono">title</td>
                   <td className="px-4 py-2 font-mono">string</td>
-                  <td className="px-4 py-2">Kart başlığı</td>
+                  <td className="px-4 py-2">Card title</td>
                 </tr>
                 <tr className="border-t">
                   <td className="px-4 py-2 font-mono">src</td>
                   <td className="px-4 py-2 font-mono">string</td>
-                  <td className="px-4 py-2">Kart görseli</td>
+                  <td className="px-4 py-2">Card image</td>
                 </tr>
               </tbody>
             </table>

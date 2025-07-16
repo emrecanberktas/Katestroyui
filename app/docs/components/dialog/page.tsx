@@ -31,21 +31,19 @@ export default function Example() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button>Dialog Aç</Button>
+        <Button>Open Dialog</Button>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Başlık</DialogTitle>
-          <DialogDescription>
-            Dialog açıklaması burada.
-          </DialogDescription>
+          <DialogTitle>Title</DialogTitle>
+          <DialogDescription>Dialog description goes here.</DialogDescription>
         </DialogHeader>
-        <div className="py-4">İçerik buraya gelecek.</div>
+        <div className="py-4">Content goes here.</div>
         <DialogFooter>
           <DialogClose asChild>
-            <Button variant="outline">Kapat</Button>
+            <Button variant="outline">Close</Button>
           </DialogClose>
-          <Button>Kaydet</Button>
+          <Button>Save</Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>
@@ -72,34 +70,38 @@ export default function DialogDocs() {
       <div className="mb-4">
         <h1 className="text-2xl sm:text-3xl font-bold mb-2 sm:mb-3">Dialog</h1>
         <p className="text-muted-foreground text-base sm:text-lg">
-          Animasyonlu, erişilebilir ve özelleştirilebilir bir Dialog componenti.
+          Animated, accessible, and customizable Dialog component.
         </p>
       </div>
 
       <Tabs defaultValue="demo">
         <TabsList className="mb-3">
-          <TabsTrigger value="demo">Canlı Demo</TabsTrigger>
-          <TabsTrigger value="code">Kod</TabsTrigger>
+          <TabsTrigger value="demo" className="flex-1 sm:flex-none">
+            Live Demo
+          </TabsTrigger>
+          <TabsTrigger value="code" className="flex-1 sm:flex-none">
+            Code
+          </TabsTrigger>
         </TabsList>
         <TabsContent value="demo">
           <div className="bg-background border rounded-lg p-6 shadow flex flex-col gap-4 mb-6">
             <Dialog>
               <DialogTrigger asChild>
-                <Button>Dialog Aç</Button>
+                <Button>Open Dialog</Button>
               </DialogTrigger>
               <DialogContent>
                 <DialogHeader>
-                  <DialogTitle>Başlık</DialogTitle>
+                  <DialogTitle>Title</DialogTitle>
                   <DialogDescription>
-                    Dialog açıklaması burada.
+                    Dialog description goes here.
                   </DialogDescription>
                 </DialogHeader>
-                <div className="py-4">İçerik buraya gelecek.</div>
+                <div className="py-4">Content goes here.</div>
                 <DialogFooter>
                   <DialogClose asChild>
-                    <Button variant="outline">Kapat</Button>
+                    <Button variant="outline">Close</Button>
                   </DialogClose>
-                  <Button>Kaydet</Button>
+                  <Button>Save</Button>
                 </DialogFooter>
               </DialogContent>
             </Dialog>
@@ -113,7 +115,7 @@ export default function DialogDocs() {
       </Tabs>
 
       <div className="mt-2 mb-8">
-        <h2 className="text-xl font-semibold mb-4">Kurulum</h2>
+        <h2 className="text-xl font-semibold mb-4">Install</h2>
         <Tabs defaultValue="cli">
           <TabsList className="mb-3">
             <TabsTrigger value="cli">CLI</TabsTrigger>
@@ -126,7 +128,7 @@ export default function DialogDocs() {
           </TabsContent>
           <TabsContent value="manual">
             <p className="text-muted-foreground text-base mb-4">
-              Aşağıdaki bağımlılıkları yükleyin:
+              Install the following dependencies:
             </p>
             <div className="mb-6">
               <TerminalBlock commands={manualCommands} />
@@ -136,7 +138,7 @@ export default function DialogDocs() {
       </div>
 
       <div className="mt-2 mb-8">
-        <h2 className="text-xl font-semibold mb-4">Kullanım</h2>
+        <h2 className="text-xl font-semibold mb-4">Usage</h2>
         <div className="bg-background border rounded-lg p-6 shadow mb-6">
           <CodeBlock
             code={`import {
@@ -152,19 +154,19 @@ export default function DialogDocs() {
 
 <Dialog>
   <DialogTrigger asChild>
-    <Button>Dialog Aç</Button>
+    <Button>Open Dialog</Button>
   </DialogTrigger>
   <DialogContent>
     <DialogHeader>
-      <DialogTitle>Başlık</DialogTitle>
-      <DialogDescription>Dialog açıklaması burada.</DialogDescription>
+      <DialogTitle>Title</DialogTitle>
+      <DialogDescription>Dialog description goes here.</DialogDescription>
     </DialogHeader>
-    <div className="py-4">İçerik buraya gelecek.</div>
+    <div className="py-4">Content goes here.</div>
     <DialogFooter>
       <DialogClose asChild>
-        <Button variant="outline">Kapat</Button>
+        <Button variant="outline">Close</Button>
       </DialogClose>
-      <Button>Kaydet</Button>
+      <Button>Save</Button>
     </DialogFooter>
   </DialogContent>
 </Dialog>
@@ -180,9 +182,9 @@ export default function DialogDocs() {
             <thead className="bg-zinc-100 dark:bg-zinc-800">
               <tr>
                 <th className="px-4 py-2 text-left">Prop</th>
-                <th className="px-4 py-2 text-left">Tip</th>
-                <th className="px-4 py-2 text-left">Açıklama</th>
-                <th className="px-4 py-2 text-left">Varsayılan</th>
+                <th className="px-4 py-2 text-left">Type</th>
+                <th className="px-4 py-2 text-left">Description</th>
+                <th className="px-4 py-2 text-left">Default</th>
               </tr>
             </thead>
             <tbody>
@@ -190,8 +192,7 @@ export default function DialogDocs() {
                 <td className="px-4 py-2 font-mono">open</td>
                 <td className="px-4 py-2 font-mono">boolean</td>
                 <td className="px-4 py-2">
-                  Dialog&apos;un açık olup olmadığını kontrol eder (controlled
-                  usage)
+                  Controls whether the dialog is open (controlled usage)
                 </td>
                 <td className="px-4 py-2">-</td>
               </tr>
@@ -199,7 +200,7 @@ export default function DialogDocs() {
                 <td className="px-4 py-2 font-mono">defaultOpen</td>
                 <td className="px-4 py-2 font-mono">boolean</td>
                 <td className="px-4 py-2">
-                  Dialog&apos;un başlangıçta açık olup olmadığını belirler
+                  Whether the dialog is open by default
                 </td>
                 <td className="px-4 py-2">false</td>
               </tr>
@@ -209,14 +210,14 @@ export default function DialogDocs() {
                   (open: boolean) =&gt; void
                 </td>
                 <td className="px-4 py-2">
-                  Açık/kapalı durumu değiştiğinde çağrılır
+                  Callback when open/close state changes
                 </td>
                 <td className="px-4 py-2">-</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">children</td>
-                <td className="px-4 py-2 font-mono">ReactNode</td>
-                <td className="px-4 py-2">Dialog içeriği</td>
+                <td className="px-4 py-2 font-mono">React.ReactNode</td>
+                <td className="px-4 py-2">Dialog content</td>
                 <td className="px-4 py-2">-</td>
               </tr>
             </tbody>

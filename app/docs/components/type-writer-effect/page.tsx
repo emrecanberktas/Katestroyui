@@ -11,7 +11,7 @@ const codeExample = `import TypewriterEffect from "@/components/ui/type-writer-e
 export default function Demo() {
   return (
     <TypewriterEffect
-      texts={["Merhaba, dünya!", "Typewriter Effect ile yazı animasyonu."]}
+      texts={["Hello, world!", "Text animation with Typewriter Effect."]}
       speed={80}
       deleteSpeed={40}
       delayBetween={1500}
@@ -44,22 +44,26 @@ export default function TypewriterEffectDocs() {
       <div className="mb-4">
         <h1 className="text-3xl font-bold mb-3">Typewriter Effect</h1>
         <p className="text-muted-foreground text-lg">
-          Typewriter Effect bileşeni, yazıların bir daktilo animasyonu ile tek
-          tek veya çoklu olarak gösterilmesini sağlar. Sunumlar, başlıklar veya
-          dikkat çekici metinler için idealdir.
+          The Typewriter Effect component allows you to display text with a
+          typewriter animation, either one by one or multiple at once. Ideal for
+          presentations, headings, or attention-grabbing texts.
         </p>
       </div>
       <Tabs defaultValue="demo">
         <TabsList className="mb-3">
-          <TabsTrigger value="demo">Canlı Demo</TabsTrigger>
-          <TabsTrigger value="code">Kod</TabsTrigger>
+          <TabsTrigger value="demo" className="flex-1 sm:flex-none">
+            Live Demo
+          </TabsTrigger>
+          <TabsTrigger value="code" className="flex-1 sm:flex-none">
+            Code
+          </TabsTrigger>
         </TabsList>
         <TabsContent value="demo">
           <div className="bg-background border rounded-lg p-6 shadow flex flex-col gap-6 mb-6 items-center justify-center">
             <TypewriterEffect
               texts={[
-                "Merhaba, dünya!",
-                "Typewriter Effect ile yazı animasyonu.",
+                "Hello, world!",
+                "Text animation with Typewriter Effect.",
               ]}
               speed={80}
               deleteSpeed={40}
@@ -78,7 +82,7 @@ export default function TypewriterEffectDocs() {
         </TabsContent>
       </Tabs>
       <div className="mt-2 mb-8">
-        <h2 className="text-xl font-semibold mb-4">Kurulum</h2>
+        <h2 className="text-xl font-semibold mb-4">Install</h2>
         <Tabs defaultValue="cli">
           <TabsList className="mb-3">
             <TabsTrigger value="cli">CLI</TabsTrigger>
@@ -91,7 +95,7 @@ export default function TypewriterEffectDocs() {
           </TabsContent>
           <TabsContent value="manual">
             <p className="text-muted-foreground text-base mb-4">
-              Aşağıdaki bağımlılıkları yükleyin:
+              Install the following dependencies:
             </p>
             <div className="mb-6">
               <TerminalBlock commands={manualCommands} />
@@ -248,7 +252,7 @@ export default TypewriterEffect;
         </Tabs>
       </div>
       <div className="mt-2 mb-8">
-        <h2 className="text-xl font-semibold mb-4">Kullanım</h2>
+        <h2 className="text-xl font-semibold mb-4">Usage</h2>
         <div className="bg-background border rounded-lg p-6 shadow mb-6">
           <CodeBlock code={codeExample} />
         </div>
@@ -260,79 +264,73 @@ export default TypewriterEffect;
             <thead className="bg-zinc-100 dark:bg-zinc-800">
               <tr>
                 <th className="px-4 py-2 text-left">Prop</th>
-                <th className="px-4 py-2 text-left">Tip</th>
-                <th className="px-4 py-2 text-left">Açıklama</th>
-                <th className="px-4 py-2 text-left">Varsayılan</th>
+                <th className="px-4 py-2 text-left">Type</th>
+                <th className="px-4 py-2 text-left">Description</th>
+                <th className="px-4 py-2 text-left">Default</th>
               </tr>
             </thead>
             <tbody>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">text</td>
                 <td className="px-4 py-2 font-mono">string</td>
-                <td className="px-4 py-2">Tek bir metin göstermek için.</td>
+                <td className="px-4 py-2">To display a single text.</td>
                 <td className="px-4 py-2">-</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">texts</td>
                 <td className="px-4 py-2 font-mono">string[]</td>
                 <td className="px-4 py-2">
-                  Birden fazla metni sıralı göstermek için.
+                  To display multiple texts sequentially.
                 </td>
                 <td className="px-4 py-2">[]</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">speed</td>
                 <td className="px-4 py-2 font-mono">number</td>
-                <td className="px-4 py-2">Yazma hızı (ms).</td>
+                <td className="px-4 py-2">Typing speed (ms).</td>
                 <td className="px-4 py-2">100</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">deleteSpeed</td>
                 <td className="px-4 py-2 font-mono">number</td>
-                <td className="px-4 py-2">Silme hızı (ms).</td>
+                <td className="px-4 py-2">Deletion speed (ms).</td>
                 <td className="px-4 py-2">50</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">delayBetween</td>
                 <td className="px-4 py-2 font-mono">number</td>
-                <td className="px-4 py-2">
-                  Metinler arası bekleme süresi (ms).
-                </td>
+                <td className="px-4 py-2">Time between texts (ms).</td>
                 <td className="px-4 py-2">2000</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">loop</td>
                 <td className="px-4 py-2 font-mono">boolean</td>
-                <td className="px-4 py-2">
-                  Metinler döngüsel olarak tekrar eder.
-                </td>
+                <td className="px-4 py-2">Texts loop continuously.</td>
                 <td className="px-4 py-2">true</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">showCursor</td>
                 <td className="px-4 py-2 font-mono">boolean</td>
-                <td className="px-4 py-2">Yanıp sönen imleç gösterilsin mi?</td>
+                <td className="px-4 py-2">Should the cursor blink?</td>
                 <td className="px-4 py-2">true</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">cursorChar</td>
                 <td className="px-4 py-2 font-mono">string</td>
-                <td className="px-4 py-2">İmleç karakteri.</td>
+                <td className="px-4 py-2">Cursor character.</td>
                 <td className="px-4 py-2">&quot;|&quot;</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">className</td>
                 <td className="px-4 py-2 font-mono">string</td>
-                <td className="px-4 py-2">
-                  Ekstra Tailwind/özelleştirme sınıfları.
-                </td>
+                <td className="px-4 py-2">Extra Tailwind/custom classes.</td>
                 <td className="px-4 py-2">-</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">onComplete</td>
                 <td className="px-4 py-2 font-mono">() =&gt; void</td>
                 <td className="px-4 py-2">
-                  Animasyon tamamlandığında çağrılır.
+                  Called when animation is complete.
                 </td>
                 <td className="px-4 py-2">-</td>
               </tr>
@@ -341,44 +339,42 @@ export default TypewriterEffect;
                 <td className="px-4 py-2 font-mono">
                   (currentText: string, index: number) =&gt; void
                 </td>
-                <td className="px-4 py-2">Her metin değişiminde çağrılır.</td>
+                <td className="px-4 py-2">Called on every text change.</td>
                 <td className="px-4 py-2">-</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">startDelay</td>
                 <td className="px-4 py-2 font-mono">number</td>
                 <td className="px-4 py-2">
-                  Animasyon başlamadan önceki gecikme (ms).
+                  Delay before animation starts (ms).
                 </td>
                 <td className="px-4 py-2">0</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">preserveHeight</td>
                 <td className="px-4 py-2 font-mono">boolean</td>
-                <td className="px-4 py-2">Yükseklik sabit kalsın mı?</td>
+                <td className="px-4 py-2">Should height be preserved?</td>
                 <td className="px-4 py-2">false</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">randomSpeed</td>
                 <td className="px-4 py-2 font-mono">boolean</td>
                 <td className="px-4 py-2">
-                  Her karakter için hız rastgele değişsin mi?
+                  Should speed be random for each character?
                 </td>
                 <td className="px-4 py-2">false</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">pauseOnHover</td>
                 <td className="px-4 py-2 font-mono">boolean</td>
-                <td className="px-4 py-2">
-                  Üzerine gelince animasyon dursun mu?
-                </td>
+                <td className="px-4 py-2">Should animation pause on hover?</td>
                 <td className="px-4 py-2">false</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">enableCharBounce</td>
                 <td className="px-4 py-2 font-mono">boolean</td>
                 <td className="px-4 py-2">
-                  Karakterler animasyonla gelsin mi?
+                  Should characters animate with bounce?
                 </td>
                 <td className="px-4 py-2">true</td>
               </tr>

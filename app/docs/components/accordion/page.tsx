@@ -21,16 +21,16 @@ export default function Example() {
   return (
     <Accordion type="single" defaultValue="item-1">
       <AccordionItem value="item-1">
-        <AccordionTrigger>Accordion Başlık</AccordionTrigger>
-        <AccordionContent>Accordion içeriği burada.</AccordionContent>
+        <AccordionTrigger>Accordion Title</AccordionTrigger>
+        <AccordionContent>Accordion content goes here.</AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-2">
-        <AccordionTrigger>Accordion Başlık 2</AccordionTrigger>
-        <AccordionContent>Accordion içeriği burada.</AccordionContent>
+        <AccordionTrigger>Accordion Title 2</AccordionTrigger>
+        <AccordionContent>Accordion content goes here.</AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-3">
-        <AccordionTrigger>Accordion Başlık 3</AccordionTrigger>
-        <AccordionContent>Accordion içeriği burada.</AccordionContent>
+        <AccordionTrigger>Accordion Title 3</AccordionTrigger>
+        <AccordionContent>Accordion content goes here.</AccordionContent>
       </AccordionItem>
     </Accordion>
   );
@@ -58,34 +58,39 @@ export default function AccordionDocs() {
           Accordion
         </h1>
         <p className="text-muted-foreground text-base sm:text-lg">
-          Animasyonlu, erişilebilir ve özelleştirilebilir bir Accordion
-          componenti.
+          Animated, accessible, and customizable Accordion component.
         </p>
       </div>
 
       <Tabs defaultValue="demo">
         <TabsList className="mb-3 ">
           <TabsTrigger value="demo" className="flex-1 sm:flex-none">
-            Canlı Demo
+            Live Demo
           </TabsTrigger>
           <TabsTrigger value="code" className="flex-1 sm:flex-none">
-            Kod
+            Code
           </TabsTrigger>
         </TabsList>
         <TabsContent value="demo">
           <div className="bg-background border rounded-lg p-4 sm:p-6 shadow flex flex-col gap-4 mb-6">
             <Accordion type="single" defaultValue="item-1">
               <AccordionItem value="item-1">
-                <AccordionTrigger>Accordion Başlık</AccordionTrigger>
-                <AccordionContent>Accordion içeriği burada.</AccordionContent>
+                <AccordionTrigger>Accordion Title</AccordionTrigger>
+                <AccordionContent>
+                  Accordion content goes here.
+                </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2">
-                <AccordionTrigger>Accordion Başlık 2</AccordionTrigger>
-                <AccordionContent>Accordion içeriği burada.</AccordionContent>
+                <AccordionTrigger>Accordion Title 2</AccordionTrigger>
+                <AccordionContent>
+                  Accordion content goes here.
+                </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-3">
-                <AccordionTrigger>Accordion Başlık 3</AccordionTrigger>
-                <AccordionContent>Accordion içeriği burada.</AccordionContent>
+                <AccordionTrigger>Accordion Title 3</AccordionTrigger>
+                <AccordionContent>
+                  Accordion content goes here.
+                </AccordionContent>
               </AccordionItem>
             </Accordion>
           </div>
@@ -98,7 +103,7 @@ export default function AccordionDocs() {
       </Tabs>
 
       <div className="mt-2 mb-8">
-        <h2 className="text-lg sm:text-xl font-semibold mb-4">Kurulum</h2>
+        <h2 className="text-lg sm:text-xl font-semibold mb-4">Install</h2>
         <Tabs defaultValue="cli">
           <TabsList className="mb-3">
             <TabsTrigger value="cli" className="flex-1 sm:flex-none">
@@ -114,8 +119,8 @@ export default function AccordionDocs() {
             </div>
           </TabsContent>
           <TabsContent value="manual">
-            <p className="text-muted-foreground text-sm sm:text-base mb-4">
-              Aşağıdaki bağımlılıkları yükleyin:
+            <p className="text-muted-foreground text-base mb-4">
+              Install the following dependencies:
             </p>
             <div className="mb-6">
               <TerminalBlock commands={manualCommands} />
@@ -305,7 +310,7 @@ export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };
       </div>
 
       <div className="mt-2 mb-8">
-        <h2 className="text-lg sm:text-xl font-semibold mb-4">Kullanım</h2>
+        <h2 className="text-lg sm:text-xl font-semibold mb-4">Usage</h2>
         <div className="bg-background border rounded-lg p-4 sm:p-6 shadow mb-6">
           <CodeBlock
             code={`
@@ -318,8 +323,8 @@ import {
 
 <Accordion type="single" defaultValue="item-1">
   <AccordionItem value="item-1">
-    <AccordionTrigger>Accordion Başlık</AccordionTrigger>
-    <AccordionContent>İçerik</AccordionContent>
+    <AccordionTrigger>Accordion Title</AccordionTrigger>
+    <AccordionContent>Content</AccordionContent>
   </AccordionItem>
 </Accordion>
 `}
@@ -334,9 +339,9 @@ import {
             <thead className="bg-zinc-100 dark:bg-zinc-800">
               <tr>
                 <th className="px-2 sm:px-4 py-2 text-left">Prop</th>
-                <th className="px-2 sm:px-4 py-2 text-left">Tip</th>
-                <th className="px-2 sm:px-4 py-2 text-left">Açıklama</th>
-                <th className="px-2 sm:px-4 py-2 text-left">Varsayılan</th>
+                <th className="px-2 sm:px-4 py-2 text-left">Type</th>
+                <th className="px-2 sm:px-4 py-2 text-left">Description</th>
+                <th className="px-2 sm:px-4 py-2 text-left">Default</th>
               </tr>
             </thead>
             <tbody>
@@ -346,7 +351,7 @@ import {
                   &quot;single&quot; | &quot;multiple&quot;
                 </td>
                 <td className="px-2 sm:px-4 py-2">
-                  Accordion tipi (tekli veya çoklu seçim)
+                  Accordion type (single or multiple selection)
                 </td>
                 <td className="px-2 sm:px-4 py-2">&quot;single&quot;</td>
               </tr>
@@ -355,9 +360,7 @@ import {
                 <td className="px-2 sm:px-4 py-2 font-mono">
                   string | string[]
                 </td>
-                <td className="px-2 sm:px-4 py-2">
-                  Başlangıçta açık olan item(lar)
-                </td>
+                <td className="px-2 sm:px-4 py-2">Initially open item(s)</td>
                 <td className="px-2 sm:px-4 py-2">-</td>
               </tr>
               <tr className="border-t">
@@ -366,7 +369,7 @@ import {
                   string | string[]
                 </td>
                 <td className="px-2 sm:px-4 py-2">
-                  Kontrollü değer (controlled usage)
+                  Controlled value (controlled usage)
                 </td>
                 <td className="px-2 sm:px-4 py-2">-</td>
               </tr>
@@ -375,9 +378,7 @@ import {
                 <td className="px-2 sm:px-4 py-2 font-mono">
                   (value) =&gt; void
                 </td>
-                <td className="px-2 sm:px-4 py-2">
-                  Değer değiştiğinde çağrılır
-                </td>
+                <td className="px-2 sm:px-4 py-2">Called when value changes</td>
                 <td className="px-2 sm:px-4 py-2">-</td>
               </tr>
             </tbody>

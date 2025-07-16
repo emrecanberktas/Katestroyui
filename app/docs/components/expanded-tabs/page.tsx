@@ -66,13 +66,17 @@ export default function ExpandedTabsDocs() {
       <div className="mb-4">
         <h1 className="text-3xl font-bold mb-3">Expanded Tabs</h1>
         <p className="text-muted-foreground text-lg">
-          Animasyonlu, ikon destekli ve genişletilmiş sekme (tab) bileşeni.
+          Animated, icon-supported, and expanded tab component.
         </p>
       </div>
       <Tabs defaultValue="demo">
         <TabsList className="mb-3">
-          <TabsTrigger value="demo">Canlı Demo</TabsTrigger>
-          <TabsTrigger value="code">Kod</TabsTrigger>
+          <TabsTrigger value="demo" className="flex-1 sm:flex-none">
+            Live Demo
+          </TabsTrigger>
+          <TabsTrigger value="code" className="flex-1 sm:flex-none">
+            Code
+          </TabsTrigger>
         </TabsList>
         <TabsContent value="demo">
           <div className="bg-background border rounded-lg p-6 shadow flex flex-col gap-6 mb-6 items-center justify-center min-h-[320px]">
@@ -94,10 +98,10 @@ export default function ExpandedTabsDocs() {
 
               <ExpandedTabsContent value="home">
                 <div className="p-6 flex flex-col gap-4">
-                  <h2 className="text-2xl font-semibold"> Hoş geldiniz</h2>
+                  <h2 className="text-2xl font-semibold">Welcome</h2>
                   <p className="text-muted-foreground">
-                    Bu, ana sayfa genel bakışıdır. Burada anahtar metrikleri
-                    izleyebilir ve son güncellemeleri keşfedebilirsiniz.
+                    This is the general overview of the home page. Here you can
+                    track key metrics and discover the latest updates.
                   </p>
                   <img
                     src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80"
@@ -109,10 +113,10 @@ export default function ExpandedTabsDocs() {
 
               <ExpandedTabsContent value="profile">
                 <div className="p-6 flex flex-col gap-4">
-                  <h2 className="text-2xl font-semibold"> Profiliniz</h2>
+                  <h2 className="text-2xl font-semibold">Your Profile</h2>
                   <p className="text-muted-foreground">
-                    Kişisel bilgilerinizi yönetin, yeni bir avatar yükleyin veya
-                    bio&apos;nızı güncelleyin.
+                    Manage your personal information, upload a new avatar, or
+                    update your bio.
                   </p>
                   <div className="flex items-center gap-4">
                     <img
@@ -121,9 +125,9 @@ export default function ExpandedTabsDocs() {
                       className="w-20 h-20 rounded-full border"
                     />
                     <div>
-                      <p className="font-medium">Emre Can Berktaş</p>
+                      <p className="font-medium">John Doe</p>
                       <p className="text-sm text-muted-foreground">
-                        Frontend Developer
+                        Software Engineer
                       </p>
                     </div>
                   </div>
@@ -132,15 +136,15 @@ export default function ExpandedTabsDocs() {
 
               <ExpandedTabsContent value="settings">
                 <div className="p-6 flex flex-col gap-4">
-                  <h2 className="text-2xl font-semibold">⚙️ Ayarlar</h2>
+                  <h2 className="text-2xl font-semibold">Settings</h2>
                   <p className="text-muted-foreground">
-                    Uygulama tercihlerini ayarlayın, temaları değiştirin veya
-                    hesap ayarlarınızı güncelleyin.
+                    Configure application preferences, change themes, or update
+                    your account settings.
                   </p>
                   <ul className="list-disc pl-6 text-muted-foreground space-y-1">
-                    <li> Karanlık mod desteği</li>
-                    <li> Bildirim ayarları</li>
-                    <li> Gizlilik ve güvenlik seçenekleri</li>
+                    <li>Dark mode support</li>
+                    <li>Notification settings</li>
+                    <li>Privacy and security options</li>
                   </ul>
                 </div>
               </ExpandedTabsContent>
@@ -154,7 +158,7 @@ export default function ExpandedTabsDocs() {
         </TabsContent>
       </Tabs>
       <div className="mt-2 mb-8">
-        <h2 className="text-xl font-semibold mb-4">Kurulum</h2>
+        <h2 className="text-xl font-semibold mb-4">Install</h2>
         <Tabs defaultValue="cli">
           <TabsList className="mb-3">
             <TabsTrigger value="cli">CLI</TabsTrigger>
@@ -167,7 +171,7 @@ export default function ExpandedTabsDocs() {
           </TabsContent>
           <TabsContent value="manual">
             <p className="text-muted-foreground text-base mb-4">
-              Aşağıdaki bağımlılıkları yükleyin:
+              Install the following dependencies:
             </p>
             <div className="mb-6">
               <TerminalBlock commands={manualCommands} />
@@ -176,7 +180,7 @@ export default function ExpandedTabsDocs() {
         </Tabs>
       </div>
       <div className="mt-2 mb-8">
-        <h2 className="text-xl font-semibold mb-4">Kullanım</h2>
+        <h2 className="text-xl font-semibold mb-4">Usage</h2>
         <div className="bg-background border rounded-lg p-6 shadow mb-6">
           <CodeBlock code={codeExample} />
         </div>
@@ -187,41 +191,40 @@ export default function ExpandedTabsDocs() {
           <table className="min-w-full text-sm border rounded-lg overflow-hidden">
             <thead className="bg-zinc-100 dark:bg-zinc-800">
               <tr>
-                <th className="px-4 py-2 text-left">Bileşen</th>
                 <th className="px-4 py-2 text-left">Prop</th>
-                <th className="px-4 py-2 text-left">Tip</th>
-                <th className="px-4 py-2 text-left">Açıklama</th>
-                <th className="px-4 py-2 text-left">Varsayılan</th>
+                <th className="px-4 py-2 text-left">Type</th>
+                <th className="px-4 py-2 text-left">Description</th>
+                <th className="px-4 py-2 text-left">Default</th>
               </tr>
             </thead>
             <tbody>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">ExpandedTabs</td>
                 <td className="px-4 py-2 font-mono">defaultValue</td>
-                <td className="px-4 py-2 font-mono">string</td>
-                <td className="px-4 py-2">Varsayılan seçili sekme değeri</td>
+                <td className="px-4 py-2">
+                  The default value of the selected tab
+                </td>
                 <td className="px-4 py-2">-</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">ExpandedTabsTrigger</td>
                 <td className="px-4 py-2 font-mono">value</td>
-                <td className="px-4 py-2 font-mono">string</td>
-                <td className="px-4 py-2">Sekmenin değeri</td>
+                <td className="px-4 py-2">The value of the tab</td>
                 <td className="px-4 py-2">-</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">ExpandedTabsTrigger</td>
                 <td className="px-4 py-2 font-mono">icon</td>
-                <td className="px-4 py-2 font-mono">LucideIcon</td>
-                <td className="px-4 py-2">Sekme başında gösterilecek ikon</td>
+                <td className="px-4 py-2">
+                  The icon to display at the beginning of the tab
+                </td>
                 <td className="px-4 py-2">-</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">ExpandedTabsContent</td>
                 <td className="px-4 py-2 font-mono">value</td>
-                <td className="px-4 py-2 font-mono">string</td>
                 <td className="px-4 py-2">
-                  İçeriğin bağlı olduğu sekme değeri
+                  The value of the tab content it is associated with
                 </td>
                 <td className="px-4 py-2">-</td>
               </tr>

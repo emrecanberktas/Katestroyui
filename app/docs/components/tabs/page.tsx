@@ -12,35 +12,35 @@ function Example() {
   return (
     <Tabs defaultValue="profile">
       <TabsList className="justify-center">
-        <TabsTrigger value="profile">Profil</TabsTrigger>
-        <TabsTrigger value="settings">Ayarlar</TabsTrigger>
-        <TabsTrigger value="security">Güvenlik</TabsTrigger>
+        <TabsTrigger value="profile">Profile</TabsTrigger>
+        <TabsTrigger value="settings">Settings</TabsTrigger>
+        <TabsTrigger value="security">Security</TabsTrigger>
       </TabsList>
       <TabsContent value="profile">
         <div>
-          <h3 className="text-lg font-semibold mb-2">Kullanıcı Bilgileri</h3>
-          <p className="mb-1">Ad: <span className="font-medium">Ahmet Yılmaz</span></p>
-          <p className="mb-1">E-posta: <span className="font-medium">ahmet@example.com</span></p>
-          <p className="mb-1">Üyelik: <span className="font-medium">Premium</span></p>
+          <h3 className="text-lg font-semibold mb-2">User Information</h3>
+          <p className="mb-1">Name: <span className="font-medium">John Doe</span></p>
+          <p className="mb-1">Email: <span className="font-medium">john@example.com</span></p>
+          <p className="mb-1">Membership: <span className="font-medium">Premium</span></p>
         </div>
       </TabsContent>
       <TabsContent value="settings">
         <div>
-          <h3 className="text-lg font-semibold mb-2">Genel Ayarlar</h3>
+          <h3 className="text-lg font-semibold mb-2">General Settings</h3>
           <ul className="list-disc pl-5 space-y-1">
-            <li>Bildirimler: Açık</li>
-            <li>Tema: Koyu</li>
-            <li>Dil: Türkçe</li>
+            <li>Notifications: On</li>
+            <li>Theme: Dark</li>
+            <li>Language: English</li>
           </ul>
         </div>
       </TabsContent>
       <TabsContent value="security">
         <div>
-          <h3 className="text-lg font-semibold mb-2">Güvenlik</h3>
+          <h3 className="text-lg font-semibold mb-2">Security</h3>
           <ul className="list-disc pl-5 space-y-1">
-            <li>İki adımlı doğrulama: Aktif</li>
-            <li>Son giriş: 2 saat önce</li>
-            <li>Şifre: Son değişiklik 1 ay önce</li>
+            <li>Two-factor authentication: Active</li>
+            <li>Last login: 2 hours ago</li>
+            <li>Password: Last changed 1 month ago</li>
           </ul>
         </div>
       </TabsContent>
@@ -69,59 +69,59 @@ export default function TabsDocs() {
       <div className="mb-4">
         <h1 className="text-2xl sm:text-3xl font-bold mb-2 sm:mb-3">Tabs</h1>
         <p className="text-muted-foreground text-base sm:text-lg">
-          Farklı içerikleri sekmeler arasında geçiş yaparak göstermek için
-          kullanılan animasyonlu ve erişilebilir bir tabs bileşeni.
+          An animated and accessible tabs component used to display different
+          content by switching between tabs.
         </p>
       </div>
 
-      {/* Demo ve Kod sekmeli gösterim */}
       <Tabs defaultValue="demo">
         <TabsList className="mb-3">
-          <TabsTrigger value="demo">Canlı Demo</TabsTrigger>
-          <TabsTrigger value="code">Kod</TabsTrigger>
+          <TabsTrigger value="demo">Live Demo</TabsTrigger>
+          <TabsTrigger value="code">Code</TabsTrigger>
         </TabsList>
         <TabsContent value="demo">
           <div className="bg-background border rounded-lg p-6 shadow flex flex-col gap-4 mb-6 items-center justify-center">
             <Tabs defaultValue="profile">
               <TabsList className="justify-center">
-                <TabsTrigger value="profile">Profil</TabsTrigger>
-                <TabsTrigger value="settings">Ayarlar</TabsTrigger>
-                <TabsTrigger value="security">Güvenlik</TabsTrigger>
+                <TabsTrigger value="profile">Profile</TabsTrigger>
+                <TabsTrigger value="settings">Settings</TabsTrigger>
+                <TabsTrigger value="security">Security</TabsTrigger>
               </TabsList>
               <TabsContent value="profile">
                 <div>
                   <h3 className="text-lg font-semibold mb-2">
-                    Kullanıcı Bilgileri
+                    User Information
                   </h3>
                   <p className="mb-1">
-                    Ad: <span className="font-medium">Ahmet Yılmaz</span>
+                    Name: <span className="font-medium">John Doe</span>
                   </p>
                   <p className="mb-1">
-                    E-posta:{" "}
-                    <span className="font-medium">ahmet@example.com</span>
+                    Email: <span className="font-medium">john@example.com</span>
                   </p>
                   <p className="mb-1">
-                    Üyelik: <span className="font-medium">Premium</span>
+                    Membership: <span className="font-medium">Premium</span>
                   </p>
                 </div>
               </TabsContent>
               <TabsContent value="settings">
                 <div>
-                  <h3 className="text-lg font-semibold mb-2">Genel Ayarlar</h3>
+                  <h3 className="text-lg font-semibold mb-2">
+                    General Settings
+                  </h3>
                   <ul className="list-disc pl-5 space-y-1">
-                    <li>Bildirimler: Açık</li>
-                    <li>Tema: Koyu</li>
-                    <li>Dil: Türkçe</li>
+                    <li>Notifications: On</li>
+                    <li>Theme: Dark</li>
+                    <li>Language: English</li>
                   </ul>
                 </div>
               </TabsContent>
               <TabsContent value="security">
                 <div>
-                  <h3 className="text-lg font-semibold mb-2">Güvenlik</h3>
+                  <h3 className="text-lg font-semibold mb-2">Security</h3>
                   <ul className="list-disc pl-5 space-y-1">
-                    <li>İki adımlı doğrulama: Aktif</li>
-                    <li>Son giriş: 2 saat önce</li>
-                    <li>Şifre: Son değişiklik 1 ay önce</li>
+                    <li>Two-factor authentication: Active</li>
+                    <li>Last login: 2 hours ago</li>
+                    <li>Password: Last changed 1 month ago</li>
                   </ul>
                 </div>
               </TabsContent>
@@ -136,7 +136,7 @@ export default function TabsDocs() {
       </Tabs>
 
       <div className="mt-2 mb-8">
-        <h2 className="text-xl font-semibold mb-4">Kurulum</h2>
+        <h2 className="text-xl font-semibold mb-4">Install</h2>
         <Tabs defaultValue="cli">
           <TabsList className="mb-3">
             <TabsTrigger value="cli">CLI</TabsTrigger>
@@ -149,17 +149,122 @@ export default function TabsDocs() {
           </TabsContent>
           <TabsContent value="manual">
             <p className="text-muted-foreground text-base mb-4">
-              Aşağıdaki bağımlılıkları yükleyin:
+              Install the following dependencies:
             </p>
             <div className="mb-6">
               <TerminalBlock commands={manualCommands} />
             </div>
             <div className="mb-6">
               <CodeBlock
-                code={`import * as TabsPrimitive from "@radix-ui/react-tabs";
+                code={`import * as React from "react";
+import * as TabsPrimitive from "@radix-ui/react-tabs";
 import { motion } from "motion/react";
-import React from "react";
-// ... tabs component implementation ...
+
+import { cn } from "@/lib/utils";
+
+function Tabs({
+  className,
+  ...props
+}: React.ComponentProps<typeof TabsPrimitive.Root>) {
+  return (
+    <TabsPrimitive.Root
+      data-slot="tabs"
+      className={cn("flex flex-col gap-2", className)}
+      {...props}
+    >
+      {props.children}
+    </TabsPrimitive.Root>
+  );
+}
+
+function TabsList({
+  className,
+  ...props
+}: React.ComponentProps<typeof TabsPrimitive.List>) {
+  const tabsListRef = React.useRef<HTMLDivElement>(null);
+
+  return (
+    <TabsPrimitive.List
+      ref={tabsListRef}
+      data-slot="tabs-list"
+      {...props}
+      className={cn(
+        "bg-muted text-muted-foreground inline-flex h-9 w-fit items-center justify-center rounded-lg p-[3px]",
+        className
+      )}
+    />
+  );
+}
+
+function TabsTrigger({
+  className,
+  value,
+  ...props
+}: React.ComponentProps<typeof TabsPrimitive.Trigger> & {
+  "data-state"?: "active" | "inactive";
+  value: string;
+}) {
+  const [isHovered, setIsHovered] = React.useState(false);
+
+  return (
+    <div
+      className="relative inline-flex"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <TabsPrimitive.Trigger
+        data-slot="tabs-trigger"
+        {...props}
+        value={value}
+        className={cn(
+          "text-foreground dark:text-muted-foreground inline-flex h-[calc(100%-1px)] items-center justify-center gap-1.5 rounded-md border border-transparent px-3 py-1 text-sm font-medium whitespace-nowrap transition-[color,box-shadow] focus-visible:ring-[3px] focus-visible:outline-1 focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:outline-ring disabled:pointer-events-none disabled:opacity-50",
+          "data-[state=active]:bg-background dark:data-[state=active]:bg-input/50 dark:data-[state=active]:text-foreground data-[state=active]:shadow-md",
+          className
+        )}
+      >
+        {props.children}
+        {(isHovered || props["data-state"] === "active") && (
+          <motion.div
+            layoutId="tab-indicator"
+            className={cn(
+              "absolute inset-0 rounded-md",
+              props["data-state"] === "active"
+                ? "bg-black/10 dark:bg-white/20"
+                : "bg-black/5 dark:bg-white/10"
+            )}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ type: "spring", bounce: 0, duration: 0.4 }}
+          />
+        )}
+      </TabsPrimitive.Trigger>
+    </div>
+  );
+}
+
+function TabsContent({
+  className,
+  ...props
+}: React.ComponentProps<typeof TabsPrimitive.Content>) {
+  return (
+    <TabsPrimitive.Content
+      data-slot="tabs-content"
+      className={cn("flex-1 outline-none", className)}
+      {...props}
+    >
+      <motion.div
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        {props.children}
+      </motion.div>
+    </TabsPrimitive.Content>
+  );
+}
+
+export { Tabs, TabsList, TabsTrigger, TabsContent };
+
 `}
               />
             </div>
@@ -168,7 +273,7 @@ import React from "react";
       </div>
 
       <div className="mt-2 mb-8">
-        <h2 className="text-xl font-semibold mb-4">Kullanım</h2>
+        <h2 className="text-xl font-semibold mb-4">Usage</h2>
         <div className="bg-background border rounded-lg p-6 shadow mb-6">
           <CodeBlock code={codeExample} />
         </div>
@@ -181,9 +286,9 @@ import React from "react";
             <thead className="bg-zinc-100 dark:bg-zinc-800">
               <tr>
                 <th className="px-4 py-2 text-left">Prop</th>
-                <th className="px-4 py-2 text-left">Tip</th>
-                <th className="px-4 py-2 text-left">Açıklama</th>
-                <th className="px-4 py-2 text-left">Varsayılan</th>
+                <th className="px-4 py-2 text-left">Type</th>
+                <th className="px-4 py-2 text-left">Description</th>
+                <th className="px-4 py-2 text-left">Default</th>
               </tr>
             </thead>
             <tbody>
@@ -191,7 +296,7 @@ import React from "react";
                 <td className="px-4 py-2 font-mono">defaultValue</td>
                 <td className="px-4 py-2 font-mono">string</td>
                 <td className="px-4 py-2">
-                  Başlangıçta seçili olan sekme değeri
+                  The value of the tab that is selected by default
                 </td>
                 <td className="px-4 py-2">-</td>
               </tr>
@@ -199,7 +304,7 @@ import React from "react";
                 <td className="px-4 py-2 font-mono">value</td>
                 <td className="px-4 py-2 font-mono">string</td>
                 <td className="px-4 py-2">
-                  Kontrollü değer (controlled usage)
+                  Controlled value (controlled usage)
                 </td>
                 <td className="px-4 py-2">-</td>
               </tr>
@@ -208,21 +313,21 @@ import React from "react";
                 <td className="px-4 py-2 font-mono">
                   (value: string) =&gt; void
                 </td>
-                <td className="px-4 py-2">Sekme değiştiğinde çağrılır</td>
+                <td className="px-4 py-2">Called when the tab changes</td>
                 <td className="px-4 py-2">-</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">children</td>
                 <td className="px-4 py-2 font-mono">React.ReactNode</td>
                 <td className="px-4 py-2">
-                  TabsList, TabsTrigger ve TabsContent bileşenleri
+                  TabsList, TabsTrigger and TabsContent components
                 </td>
                 <td className="px-4 py-2">-</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">className</td>
                 <td className="px-4 py-2 font-mono">string</td>
-                <td className="px-4 py-2">Ekstra CSS sınıfları</td>
+                <td className="px-4 py-2">Extra CSS classes</td>
                 <td className="px-4 py-2">-</td>
               </tr>
             </tbody>

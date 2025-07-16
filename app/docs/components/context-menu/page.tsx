@@ -69,33 +69,33 @@ function Example() {
           <div className="w-4 h-4 bg-red-500 rounded-full border-2 border-white shadow-lg" />
         }
       >
-        Sağ tıkla
+        Right click
       </ContextMenuTrigger>
       <ContextMenuContent>
-        <ContextMenuLabel>Seçenekler</ContextMenuLabel>
-        <ContextMenuItem onClick={() => alert("Düzenle tıklandı")}>Düzenle</ContextMenuItem>
-        <ContextMenuItem onClick={() => alert("Sil tıklandı")}>Sil</ContextMenuItem>
+        <ContextMenuLabel>Options</ContextMenuLabel>
+        <ContextMenuItem onClick={() => alert("Edit clicked")}>Edit</ContextMenuItem>
+        <ContextMenuItem onClick={() => alert("Delete clicked")}>Delete</ContextMenuItem>
         <ContextMenuSeparator />
         <ContextMenuCheckboxItem
           checked={checked}
           onCheckedChange={setChecked}
         >
-          Checkbox Seçeneği
+          Checkbox Option
         </ContextMenuCheckboxItem>
         <ContextMenuSeparator />
         <ContextMenuRadioGroup
           value={radioValue}
           onValueChange={setRadioValue}
         >
-          <ContextMenuRadioItem value="option1">Seçenek 1</ContextMenuRadioItem>
-          <ContextMenuRadioItem value="option2">Seçenek 2</ContextMenuRadioItem>
+          <ContextMenuRadioItem value="option1">Option 1</ContextMenuRadioItem>
+          <ContextMenuRadioItem value="option2">Option 2</ContextMenuRadioItem>
         </ContextMenuRadioGroup>
         <ContextMenuSeparator />
         <ContextMenuSub>
-          <ContextMenuSubTrigger>Daha Fazla</ContextMenuSubTrigger>
+          <ContextMenuSubTrigger>More</ContextMenuSubTrigger>
           <ContextMenuSubContent>
-            <ContextMenuItem>Alt Seçenek 1</ContextMenuItem>
-            <ContextMenuItem>Alt Seçenek 2</ContextMenuItem>
+            <ContextMenuItem>Sub Option 1</ContextMenuItem>
+            <ContextMenuItem>Sub Option 2</ContextMenuItem>
           </ContextMenuSubContent>
         </ContextMenuSub>
       </ContextMenuContent>
@@ -127,14 +127,14 @@ export default function ContextMenuDocs() {
       <div className="mb-4">
         <h1 className="text-3xl font-bold mb-3">Context Menu</h1>
         <p className="text-muted-foreground text-lg">
-          Sağ tık menüsü ile gelişmiş, animasyonlu ve erişilebilir bir içerik
-          menüsü bileşeni.
+          An advanced, animated, and accessible context menu component with
+          right-click support.
         </p>
       </div>
       <Tabs defaultValue="demo">
         <TabsList className="mb-3">
-          <TabsTrigger value="demo">Canlı Demo</TabsTrigger>
-          <TabsTrigger value="code">Kod</TabsTrigger>
+          <TabsTrigger value="demo">Live Demo</TabsTrigger>
+          <TabsTrigger value="code">Code</TabsTrigger>
         </TabsList>
         <TabsContent value="demo">
           <div className="bg-background border rounded-lg p-6 shadow flex flex-col gap-6 mb-6 items-center justify-center">
@@ -143,22 +143,22 @@ export default function ContextMenuDocs() {
                 className="flex h-[150px] w-[300px] items-center justify-center rounded-md border border-dashed text-sm"
                 customCursor={<CustomCursor />}
               >
-                Sağ tıkla
+                Right click
               </ContextMenuTrigger>
               <ContextMenuContent>
-                <ContextMenuLabel>Seçenekler</ContextMenuLabel>
-                <ContextMenuItem onClick={() => alert("Düzenle tıklandı")}>
-                  Düzenle
+                <ContextMenuLabel>Options</ContextMenuLabel>
+                <ContextMenuItem onClick={() => alert("Edit clicked")}>
+                  Edit
                 </ContextMenuItem>
-                <ContextMenuItem onClick={() => alert("Sil tıklandı")}>
-                  Sil
+                <ContextMenuItem onClick={() => alert("Delete clicked")}>
+                  Delete
                 </ContextMenuItem>
                 <ContextMenuSeparator />
                 <ContextMenuCheckboxItem
                   checked={checked}
                   onCheckedChange={setChecked}
                 >
-                  Checkbox Seçeneği
+                  Checkbox Option
                 </ContextMenuCheckboxItem>
                 <ContextMenuSeparator />
                 <ContextMenuRadioGroup
@@ -166,18 +166,18 @@ export default function ContextMenuDocs() {
                   onValueChange={setRadioValue}
                 >
                   <ContextMenuRadioItem value="option1">
-                    Seçenek 1
+                    Option 1
                   </ContextMenuRadioItem>
                   <ContextMenuRadioItem value="option2">
-                    Seçenek 2
+                    Option 2
                   </ContextMenuRadioItem>
                 </ContextMenuRadioGroup>
                 <ContextMenuSeparator />
                 <ContextMenuSub>
-                  <ContextMenuSubTrigger>Daha Fazla</ContextMenuSubTrigger>
+                  <ContextMenuSubTrigger>More</ContextMenuSubTrigger>
                   <ContextMenuSubContent>
-                    <ContextMenuItem>Alt Seçenek 1</ContextMenuItem>
-                    <ContextMenuItem>Alt Seçenek 2</ContextMenuItem>
+                    <ContextMenuItem>Sub Option 1</ContextMenuItem>
+                    <ContextMenuItem>Sub Option 2</ContextMenuItem>
                   </ContextMenuSubContent>
                 </ContextMenuSub>
               </ContextMenuContent>
@@ -191,7 +191,7 @@ export default function ContextMenuDocs() {
         </TabsContent>
       </Tabs>
       <div className="mt-2 mb-8">
-        <h2 className="text-xl font-semibold mb-4">Kurulum</h2>
+        <h2 className="text-xl font-semibold mb-4">Installation</h2>
         <Tabs defaultValue="cli">
           <TabsList className="mb-3">
             <TabsTrigger value="cli">CLI</TabsTrigger>
@@ -204,7 +204,7 @@ export default function ContextMenuDocs() {
           </TabsContent>
           <TabsContent value="manual">
             <p className="text-muted-foreground text-base mb-4">
-              Aşağıdaki bağımlılıkları yükleyin:
+              Install the following dependencies:
             </p>
             <div className="mb-6">
               <TerminalBlock commands={manualCommands} />
@@ -223,7 +223,7 @@ import React from "react";
         </Tabs>
       </div>
       <div className="mt-2 mb-8">
-        <h2 className="text-xl font-semibold mb-4">Kullanım</h2>
+        <h2 className="text-xl font-semibold mb-4">Usage</h2>
         <div className="bg-background border rounded-lg p-6 shadow mb-6">
           <CodeBlock code={codeExample} />
         </div>
@@ -235,28 +235,28 @@ import React from "react";
             <thead className="bg-zinc-100 dark:bg-zinc-800">
               <tr>
                 <th className="px-4 py-2 text-left">Prop</th>
-                <th className="px-4 py-2 text-left">Tip</th>
-                <th className="px-4 py-2 text-left">Açıklama</th>
-                <th className="px-4 py-2 text-left">Varsayılan</th>
+                <th className="px-4 py-2 text-left">Type</th>
+                <th className="px-4 py-2 text-left">Description</th>
+                <th className="px-4 py-2 text-left">Default</th>
               </tr>
             </thead>
             <tbody>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">children</td>
                 <td className="px-4 py-2 font-mono">React.ReactNode</td>
-                <td className="px-4 py-2">İçerik ve tetikleyici</td>
+                <td className="px-4 py-2">Content and trigger</td>
                 <td className="px-4 py-2">-</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">onClick</td>
                 <td className="px-4 py-2 font-mono">() =&gt; void</td>
-                <td className="px-4 py-2">Tıklama olayı</td>
+                <td className="px-4 py-2">Click event</td>
                 <td className="px-4 py-2">-</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">checked</td>
                 <td className="px-4 py-2 font-mono">boolean</td>
-                <td className="px-4 py-2">Checkbox veya radio seçili mi</td>
+                <td className="px-4 py-2">Is checkbox or radio selected</td>
                 <td className="px-4 py-2">false</td>
               </tr>
               <tr className="border-t">
@@ -264,19 +264,19 @@ import React from "react";
                 <td className="px-4 py-2 font-mono">
                   (checked: boolean) =&gt; void
                 </td>
-                <td className="px-4 py-2">Checkbox veya radio değişim olayı</td>
+                <td className="px-4 py-2">Checkbox or radio change event</td>
                 <td className="px-4 py-2">-</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">value</td>
                 <td className="px-4 py-2 font-mono">string</td>
-                <td className="px-4 py-2">Radio item değeri</td>
+                <td className="px-4 py-2">Radio item value</td>
                 <td className="px-4 py-2">-</td>
               </tr>
               <tr className="border-t">
                 <td className="px-4 py-2 font-mono">className</td>
                 <td className="px-4 py-2 font-mono">string</td>
-                <td className="px-4 py-2">Ekstra CSS sınıfları</td>
+                <td className="px-4 py-2">Extra CSS classes</td>
                 <td className="px-4 py-2">-</td>
               </tr>
             </tbody>
