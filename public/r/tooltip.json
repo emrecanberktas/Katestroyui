@@ -4,6 +4,7 @@
   "type": "registry:component",
   "title": "Tooltip",
   "description": "UI component for Tooltip.",
+  "dependencies": ["@radix-ui/react-tooltip", "motion"],
   "files": [
     {
       "path": "registry/new-york/ui/tooltip.tsx",

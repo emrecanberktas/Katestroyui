@@ -4,6 +4,7 @@
   "type": "registry:component",
   "title": "Avatar",
   "description": "UI component for Avatar.",
+  "dependencies": ["@radix-ui/react-avatar"],
   "files": [
     {
       "path": "registry/new-york/ui/avatar.tsx",
