@@ -5,7 +5,7 @@
   "title": "Alert Dialog",
   "description": "UI component for Alert Dialog.",
   "dependencies": ["@radix-ui/react-alert-dialog", "motion"],
-  "devDependencies": ["button"],
+  "registryDependencies": ["button"],
   "files": [
     {
       "path": "components/ui/alert-dialog.tsx",

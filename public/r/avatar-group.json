@@ -5,7 +5,7 @@
   "title": "Avatar Group",
   "description": "UI component for Avatar Group.",
   "dependencies": ["motion"],
-  "devDependencies": ["avatar", "tooltip"],
+  "registryDependencies": ["avatar", "tooltip"],
   "files": [
     {
       "path": "components/ui/avatar-group.tsx",

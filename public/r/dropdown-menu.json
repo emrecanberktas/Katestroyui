@@ -5,7 +5,7 @@
   "title": "Dropdown Menu",
   "description": "UI component for Dropdown Menu.",
   "dependencies": ["@radix-ui/react-dropdown-menu", "motion"],
-  "devDependencies": ["checkbox"],
+  "registryDependencies": ["checkbox"],
   "files": [
     {
       "path": "components/ui/dropdown-menu.tsx",

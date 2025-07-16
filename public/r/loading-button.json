@@ -5,7 +5,7 @@
   "title": "Loading Button",
   "description": "UI component for Loading Button.",
   "dependencies": ["motion"],
-  "devDependencies": ["button"],
+  "registryDependencies": ["button"],
   "files": [
     {
       "path": "components/ui/loading-button.tsx",

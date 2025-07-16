@@ -5,7 +5,7 @@
   "title": "Copy Button",
   "description": "UI component for Copy Button.",
   "dependencies": ["motion"],
-  "devDependencies": ["button"],
+  "registryDependencies": ["button"],
   "files": [
     {
       "path": "components/ui/copy-button.tsx",

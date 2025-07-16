@@ -50,6 +50,15 @@
       ]
     },
     {
+      "name": "checkbox",
+      "type": "registry:component",
+      "title": "Checkbox",
+      "description": "UI component for Checkbox.",
+      "files": [
+        { "path": "components/ui/checkbox.tsx", "type": "registry:component" }
+      ]
+    },
+    {
       "name": "copy-button",
       "type": "registry:component",
       "title": "Copy Button",
@@ -59,27 +68,6 @@
           "path": "components/ui/copy-button.tsx",
           "type": "registry:component"
         }
-      ]
-    },
-    {
-      "name": "loading-button",
-      "type": "registry:component",
-      "title": "Loading Button",
-      "description": "UI component for Loading Button.",
-      "files": [
-        {
-          "path": "components/ui/loading-button.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "checkbox",
-      "type": "registry:component",
-      "title": "Checkbox",
-      "description": "UI component for Checkbox.",
-      "files": [
-        { "path": "components/ui/checkbox.tsx", "type": "registry:component" }
       ]
     },
     {
@@ -155,6 +143,18 @@
       "description": "UI component for Focus Card.",
       "files": [
         { "path": "components/ui/focus-card.tsx", "type": "registry:component" }
+      ]
+    },
+    {
+      "name": "loading-button",
+      "type": "registry:component",
+      "title": "Loading Button",
+      "description": "UI component for Loading Button.",
+      "files": [
+        {
+          "path": "components/ui/loading-button.tsx",
+          "type": "registry:component"
+        }
       ]
     },
     {
