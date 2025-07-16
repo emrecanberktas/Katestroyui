@@ -36,8 +36,58 @@ export function AppSidebar() {
             </span>
           </Link>
         </div>
+        {/* Installation Section */}
         <SidebarGroup>
-          <SidebarGroupLabel>Componentler</SidebarGroupLabel>
+          <SidebarGroupLabel>Installation</SidebarGroupLabel>
+          <SidebarMenu>
+            <li>
+              <SidebarMenuButton asChild className="min-h-[44px]">
+                <Link href="/docs/installation/next">Next.js</Link>
+              </SidebarMenuButton>
+            </li>
+            <li>
+              <SidebarMenuButton asChild className="min-h-[44px]">
+                <Link href="/docs/installation/vite">Vite</Link>
+              </SidebarMenuButton>
+            </li>
+            <li>
+              <SidebarMenuButton asChild className="min-h-[44px]">
+                <Link href="/docs/installation/laravel">Laravel</Link>
+              </SidebarMenuButton>
+            </li>
+            <li>
+              <SidebarMenuButton asChild className="min-h-[44px]">
+                <Link href="/docs/installation/react-router">React Router</Link>
+              </SidebarMenuButton>
+            </li>
+            <li>
+              <SidebarMenuButton asChild className="min-h-[44px]">
+                <Link href="/docs/installation/astro">Astro</Link>
+              </SidebarMenuButton>
+            </li>
+            <li>
+              <SidebarMenuButton asChild className="min-h-[44px]">
+                <Link href="/docs/installation/tanstack-start">
+                  TanStack Start
+                </Link>
+              </SidebarMenuButton>
+            </li>
+            <li>
+              <SidebarMenuButton asChild className="min-h-[44px]">
+                <Link href="/docs/installation/tanstack-router">
+                  TanStack Router
+                </Link>
+              </SidebarMenuButton>
+            </li>
+            <li>
+              <SidebarMenuButton asChild className="min-h-[44px]">
+                <Link href="/docs/installation/manual">Manual</Link>
+              </SidebarMenuButton>
+            </li>
+          </SidebarMenu>
+        </SidebarGroup>
+        <SidebarGroup>
+          <SidebarGroupLabel>Components</SidebarGroupLabel>
           <SidebarMenu>
             {uiComponents.map((comp: { name: string; title: string }) => {
               const isActive = pathname === `/docs/components/${comp.name}`;
