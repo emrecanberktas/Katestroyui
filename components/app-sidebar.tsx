@@ -21,21 +21,20 @@ export function AppSidebar() {
   const pathname = usePathname();
   return (
     <Sidebar>
+      {/* Fixed logo/header section */}
+      <div className="flex items-center gap-3 px-4 py-4 border-b border-zinc-200 dark:border-zinc-800 bg-background sticky top-0 z-20">
+        <Link href="/" className="flex items-center gap-2 ">
+          <img
+            src="/Logo.png"
+            alt="Logo"
+            width={32}
+            height={32}
+            className="rounded-lg shadow"
+          />
+          <span className="font-bold text-lg tracking-tight">KatestroyUI</span>
+        </Link>
+      </div>
       <SidebarContent>
-        <div className="flex items-center gap-3 px-4 py-4 border-b border-zinc-200 dark:border-zinc-800">
-          <Link href="/" className="flex items-center gap-2 ">
-            <img
-              src="/Logo.png"
-              alt="Logo"
-              width={32}
-              height={32}
-              className="rounded-lg shadow"
-            />
-            <span className="font-bold text-lg tracking-tight">
-              KatestroyUI
-            </span>
-          </Link>
-        </div>
         {/* Installation Section */}
         <SidebarGroup>
           <SidebarGroupLabel>Installation</SidebarGroupLabel>

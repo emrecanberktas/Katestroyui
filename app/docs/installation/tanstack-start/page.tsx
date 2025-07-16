@@ -17,7 +17,8 @@ export default function TanStackStartInstallationPage() {
         Project from Scratch guide on the TanStack Start website.
       </p>
       <p className="mb-2 font-semibold">
-        Do not add Tailwind yet. We'll install Tailwind v4 in the next step.
+        Do not add Tailwind yet. We&apos;ll install Tailwind v4 in the next
+        step.
       </p>
 
       <h2 className="text-xl font-semibold mb-2 mt-8">Add Tailwind</h2>
