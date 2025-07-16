@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "motion/react";
 import { CopyButton } from "./ui/copy-button";
@@ -11,10 +11,12 @@ export function TerminalBlock({
   commands: Record<string, string>;
 }) {
   const tabs = Object.keys(commands) as (keyof typeof commands)[];
-
-  const [activeTab, setActiveTab] = useState<keyof typeof commands>(
-    Object.keys(commands)[0]
+  const uniqueIdRef = useRef<string>(
+    `terminal-block-${Math.random().toString(36).slice(2, 10)}`
   );
+  const uniqueId = uniqueIdRef.current;
+
+  const [activeTab, setActiveTab] = useState<keyof typeof commands>(tabs[0]);
   const [prevTabIndex, setPrevTabIndex] = useState(0);
   const activeTabIndex = tabs.indexOf(activeTab);
   const direction =
@@ -33,13 +35,11 @@ export function TerminalBlock({
     initial: (direction: "next" | "back") => ({
       x: direction === "next" ? 15 : -15,
       opacity: 0,
-      scale: 0.98,
     }),
-    animate: { x: 0, opacity: 1, scale: 1 },
+    animate: { x: 0, opacity: 1 },
     exit: (direction: "next" | "back") => ({
       x: direction === "next" ? -15 : 15,
       opacity: 0,
-      scale: 0.98,
     }),
   };
 
@@ -61,7 +61,7 @@ export function TerminalBlock({
             {tab}
             {activeTab === tab && (
               <motion.div
-                layoutId="underline"
+                layoutId={`underline-${uniqueId}`}
                 className="absolute inset-x-0 bottom-0 h-[2px] bg-primary"
               />
             )}
@@ -73,7 +73,7 @@ export function TerminalBlock({
         </div>
       </div>
 
-      <div className="flex items-center gap-2 px-3 sm:px-4 py-3 min-h-[32px] overflow-hidden">
+      <div className="relative w-full overflow-x-hidden px-3 sm:px-4 py-3">
         <AnimatePresence mode="popLayout" initial={false} custom={direction}>
           <motion.code
             key={activeTab}
